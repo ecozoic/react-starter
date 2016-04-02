@@ -1,4 +1,7 @@
-var path = require('path');
+'use strict';
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -15,14 +18,14 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/public/assets/',
-    filename: '[name].js'
+    publicPath: '/',
+    filename: '[name].[hash].js',
+    sourceMapFilename: '[name].[hash].js.map'
   },
 
   devtool: 'source-map',
 
   devServer: {
-    contentBase: 'public',
     host: 'localhost',
     port: 8080
   },
@@ -36,6 +39,14 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      inject: 'body',
+      minify: false
+    })
+  ],
 
   resolve: {
     extensions: ['', '.js', '.jsx']
