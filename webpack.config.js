@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const cssNextPlugin = require('postcss-cssnext');
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -76,7 +77,7 @@ module.exports = {
       {
         test: /\.s?(a|c)ss$/,
         exclude: /node_modules/,
-        loader: 'style-loader!css-loader!sass-loader',
+        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
       },
     ],
   },
@@ -85,5 +86,9 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.jsx'],
+  },
+
+  postcss: () => {
+    return [cssNextPlugin];
   },
 };
