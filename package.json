@@ -9,7 +9,7 @@
     "build": "npm run clean && cross-env NODE_ENV=development webpack",
     "build:prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "clean": "rimraf dist",
-    "lint": "eslint .",
+    "lint:js": "eslint .",
     "lint:css": "sass-lint src/**/*.scss"
   },
   "repository": {
