@@ -9,7 +9,8 @@
     "build": "npm run clean && cross-env NODE_ENV=development webpack",
     "build:prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "clean": "rimraf dist",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:css": "sass-lint src/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,9 @@
     "postcss-cssnext": "^2.5.1",
     "postcss-loader": "0.8.2",
     "rimraf": "2.5.2",
+    "sass-lint": "1.5.1",
     "sass-loader": "3.2.0",
+    "sasslint-webpack-plugin": "1.0.2",
     "style-loader": "0.13.1",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1"

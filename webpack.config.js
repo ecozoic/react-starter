@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const cssNextPlugin = require('postcss-cssnext');
+const SassLintPlugin = require('sasslint-webpack-plugin');
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -14,6 +14,9 @@ const basePlugins = [
     template: './src/index.html',
     inject: 'body',
     minify: false,
+  }),
+  new SassLintPlugin({
+    glob: 'src/**/*.s?(a|c)ss',
   }),
 ];
 
@@ -88,7 +91,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
 
-  postcss: () => {
-    return [cssNextPlugin];
+  postcss: function postcssInit() {
+    return [
+      require('postcss-cssnext'),
+    ];
   },
 };
