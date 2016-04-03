@@ -16,7 +16,7 @@ const basePlugins = [
     minify: false,
   }),
   new SassLintPlugin({
-    glob: 'src/**/*.s?(a|c)ss',
+    glob: 'src/**/*.scss',
   }),
 ];
 
@@ -68,19 +68,19 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint',
       },
     ],
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel',
       },
       {
-        test: /\.s?(a|c)ss$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+        loader: 'style!css!postcss!sass',
       },
     ],
   },
