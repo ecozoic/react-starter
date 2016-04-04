@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --inline",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
     "build": "npm run clean && cross-env NODE_ENV=development webpack",
     "build:prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "clean": "rimraf dist",
@@ -38,6 +38,7 @@
     "node-sass": "3.4.2",
     "postcss-cssnext": "2.5.1",
     "postcss-loader": "0.8.2",
+    "react-hot-loader": "1.3.0",
     "rimraf": "2.5.2",
     "sass-lint": "1.5.1",
     "sass-loader": "3.2.0",

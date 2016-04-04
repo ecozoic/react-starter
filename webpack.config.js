@@ -36,9 +36,15 @@ const plugins = basePlugins
   .concat(process.env.NODE_ENV === 'production' ? prodPlugins : [])
   .concat(process.env.NODE_ENV === 'development' ? devPlugins : []);
 
+const jsxLoaders = ['babel'];
+
+if (process.env.NODE_ENV === 'development') {
+  jsxLoaders.unshift('react-hot');
+}
+
 module.exports = {
   entry: {
-    app: './src/index',
+    app: ['./src/index'],
     vendor: [
       'es5-shim',
       'es6-shim',
@@ -69,19 +75,19 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'eslint',
+        loaders: ['eslint'],
       },
     ],
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loaders: jsxLoaders,
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss!sass',
+        loaders: ['style', 'css', 'postcss', 'sass'],
       },
     ],
   },
