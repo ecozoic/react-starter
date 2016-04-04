@@ -1,3 +1,11 @@
+$red: #f00;
+$blue: #00f;
+$green: #0f0;
+
 h1 {
-  color: red;
+  color: $green;
+}
+
+h2 {
+  color: $blue;
 }
