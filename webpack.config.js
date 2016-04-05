@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -20,7 +22,9 @@ const basePlugins = [
   }),
 ];
 
-const devPlugins = [];
+const devPlugins = [
+  new webpack.HotModuleReplacementPlugin(),
+];
 
 const prodPlugins = [
   new webpack.optimize.OccurrenceOrderPlugin(true),
@@ -36,24 +40,30 @@ const plugins = basePlugins
   .concat(process.env.NODE_ENV === 'production' ? prodPlugins : [])
   .concat(process.env.NODE_ENV === 'development' ? devPlugins : []);
 
+const entries = {
+  app: ['./src/index'],
+  vendor: [
+    'es5-shim',
+    'es6-shim',
+    'es6-promise',
+    'react',
+    'react-dom',
+    'react-router',
+  ],
+};
+
 const jsxLoaders = ['babel'];
 
 if (process.env.NODE_ENV === 'development') {
   jsxLoaders.unshift('react-hot');
+
+  for (let entry in entries) {
+    entries[entry].unshift('webpack-dev-server/client?http://localhost:8080/', 'webpack/hot/dev-server');
+  }
 }
 
 module.exports = {
-  entry: {
-    app: ['./src/index'],
-    vendor: [
-      'es5-shim',
-      'es6-shim',
-      'es6-promise',
-      'react',
-      'react-dom',
-      'react-router',
-    ],
-  },
+  entry: entries,
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -68,6 +78,7 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 8080,
+    hot: true,
   },
 
   module: {
