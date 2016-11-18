@@ -3,6 +3,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  entry: {
+    polyfills: './src/polyfills',
+    vendor: './src/vendor',
+    app: './src/main'
+  },
+
   devtool: 'source-map',
 
   output: {

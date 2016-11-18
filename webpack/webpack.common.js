@@ -5,12 +5,6 @@ const SassLintPlugin = require('sasslint-webpack-plugin');
 const cssNext = require('postcss-cssnext');
 
 module.exports = {
-  entry: {
-    polyfills: './src/polyfills',
-    vendor: './src/vendor',
-    app: './src/main'
-  },
-
   resolve: {
     extensions: ['.jsx', '.js']
   },

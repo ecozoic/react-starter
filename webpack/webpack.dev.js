@@ -4,11 +4,22 @@ const webpack = require('webpack');
 const port = 8080;
 
 module.exports = {
+  entry: {
+    polyfills: './src/polyfills',
+    vendor: './src/vendor',
+    app: [
+      'react-hot-loader/patch',
+      `webpack-dev-server/client?http://localhost:${port}`,
+      'webpack/hot/only-dev-server',
+      './src/main'
+    ]
+  },
+
   devtool: 'cheap-module-source-map',
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: `http://localhost:${port}`,
+    publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },
@@ -27,10 +38,18 @@ module.exports = {
     ]
   },
 
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ],
+
   devServer: {
+    hot: true,
     historyApiFallback: true,
     stats: 'minimal',
     compress: true,
+    contentBase: path.resolve(__dirname, '../dist'),
+    publicPath: '/',
     port
   }
 };

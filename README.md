@@ -25,7 +25,7 @@ npm run serve
 This will generate minified assets in the dist directory and serve them up using a simple Koa server.
 
 ## Tools & Features
-* Build powered by Webpack 2, and Babel 2
+* Build powered by Webpack 2 and Babel
 * Optimized production build with UglifyJS + tree-shaking
 * Linting with eslint and sass-lint
 * SASS + postcss-cssnext for CSS preprocessing
