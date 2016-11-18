@@ -26,13 +26,14 @@ This will generate minified assets in the dist directory and serve them up using
 
 ## Tools & Features
 * Build powered by Webpack 2 and Babel
+* Hot module replacement with react-hot-loader 3
 * Optimized production build with UglifyJS + tree-shaking
 * Linting with eslint and sass-lint
 * SASS + postcss-cssnext for CSS preprocessing
 
 ## Roadmap
-* jsdoc
-* HMR
+* jsdoc / esdoc
+* testing w/ jest
 * redux + router
 
 ## Known Issues
