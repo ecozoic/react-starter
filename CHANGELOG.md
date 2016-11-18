@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated HMR setup to only provide hot loading code in development
+
+### Added
+- Basic routes using react-router
+
 ## [0.1.0] - 2016-11-17
 ### Added
 - Added changelog
