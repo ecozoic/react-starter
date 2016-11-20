@@ -1,15 +1,17 @@
 import React from 'react';
+import { Router, Route, browserHistory } from 'react-router';
+
+import { HomeComponent, PageNotFoundComponent } from './components';
 
 import './app.component.scss';
 
 export class AppComponent extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello world!!</h1>
-        <input type="text" />
-        <h2>Foo bar baz</h2>
-      </div>
+      <Router history={browserHistory}>
+        <Route path="/" component={HomeComponent} />
+        <Route path="*" component={PageNotFoundComponent} />
+      </Router>
     );
   }
 }

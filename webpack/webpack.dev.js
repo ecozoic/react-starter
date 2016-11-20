@@ -11,7 +11,7 @@ module.exports = {
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://localhost:${port}`,
       'webpack/hot/only-dev-server',
-      './src/main'
+      './src/main.hmr'
     ]
   },
 
