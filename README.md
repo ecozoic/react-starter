@@ -1,4 +1,5 @@
 # react-starter
+[![Dependency Status](https://david-dm.org/ecozoic/react-starter.svg)](https://david-dm.org/ecozoic/react-starter) [![devDependency Status](https://david-dm.org/ecozoic/react-starter/dev-status.png)](https://david-dm.org/ecozoic/react-starter?type=dev)
 
 This project is a scaffold to start new react+redux projects powered by Webpack.
 
@@ -6,7 +7,7 @@ This project is a scaffold to start new react+redux projects powered by Webpack.
 ```
 git clone https://github.com/ecozoic/react-starter
 cd react-starter
-npm install
+yarn install
 ```
 
 ## Development
@@ -38,4 +39,3 @@ This will generate minified assets in the dist directory and serve them up using
 
 ## Known Issues
 * CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
-* Yarn still having issues installing scoped packages on Windows: https://github.com/yarnpkg/yarn/issues/1861
