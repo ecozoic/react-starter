@@ -38,4 +38,3 @@ This will generate minified assets in the dist directory and serve them up using
 
 ## Known Issues
 * CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
-* Yarn still having issues installing scoped packages on Windows: https://github.com/yarnpkg/yarn/issues/1861
