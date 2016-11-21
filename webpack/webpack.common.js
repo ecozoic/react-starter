@@ -47,15 +47,6 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: () => {
-          return [
-            cssNext
-          ];
-        }
-      }
     })
   ]
 };

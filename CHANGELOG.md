@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Fixed
+- CSS now properly minified in production
+
+### Added
+- Added support for CSS modules
+- Add postcss.config.js
+
 ## [0.2.1]- 2016-11-20
 ### Changed
 - Update README
