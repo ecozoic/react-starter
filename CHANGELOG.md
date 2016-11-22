@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Added
 - Added jest + enzyme to run unit tests
+- Added Travis CI support
 
 ### Changed
 - Updated README
