@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added jest + enzyme to run unit tests
+- Added Travis CI support
+
+### Changed
+- Updated README
+
 ## [0.2.2] - 2016-11-21
 ### Fixed
 - CSS now properly minified in production
