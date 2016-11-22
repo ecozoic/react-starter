@@ -25,6 +25,13 @@ npm run serve
 
 This will generate minified assets in the dist directory and serve them up using a simple Koa server.
 
+## Tests
+```
+npm test
+```
+
+This will execute unit tests powered by Jest and Enzyme.
+
 ## Tools & Features
 * Build powered by Webpack 2 and Babel
 * Hot module replacement with react-hot-loader 3
@@ -34,6 +41,6 @@ This will generate minified assets in the dist directory and serve them up using
 
 ## Roadmap
 * jsdoc
-* unit testing w/ jest
+* coverage reporting
 * e2e testing w/ nightwatch
 * redux
