@@ -1,0 +1,16 @@
+[ignore]
+
+[include]
+
+[libs]
+flow/decls
+
+[options]
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/flow/css-module.js.flow'
+module.name_mapper.extension='styl' -> '<PROJECT_ROOT>/flow/css-module.js.flow'
+module.name_mapper.extension='sass' -> '<PROJECT_ROOT>/flow/css-module.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/flow/css-module.js.flow'
+module.name_mapper.extension='less' -> '<PROJECT_ROOT>/flow/css-module.js.flow'
+module.name_mapper.extension='ico' -> '<PROJECT_ROOT>/flow/webpack-asset.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/flow/webpack-asset.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/flow/webpack-asset.js.flow'
