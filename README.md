@@ -36,6 +36,7 @@ This will execute unit tests powered by Jest and Enzyme.
 * Build powered by Webpack 2 and Babel
 * Hot module replacement with react-hot-loader 3
 * Optimized production build with UglifyJS + tree-shaking
+* Static type checking with Flow
 * Linting with eslint and sass-lint
 * SASS + postcss-cssnext for CSS preprocessing
 
@@ -43,4 +44,4 @@ This will execute unit tests powered by Jest and Enzyme.
 * jsdoc
 * coverage reporting
 * e2e testing w/ nightwatch
-* redux
+* redux + redux-router
