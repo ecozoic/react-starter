@@ -33,9 +33,7 @@ This will generate minified assets in the dist directory and serve them up using
 * SASS + postcss-cssnext for CSS preprocessing
 
 ## Roadmap
-* jsdoc / esdoc
-* testing w/ jest
-* redux + router
-
-## Known Issues
-* CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
+* jsdoc
+* unit testing w/ jest
+* e2e testing w/ nightwatch
+* redux
