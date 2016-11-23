@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added jsdoc support
+
 ## [0.3.1] - 2016-11-22
 ### Added
 - Added flow support

@@ -2,17 +2,21 @@
 import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 
-import { HomeComponent, PageNotFoundComponent } from './components';
+import { routes } from './app.routes';
 
 import './app.component.scss';
 
+/**
+ * Main application component.
+ * @extends React.Component
+ */
 export class AppComponent extends React.Component {
+  /**
+   * Render method.
+   */
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={HomeComponent} />
-        <Route path="*" component={PageNotFoundComponent} />
-      </Router>
+      <Router history={browserHistory}  routes={routes} />
     );
   }
 }
