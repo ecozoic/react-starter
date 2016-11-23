@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { AppComponent } from './app/app.component';
+import { Root } from './app/root.component';
 
 // global styles
 import './main.scss';
@@ -11,6 +11,6 @@ import './main.scss';
 import './favicon.ico';
 
 ReactDOM.render(
-  <AppComponent />,
-  document.getElementById('app')
+  <Root />,
+  document.getElementById('root')
 );

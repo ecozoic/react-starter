@@ -1,22 +1,23 @@
 /* @flow */
-import React from 'react';
+import React, { Component } from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 
-import { routes } from './app.routes';
-
-import './app.component.scss';
+import { Home, PageNotFound } from './components';
 
 /**
  * Main application component.
  * @extends React.Component
  */
-export class AppComponent extends React.Component {
+export class App extends Component {
   /**
    * Render method.
    */
   render() {
     return (
-      <Router history={browserHistory}  routes={routes} />
+      <Router history={browserHistory}>
+        <Route path='/' component={Home} />
+        <Route path='*' component={PageNotFound} />
+      </Router>
     );
   }
 }

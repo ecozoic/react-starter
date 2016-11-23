@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
-import { AppComponent } from './app/app.component';
+import { Root } from './app/root.component';
 
 // global styles
 import './main.scss';
@@ -15,14 +15,14 @@ import './favicon.ico';
 const render = () => {
   ReactDOM.render(
     <AppContainer>
-      <AppComponent />
+      <Root />
     </AppContainer>,
-    document.getElementById('app')
+    document.getElementById('root')
   );
 };
 
 render();
 
 if (module.hot) {
-  module.hot.accept('./app/app.component', render);
+  module.hot.accept('./app/root.component', render);
 }

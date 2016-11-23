@@ -1,13 +1,13 @@
 /* @flow */
-import React from 'react';
+import React, { Component } from 'react';
 
 import styles from './home.component.scss';
 
 /**
  * Home page component.
- * @extends React.Component
+ * @extends Component
  */
-export class HomeComponent extends React.Component {
+export class Home extends Component {
   /**
    * Render method.
    */
