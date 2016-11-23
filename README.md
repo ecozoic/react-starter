@@ -59,3 +59,7 @@ This will execute static type-checking with flow.
 * coverage reporting
 * e2e testing w/ nightwatch
 * redux + redux-router
+* react-router 4
+
+## Known Issues
+* HMR can't hotload react-router routes, requires full page refresh

@@ -1,10 +1,10 @@
 /* @flow */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
-import { Root } from './app/root.component';
+import { App } from './app/app.component';
 
 // global styles
 import './main.scss';
@@ -12,17 +12,17 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-const render = () => {
-  ReactDOM.render(
+const renderApp = () => {
+  render(
     <AppContainer>
-      <Root />
+      <App />
     </AppContainer>,
-    document.getElementById('root')
+    document.getElementById('app')
   );
 };
 
-render();
+renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app/root.component', render);
+  module.hot.accept('./app/app.component', renderApp);
 }

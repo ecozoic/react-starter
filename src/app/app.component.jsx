@@ -14,9 +14,9 @@ export class App extends Component {
    */
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path='/' component={Home} />
-        <Route path='*' component={PageNotFound} />
+      <Router history={ browserHistory }>
+        <Route path='/' component={ Home } />
+        <Route path='*' component={ PageNotFound } />
       </Router>
     );
   }
