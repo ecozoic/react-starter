@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Match, Miss } from 'react-router';
 
 import { Home, PageNotFound } from './components';
 
@@ -14,10 +14,12 @@ export class App extends Component {
    */
   render() {
     return (
-      <Router history={ browserHistory }>
-        <Route path='/' component={ Home } />
-        <Route path='*' component={ PageNotFound } />
-      </Router>
+      <BrowserRouter>
+        <div>
+          <Match exactly pattern='/' component={ Home } />
+          <Miss component={ PageNotFound } />
+        </div>
+      </BrowserRouter>
     );
   }
 }
