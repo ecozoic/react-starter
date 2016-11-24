@@ -47,8 +47,9 @@ yarn flow
 This will execute static type-checking with flow.
 
 ## Tools & Features
-* Build powered by Webpack 2 and Babel
+* Build powered by Webpack 2 and Babel 6
 * Hot module replacement with react-hot-loader 3
+* react-router 4
 * Optimized production build with UglifyJS + tree-shaking
 * Static type checking with Flow
 * Linting with eslint and sass-lint
@@ -59,7 +60,4 @@ This will execute static type-checking with flow.
 * coverage reporting
 * e2e testing w/ nightwatch
 * redux + redux-router
-* react-router 4
-
-## Known Issues
-* HMR can't hotload react-router routes, requires full page refresh
+* redux-dev-tools
