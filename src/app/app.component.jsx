@@ -1,18 +1,25 @@
 /* @flow */
-import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import React, { Component } from 'react';
+import { BrowserRouter, Match, Miss } from 'react-router';
 
-import { HomeComponent, PageNotFoundComponent } from './components';
+import { Home, PageNotFound } from './components';
 
-import './app.component.scss';
-
-export class AppComponent extends React.Component {
+/**
+ * Main application component.
+ * @extends React.Component
+ */
+export class App extends Component {
+  /**
+   * Render method.
+   */
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={HomeComponent} />
-        <Route path="*" component={PageNotFoundComponent} />
-      </Router>
+      <BrowserRouter>
+        <div>
+          <Match exactly pattern='/' component={ Home } />
+          <Miss component={ PageNotFound } />
+        </div>
+      </BrowserRouter>
     );
   }
 }

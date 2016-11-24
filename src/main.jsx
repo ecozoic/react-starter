@@ -1,8 +1,8 @@
 /* @flow */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-import { AppComponent } from './app/app.component';
+import { App } from './app/app.component';
 
 // global styles
 import './main.scss';
@@ -10,7 +10,7 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-ReactDOM.render(
-  <AppComponent />,
+render(
+  <App />,
   document.getElementById('app')
 );

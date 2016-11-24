@@ -1,9 +1,16 @@
 /* @flow */
-import React from 'react';
+import React, { Component } from 'react';
 
 import './page-not-found.component.scss';
 
-export class PageNotFoundComponent extends React.Component {
+/**
+ * Page not found component.
+ * @extends Component
+ */
+export class PageNotFound extends Component {
+  /**
+   * Render method.
+   */
   render() {
     return (
       <div>

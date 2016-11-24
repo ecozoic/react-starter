@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.4.0] - 2016-11-24
+### Added
+- Added jsdoc support
+
+### Changed
+- Upgraded to react-router@4.0.0-alpha.6
+
+### Fixed
+- Routes now work properly with HMR
+
 ## [0.3.1] - 2016-11-22
 ### Added
 - Added flow support

@@ -2,11 +2,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { AppComponent } from './app.component';
+import { App } from './app.component';
 
 test('it works', () => {
   const component = shallow(
-    <AppComponent />
+    <App />
   );
 
   expect(2).toEqual(2);
