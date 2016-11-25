@@ -2,9 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.4.1] - 2016-11-25
 ### Added
-- Added Istanbul coverage reports
+- Added Istanbul coverage reporting
 
 ### Changed
 - Updated several dependencies to their latest versions
