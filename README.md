@@ -33,8 +33,9 @@ yarn test
 This will execute Jest unit tests and generate Istanbul coverage reports.
 
 To run Nightwatch e2e tests, ensure the app is running with either ```yarn start``` or ```yarn serve``` and then run:
-
+```
 yarn e2e
+```
 
 ## Documentation
 ```
