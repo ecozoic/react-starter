@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.4.1] - 2016-11-25
+### Added
+- Added Istanbul coverage reporting
+
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [0.4.0] - 2016-11-24
 ### Added
 - Added jsdoc support
