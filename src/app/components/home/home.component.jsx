@@ -5,7 +5,7 @@ import styles from './home.component.scss';
 
 /**
  * Home page component.
- * @extends Component
+ * @extends React.Component
  */
 export class Home extends Component {
   /**

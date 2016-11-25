@@ -5,7 +5,7 @@ import './page-not-found.component.scss';
 
 /**
  * Page not found component.
- * @extends Component
+ * @extends React.Component
  */
 export class PageNotFound extends Component {
   /**
