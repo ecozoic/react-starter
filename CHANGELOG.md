@@ -2,9 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.4.2] - 2016-11-25
 ### Added
 - Added nightwatch e2e support
+
+### Changed
+- Updated README
 
 ## [0.4.1] - 2016-11-25
 ### Added

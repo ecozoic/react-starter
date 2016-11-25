@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --config jest.conf.json",
