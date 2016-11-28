@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 ### Changed
 - Updated several dependencies to their latest versions
+- Updated README
 - Changed eslint parser to babel-eslint to support static properties
 - Changed .eslintrc to support object rest/spread
 - Added babel-preset-stage-2 to .babelrc to support static properties
