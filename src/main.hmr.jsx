@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 
 import { AppContainer } from 'react-hot-loader';
 
-import { App } from './app/app.component';
-import todoApp from './app/reducers';
+import { App } from './app/app';
+import { rootReducer } from './app/reducers';
 
 // global styles
 import './main.scss';
@@ -15,7 +15,7 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-const store = createStore(todoApp);
+const store = createStore(rootReducer);
 
 const renderApp = () => {
   render(
@@ -31,5 +31,5 @@ const renderApp = () => {
 renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app/app.component', renderApp);
+  module.hot.accept('./app/app', renderApp);
 }

@@ -1,6 +1,7 @@
+/* @flow */
 import * as t from '../constants';
 
-const todo = (state = {}, action) => {
+export const todo = (state = {}, action) => {
   switch (action.type) {
     case t.ADD_TODO:
       return {
@@ -22,7 +23,7 @@ const todo = (state = {}, action) => {
   }
 };
 
-const todos = (state = [], action) => {
+export const todos = (state = [], action) => {
   switch (action.type) {
     case t.ADD_TODO:
       return [
@@ -35,5 +36,3 @@ const todos = (state = [], action) => {
       return state;
   }
 };
-
-export default todos;

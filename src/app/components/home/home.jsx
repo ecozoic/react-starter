@@ -1,9 +1,10 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import styles from './home.component.scss';
+import styles from './home.scss';
 
-import { AddTodoContainer, TodoListContainer } from '../../containers';
+import { AddTodoContainer } from '../../containers/add-todo';
+import { TodoListContainer } from '../../containers/todo-list';
 
 /**
  * Home page component.

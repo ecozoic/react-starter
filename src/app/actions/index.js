@@ -1,3 +1,4 @@
+/* @flow */
 import * as t from '../constants';
 
 let nextTodoId = 0;

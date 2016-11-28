@@ -1,8 +1,7 @@
+/* @flow */
 import { combineReducers } from 'redux';
-import todos from './todos';
+import { todos } from './todos';
 
-const todoApp = combineReducers({
+export const rootReducer = combineReducers({
   todos
 });
-
-export default todoApp;

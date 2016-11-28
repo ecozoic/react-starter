@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import styles from './page-not-found.component.scss';
+import styles from './page-not-found.scss';
 
 /**
  * Page not found component.

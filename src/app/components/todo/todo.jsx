@@ -1,6 +1,7 @@
+/* @flow */
 import React, { PropTypes, Component } from 'react';
 
-import styles from './todo.component.scss';
+import styles from './todo.scss';
 
 export class Todo extends Component {
   static propTypes = {
