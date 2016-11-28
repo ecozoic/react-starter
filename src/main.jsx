@@ -13,7 +13,7 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, {});
 
 render(
   <Provider store={store}>

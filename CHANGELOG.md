@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Added redux & react-redux support
 - Added sample todo list application features
 - Added .vscode/settings.json to disable IDE javascript validation (does not support object rest/spread)
+- Added redux-devtools
 
 ### Changed
 - Updated several dependencies to their latest versions
@@ -14,10 +15,11 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Changed .eslintrc to support object rest/spread
 - Added babel-preset-stage-2 to .babelrc to support static properties
 - Shortened file naming convention
+- Added camelcasing support to CSS modules configuration
 
 ### Removed
 - Removed babel-transform-object-rest-spread-plugin since its included in stage-2 preset
-- Removed barrel files b/c tired of weird circular dependency issues
+- Removed barrel files b/c I'm tired of weird circular dependency issues
 
 ## [0.4.2] - 2016-11-25
 ### Added

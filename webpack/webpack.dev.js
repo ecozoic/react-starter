@@ -30,7 +30,7 @@ module.exports = {
         test: /\.s?(a|c)ss$/,
         use: [
           'style-loader',
-          'css-loader?modules&importLoaders=2',
+          'css-loader?modules&importLoaders=2&camelCase',
           'postcss-loader',
           'sass-loader'
         ]
