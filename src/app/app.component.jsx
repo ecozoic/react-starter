@@ -16,8 +16,8 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Match exactly pattern='/' component={ Home } />
-          <Miss component={ PageNotFound } />
+          <Match exactly pattern='/' component={Home} />
+          <Miss component={PageNotFound} />
         </div>
       </BrowserRouter>
     );
