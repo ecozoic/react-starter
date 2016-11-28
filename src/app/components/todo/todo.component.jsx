@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
+import styles from './todo.component.scss';
+
 export class Todo extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
@@ -12,6 +14,7 @@ export class Todo extends Component {
 
     return (
       <li
+        className={styles.todo}
         onClick={onClick}
         style={{
           textDecoration: completed ? 'line-through' : 'none'

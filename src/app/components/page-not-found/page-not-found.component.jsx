@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import './page-not-found.component.scss';
+import styles from './page-not-found.component.scss';
 
 /**
  * Page not found component.
@@ -13,8 +13,8 @@ export class PageNotFound extends Component {
    */
   render() {
     return (
-      <div>
-        404
+      <div className={styles.pageNotFound}>
+        <h1>404</h1>
       </div>
     );
   }

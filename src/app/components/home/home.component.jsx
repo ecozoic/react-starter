@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import styles from './home.component.scss';
 
+import { AddTodoContainer, TodoListContainer } from '../../containers';
+
 /**
  * Home page component.
  * @extends React.Component
@@ -14,9 +16,9 @@ export class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        <h1>Hello world!</h1>
-        <input type="text" />
-        <h2>Foo bar baz</h2>
+        <h1>Todo List</h1>
+        <AddTodoContainer />
+        <TodoListContainer />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
-import { Todo } from '../';
+import { Todo } from '../todo';
+import styles from './todo-list.component.scss';
 
 export class TodoList extends Component {
   static propTypes = {
@@ -16,7 +17,7 @@ export class TodoList extends Component {
     const { todos, onTodoClick } = this.props;
 
     return (
-      <ul>
+      <ul className={styles.todoList}>
         {todos.map(todo =>
           <Todo
             key={todo.id}
