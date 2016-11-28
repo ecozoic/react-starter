@@ -1,7 +1,10 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import styles from './home.component.scss';
+import styles from './home.scss';
+
+import { AddTodoContainer } from '../../containers/add-todo';
+import { TodoListContainer } from '../../containers/todo-list';
 
 /**
  * Home page component.
@@ -14,9 +17,9 @@ export class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        <h1>Hello world!</h1>
-        <input type="text" />
-        <h2>Foo bar baz</h2>
+        <h1>Todo List</h1>
+        <AddTodoContainer />
+        <TodoListContainer />
       </div>
     );
   }
