@@ -2,6 +2,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added redux & react-redux support
+- Added sample todo list application features
+- Added .vscode/settings.json to disable IDE javascript validation (does not support object rest/spread)
+- Added redux-devtools
+
+### Changed
+- Updated several dependencies to their latest versions
+- Changed eslint parser to babel-eslint to support static properties
+- Changed .eslintrc to support object rest/spread
+- Added babel-preset-stage-2 to .babelrc to support static properties
+- Shortened file naming convention
+- Added camelcasing support to CSS modules configuration
+
+### Removed
+- Removed babel-transform-object-rest-spread-plugin since its included in stage-2 preset
+- Removed barrel files b/c I'm tired of weird circular dependency issues
+
 ## [0.4.2] - 2016-11-25
 ### Added
 - Added nightwatch e2e support
