@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { DevTools } from './app/containers/dev-tools';
 
-import { App } from './app/app';
+import { App } from './app';
 import { rootReducer } from './app/reducers';
 
 // global styles
@@ -16,7 +16,7 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-const store = createStore(rootReducer, {}, DevTools.instrument());
+const store = createStore(rootReducer, DevTools.instrument());
 
 const renderApp = () => {
   render(
