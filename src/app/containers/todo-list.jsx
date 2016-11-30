@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 import { toggleTodo } from '../actions';
-import { TodoList } from '../components/todo-list/todo-list';
+import { TodoList } from '../components/todo-list';
 
 const mapStateToProps = (state) => {
   return {

@@ -20,7 +20,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: 'babel-loader?cacheDirectory'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,

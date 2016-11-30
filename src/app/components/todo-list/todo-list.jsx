@@ -1,7 +1,7 @@
 /* @flow */
 import React, { PropTypes, Component } from 'react';
 
-import { Todo } from '../todo/todo';
+import { Todo } from '../todo';
 import styles from './todo-list.scss';
 
 export class TodoList extends Component {
