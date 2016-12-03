@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Fixed
 - Fixed bug preventing HMR of components
+- Fixed jsdoc generation by adding jsdoc-babel plugin
 
 ## [0.5.1] - 2016-11-30
 ### Changed
