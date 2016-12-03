@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Fixed
+- Fixed bug preventing HMR of components
+
 ## [0.5.1] - 2016-11-30
 ### Changed
 - Updated several dependencies to their latest versions
