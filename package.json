@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "pretest": "npm run clean:test",
