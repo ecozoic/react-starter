@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.2] - 2016-12-02
+### Fixed
+- Fixed bug preventing HMR of components
+- Fixed jsdoc generation by adding jsdoc-babel plugin
+
 ## [0.5.1] - 2016-11-30
 ### Changed
 - Updated several dependencies to their latest versions

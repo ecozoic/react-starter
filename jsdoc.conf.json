@@ -5,13 +5,20 @@
   },
   "source": {
     "include": ["src"],
-    "exclude": [],
-    "includePattern": ".+\\.js(doc|x)?$",
-    "excludePattern": "(^|\\/|\\\\)_"
+    "exclude": []
   },
   "opts": {
     "destination": "./docs/",
     "recurse": true,
     "readme": "./README.md"
+  },
+  "plugins": ["node_modules/jsdoc-babel"],
+  "babel": {
+    "extensions": ["js", "jsx"],
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ]
   }
 }
