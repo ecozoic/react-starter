@@ -7149,9 +7149,9 @@ webpack-dev-middleware@^1.4.0:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-dev-server@2.1.0-beta.11:
-  version "2.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.1.0-beta.11.tgz#5a1e11590bf9e520ea8a559ee436779125647c28"
+webpack-dev-server@2.1.0-beta.12:
+  version "2.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.1.0-beta.12.tgz#f717e7b69214dae0e7a2061c12d128432d7520ef"
   dependencies:
     chokidar "^1.6.0"
     compression "^1.5.2"
