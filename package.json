@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "pretest": "npm run clean:test",
@@ -73,7 +73,7 @@
     "selenium-standalone": "5.9.0",
     "style-loader": "0.13.1",
     "webpack": "2.1.0-beta.27",
-    "webpack-dev-server": "2.1.0-beta.11",
+    "webpack-dev-server": "2.1.0-beta.12",
     "webpack-merge": "1.0.2"
   },
   "dependencies": {
