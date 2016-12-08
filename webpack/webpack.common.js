@@ -1,8 +1,6 @@
-const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
-const cssNext = require('postcss-cssnext');
 
 module.exports = {
   resolve: {
@@ -23,8 +21,8 @@ module.exports = {
         use: 'babel-loader?cacheDirectory'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
-        use: 'file-loader?name=assets/[name].[hash].[ext]'
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: 'file-loader?name=assets/images/[name].[hash].[ext]'
       },
       {
         test: /\.ico$/,

@@ -20,8 +20,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
+    filename: 'assets/[name].js',
+    chunkFilename: 'assets/[id].chunk.js'
   },
 
   module: {

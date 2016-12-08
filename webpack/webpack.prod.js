@@ -14,8 +14,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+    filename: 'assets/[name].[hash].js',
+    chunkFilename: 'assets/[id].[hash].chunk.js'
   },
 
   module: {
@@ -39,7 +39,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: '[name].[hash].css'
+      filename: 'assets/[name].[hash].css'
     })
   ]
 };

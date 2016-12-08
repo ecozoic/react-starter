@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.0] - 2016-12-08
+### Added
+- Added maxage headers to served static assets
+- Added etags support
+
+### Changed
+- Updated several dependencies to their latest versions
+- Changed build directory structure to better facilitate caching
+
 ## [0.5.2] - 2016-12-02
 ### Fixed
 - Fixed bug preventing HMR of components
