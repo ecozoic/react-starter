@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.2] - 2016-12-13
+### Changed
+- Updated several dependencies to their latest versions
+- Updated README
+
 ## [0.6.1] - 2016-12-08
 ### Changed
 - Updated Webpack Dev Server to 2.1.0-beta.12
