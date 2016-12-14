@@ -20,7 +20,6 @@ app.use(logger());
 app.use(conditional());
 app.use(etag());
 
-
 app.use(mount('/assets', serve('dist/assets', {
   maxage: 365 * 24 * 60 * 60 * 1000
 })));

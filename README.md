@@ -62,3 +62,6 @@ This will execute static type-checking with flow.
 
 ## Roadmap
 * redux-router
+
+## Known Issues
+* Can't upgrade to Sass@4.x until sass-loader gets updated
