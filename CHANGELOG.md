@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.4] - 2016-12-21
+### Changed
+- Updated several dependencies to their latest versions
+- Fixed nightwatch tests
+
 ## [0.6.3] - 2016-12-14
 ### Changed
 - Updated several dependencies to their latest versions

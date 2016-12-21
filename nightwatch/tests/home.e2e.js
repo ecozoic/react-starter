@@ -4,7 +4,7 @@ export default {
 
     home.navigate();
 
-    home.expect.element('@helloWorldHeader').text.to.contain('Hello world');
+    home.expect.element('@header').text.to.contain('Todo List!');
 
     client.end();
   }

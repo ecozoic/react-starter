@@ -3,14 +3,8 @@ export default {
     return this.api.launchUrl;
   },
   elements: {
-    helloWorldHeader: {
+    header: {
       selector: 'h1'
-    },
-    textInput: {
-      selector: 'input[type=text]'
-    },
-    fooBarHeader: {
-      selector: 'h2'
     }
   }
 };
