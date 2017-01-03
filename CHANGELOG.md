@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.7] - 2017-01-03
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [0.6.6] - 2016-12-30
 ### Added
 - Added yarn to package.json engines declaration
