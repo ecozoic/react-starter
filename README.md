@@ -62,3 +62,5 @@ This will execute static type-checking with flow.
 
 ## Roadmap
 * redux-router
+* TDD
+* Improving styling + documentation
