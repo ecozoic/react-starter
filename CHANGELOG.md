@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.10] - 2017-01-05
+### Changed
+- Updated webpack-merge to 2.2.0
+
 ## [0.6.9] - 2017-01-05
 ### Changed
 - Updated several dependencies to their latest versions
