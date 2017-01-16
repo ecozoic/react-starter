@@ -37,6 +37,11 @@ To run Nightwatch e2e tests, ensure the app is running with either ```yarn start
 yarn e2e
 ```
 
+To develop using TDD (Jest in watch mode), ensure the app is running with ```yarn start``` and then run:
+```
+yarn tdd
+```
+
 ## Documentation
 ```
 yarn docs
@@ -62,5 +67,4 @@ This will execute static type-checking with flow.
 
 ## Roadmap
 * redux-router
-* TDD
 * Improving styling + documentation
