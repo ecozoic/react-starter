@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.7.0] - 2017-01-16
 ### Added
 - Added new tdd npm script that runs Jest in watch mode
 
