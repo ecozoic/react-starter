@@ -15,7 +15,9 @@ app.use(compress());
 
 app.use(favicon(`${__dirname}/dist/favicon.ico`));
 
-app.use(logger());
+if (process.env.NODE_ENV === 'development') {
+  app.use(logger());
+}
 
 app.use(conditional());
 app.use(etag());

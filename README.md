@@ -17,13 +17,20 @@ yarn start
 
 This will start up a webpack-dev-server with hot module replacement and redux-devtools.
 
+If you have an API exposed by your Node server, you can additionally start up a development Koa server by running:
+```
+yarn serve:dev
+```
+
+This will spin up a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server. The webpack-dev-server is configured to proxy HTTP calls to /api/* routes to the Koa server.
+
 ## Production
 ```
 yarn build
 yarn serve
 ```
 
-This will generate minified assets in the dist directory and serve them up using a simple Koa server.
+This will generate minified assets in the /dist/ directory and serve them up using a Koa HTTP server. This production-ready server supports HTTP caching, etags, and conditional GET requests.
 
 ## Tests
 ```
@@ -69,4 +76,3 @@ This will execute static type-checking with flow.
 * redux-router / Connected Router
 * Improving documentation
 * More unit test coverage
-* Configure Webpack Dev Server to proxy to Koa server for API calls

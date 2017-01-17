@@ -50,6 +50,9 @@ module.exports = {
     compress: true,
     contentBase: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    port
+    port,
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
   }
 };
