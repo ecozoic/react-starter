@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added nodemon to restart server in development
+- Added proxy configuration to Webpack-Dev-Server to forward /api/ requests to localhost:3000
+
 ## [0.7.1] - 2017-01-17
 ### Added
 - Added normalize.css

@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "src/*",
+    "docs/*",
+    "flow/*",
+    "flow-typed/*",
+    "jest/*",
+    "nightwatch/*",
+    "reports/*",
+    "webpack/*",
+    ".vscode/*",
+    "dist/*"
+  ]
+}
