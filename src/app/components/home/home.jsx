@@ -18,12 +18,14 @@ export class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        <div>
-          <img src={img} />
+        <div className={styles.todosContainer}>
+          <div className={styles.imageContainer}>
+            <img src={img} />
+          </div>
+          <h1 className={styles.todosHeader}>Todo List</h1>
+          <AddTodoContainer />
+          <TodoListContainer />
         </div>
-        <h1>Todo List!</h1>
-        <AddTodoContainer />
-        <TodoListContainer />
       </div>
     );
   }

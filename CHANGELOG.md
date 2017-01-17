@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.7.1] - 2017-01-17
+### Added
+- Added normalize.css
+- Added font-awesome
+
+### Changed
+- Updated README
+- Improved default styling
+
+### Removed
+- Removed Google material icons
+
 ## [0.7.0] - 2017-01-16
 ### Added
 - Added new tdd npm script that runs Jest in watch mode

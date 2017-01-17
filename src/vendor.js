@@ -10,3 +10,4 @@ import 'react-redux';
 //import 'react-router-redux';
 
 // other vendors here...
+import 'normalize.css';
