@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Added normalize.css
 - Added font-awesome
 
+### Changed
+- Updated README
+- Improved default styling
+
 ### Removed
 - Removed Google material icons
 

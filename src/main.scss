@@ -1,7 +1,27 @@
+$light-gray: #eee;
+$black: #111;
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  background: $light-gray;
+  color: $black;
   font-family: 'Roboto', sans-serif;
+}
+
+input {
+  &[type='text'] {
+    font-size: 14px;
+    height: 34px;
+    line-height: 20px;
+    padding: 6px 12px;
+  }
+}
+
+button {
+  cursor: pointer;
+  height: 34px;
+  line-height: 20px;
 }

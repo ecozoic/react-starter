@@ -23,7 +23,7 @@ class AddTodo extends Component {
           dispatch(addTodo(input.value));
           input.value = '';
         }}>
-          <input ref={node => {
+          <input type='text' ref={node => {
             input = node
           }} />
           <button type='submit'>

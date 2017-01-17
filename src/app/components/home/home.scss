@@ -1,13 +1,28 @@
-$red: #f00;
-$blue: #00f;
-$green: #0f0;
-
 .home {
-  h1 {
-    color: $blue;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 48px;
+
+  .todos-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  h2 {
-    color: $green;
+  .image-container {
+    align-self: center;
+    border-radius: 100%;
+    height: 217px;
+    overflow: hidden;
+    width: 217px;
+
+    img {
+      height: 217px;
+      width: 217px;
+    }
+  }
+
+  .todos-header {
+    text-align: center;
   }
 }
