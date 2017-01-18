@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Changed
 - Updated engine declarations in package.json
+- Updated several dependencies to their latest versions
 
 ## [0.8.0] - 2017-01-17
 ### Added
