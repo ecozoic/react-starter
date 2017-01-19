@@ -1,5 +1,5 @@
 {
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": ["src/server/**/*.js"],
   "coverageDirectory": "<rootDir>/coverage/server",
   "coverageReporters": ["json", "lcov"],
