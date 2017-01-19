@@ -1,6 +1,6 @@
 {
   "ignore": [
-    "src/*",
+    "src/client/*",
     "docs/*",
     "flow/*",
     "flow-typed/*",

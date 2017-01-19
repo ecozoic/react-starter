@@ -4,7 +4,7 @@
     "\\.(css|less|sass|scss|styl)$": "identity-obj-proxy"
   },
   "collectCoverage": true,
-  "collectCoverageFrom": ["src/app/**/*.{js,jsx}"],
-  "coverageDirectory": "<rootDir>/coverage",
+  "collectCoverageFrom": ["src/client/app/**/*.{js,jsx}"],
+  "coverageDirectory": "<rootDir>/coverage/client",
   "coverageReporters": ["json", "lcov"]
 }
