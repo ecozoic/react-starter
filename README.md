@@ -81,3 +81,5 @@ This will execute static type-checking with flow.
 * redux-router / Connected Router
 * Improving documentation
 * More unit test coverage
+* Snapshot testing
+* Webpack DLLs
