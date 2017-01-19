@@ -13,7 +13,7 @@ const app = koa();
 
 app.use(compress());
 
-app.use(favicon(`${__dirname}/dist/favicon.ico`));
+app.use(favicon('dist/favicon.ico'));
 
 if (process.env.NODE_ENV === 'development') {
   app.use(logger());
