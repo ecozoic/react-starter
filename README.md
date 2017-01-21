@@ -53,6 +53,7 @@ To develop using TDD (Jest in ```--watch``` mode) for either the client or serve
 yarn tdd:client
 yarn tdd:server
 ```
+Note that the TDD scripts do not generate coverage reports.
 
 ## Documentation
 ```
@@ -79,7 +80,7 @@ This will execute static type-checking with flow.
 
 ## Roadmap
 * redux-router / Connected Router
-* Improving documentation
+* Improve documentation
 * More unit test coverage
+* Improve flow typing
 * Snapshot testing
-* Webpack DLLs
