@@ -73,6 +73,7 @@
     "redux-devtools": "3.3.2",
     "redux-devtools-dock-monitor": "1.1.1",
     "redux-devtools-log-monitor": "1.2.0",
+    "redux-logger": "2.7.4",
     "rimraf": "2.5.4",
     "sass-lint": "1.10.2",
     "sass-loader": "4.1.1",

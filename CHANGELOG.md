@@ -7,8 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Jest configuration for running server unit tests
 - Added immutable.js
 - Added scripts for test driven development
+- Added redux-logger middleware for development
 
 ### Changed
+- Updated README
 - Updated engine declarations in package.json
 - Updated several dependencies to their latest versions
 - Moved front-end code into src/client directory
