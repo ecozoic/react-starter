@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Added
 - Jest configuration for running server unit tests
+- Added immutable.js
+- Added scripts for test driven development
 
 ### Changed
 - Updated engine declarations in package.json

@@ -11,3 +11,4 @@ import 'react-redux';
 
 // other vendors here...
 import 'normalize.css';
+import 'immutable';
