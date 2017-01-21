@@ -37,17 +37,23 @@ This will generate minified assets in the /dist/ directory and serve them up usi
 yarn test
 ```
 
-This will execute Jest unit tests and generate Istanbul coverage reports.
+This will execute Jest unit tests and generate Istanbul coverage reports for both the client and server. You can run the tests separately as well.
+```
+yarn test:client
+yarn test:server
+```
 
 To run Nightwatch e2e tests, ensure the app is running with either ```yarn start``` or ```yarn serve``` and then run:
 ```
 yarn e2e
 ```
 
-To develop using TDD (Jest in watch mode), ensure the app is running with ```yarn start``` and then run:
+To develop using TDD (Jest in ```--watch``` mode) for either the client or server, run:
 ```
-yarn tdd
+yarn tdd:client
+yarn tdd:server
 ```
+Note that the TDD scripts do not generate coverage reports.
 
 ## Documentation
 ```
@@ -74,5 +80,7 @@ This will execute static type-checking with flow.
 
 ## Roadmap
 * redux-router / Connected Router
-* Improving documentation
+* Improve documentation
 * More unit test coverage
+* Improve flow typing
+* Snapshot testing

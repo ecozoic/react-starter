@@ -6,7 +6,7 @@ import { TodoList } from '../components/todo-list';
 
 const mapStateToProps = (state) => {
   return {
-    todos: state.todos
+    todos: state.todos.toJS()
   };
 };
 

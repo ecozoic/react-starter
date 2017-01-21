@@ -1,14 +1,4 @@
 {
-  "ignore": [
-    "src/*",
-    "docs/*",
-    "flow/*",
-    "flow-typed/*",
-    "jest/*",
-    "nightwatch/*",
-    "reports/*",
-    "webpack/*",
-    ".vscode/*",
-    "dist/*"
-  ]
+  "ignore": ["*.spec.js"],
+  "watch": ["src/server"]
 }

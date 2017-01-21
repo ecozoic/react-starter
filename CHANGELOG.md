@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.0.0] - 2017-01-21
+### Added
+- Jest configuration for running server unit tests
+- Added immutable.js
+- Added scripts for test driven development
+- Added redux-logger middleware for development
+
+### Changed
+- Updated README
+- Updated engine declarations in package.json
+- Updated several dependencies to their latest versions
+- Moved front-end code into src/client directory
+- Moved back-end code into src/server directory
+
 ## [0.8.0] - 2017-01-17
 ### Added
 - Added nodemon to restart server in development

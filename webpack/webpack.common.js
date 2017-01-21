@@ -33,13 +33,13 @@ module.exports = {
 
   plugins: [
     new SassLintPlugin({
-      glob: 'src/**/*.s?(a|c)ss'
+      glob: 'src/client/**/*.s?(a|c)ss'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/client/index.html'
     }),
     new webpack.DefinePlugin({
       'process.env': {

@@ -5,13 +5,13 @@ const port = 8080;
 
 module.exports = {
   entry: {
-    polyfills: './src/polyfills',
-    vendor: './src/vendor',
+    polyfills: './src/client/polyfills',
+    vendor: './src/client/vendor',
     app: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://localhost:${port}`,
       'webpack/hot/only-dev-server',
-      './src/main.hmr'
+      './src/client/main.hmr'
     ]
   },
 
