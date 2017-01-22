@@ -9,6 +9,7 @@ import 'redux';
 import 'react-redux';
 //import 'react-router-redux';
 
-// other vendors here...
-import 'normalize.css';
 import 'immutable';
+import 'redux-immutable';
+
+import 'normalize.css';

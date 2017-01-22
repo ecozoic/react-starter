@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -102,7 +102,8 @@
     "react-redux": "5.0.2",
     "react-router": "4.0.0-alpha.6",
     "react-router-redux": "4.0.7",
-    "redux": "3.6.0"
+    "redux": "3.6.0",
+    "redux-immutable": "3.0.10"
   },
   "engines": {
     "node": "6.9.3",

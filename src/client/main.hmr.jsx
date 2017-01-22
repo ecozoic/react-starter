@@ -18,24 +18,16 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
+const initialState = Immutable.Map();
 const store = createStore(
   rootReducer,
+  initialState,
   compose(
-    applyMiddleware(createLogger({
-     stateTransformer: (state) => {
-        let newState = {};
-
-        for (var i of Object.keys(state)) {
-          if (Immutable.Iterable.isIterable(state[i])) {
-            newState[i] = state[i].toJS();
-          } else {
-            newState[i] = state[i];
-          }
-        }
-
-        return newState;
-      }
-    })),
+    applyMiddleware(
+      createLogger({
+        stateTransformer: state => state.toJS()
+      })
+    ),
     DevTools.instrument()
   )
 );
