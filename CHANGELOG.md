@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.1.1] - 2017-01-23
+### Changed
+- Upgraded enzyme to 2.7.1
+
 ## [1.1.0] - 2017-01-22
 ### Added
 - Added redux-immutable so entire state object can be immutable when using combineReducers
