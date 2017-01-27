@@ -31,7 +31,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
