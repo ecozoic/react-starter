@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -54,7 +54,7 @@
     "eslint": "3.14.1",
     "eslint-loader": "1.6.1",
     "eslint-plugin-react": "6.9.0",
-    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "extract-text-webpack-plugin": "2.0.0-rc.0",
     "file-loader": "0.9.0",
     "flow-bin": "0.38.0",
     "flow-typed": "2.0.0",
@@ -80,8 +80,8 @@
     "sasslint-webpack-plugin": "1.0.4",
     "selenium-standalone": "5.11.2",
     "style-loader": "0.13.1",
-    "webpack": "2.1.0-beta.28",
-    "webpack-dev-server": "2.1.0-beta.12",
+    "webpack": "2.2.0",
+    "webpack-dev-server": "2.2.0",
     "webpack-merge": "2.6.0"
   },
   "dependencies": {
