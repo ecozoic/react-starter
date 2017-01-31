@@ -80,8 +80,8 @@
     "sasslint-webpack-plugin": "1.0.4",
     "selenium-standalone": "6.0.0",
     "style-loader": "0.13.1",
-    "webpack": "2.2.0",
-    "webpack-dev-server": "2.2.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.2.1",
     "webpack-merge": "2.6.1"
   },
   "dependencies": {
@@ -103,7 +103,7 @@
     "react-router": "4.0.0-alpha.6",
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
-    "redux-immutable": "3.0.10"
+    "redux-immutable": "3.0.11"
   },
   "engines": {
     "node": "6.9.3",
