@@ -105,7 +105,9 @@
     "react-router-dom": "4.0.0-beta.4",
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
-    "redux-immutable": "3.0.11"
+    "redux-immutable": "3.0.11",
+    "redux-thunk": "2.2.0",
+    "whatwg-fetch": "2.0.2"
   },
   "engines": {
     "node": "6.9.5",
