@@ -1,14 +1,16 @@
 /* @flow */
 import React from 'react';
-import { Match, Miss } from 'react-router';
+import { Route, Switch } from 'react-router-dom';
 
 import { Home } from '../components/home';
 import { PageNotFound } from '../components/page-not-found';
 
 const routes = (
   <div>
-    <Match exactly pattern='/' component={Home} />
-    <Miss component={PageNotFound} />
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route component={PageNotFound} />
+    </Switch>
   </div>
 );
 

@@ -2,9 +2,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.2.0] - 2017-02-04
+### Added
+- Added storybook support
+- Added redux-thunk
+- Added API route for todos
+
+### Changed
+- Updated several dependencies to their latest versions
+- Updated Node version in .nvmrc and package.json engine declaration
+- Updated README
+
 ## [1.1.3] - 2017-01-31
 ### Changed
 - Updated several dependencies to their latest versions
+- Refactored routes for react-router@4-beta
 
 ## [1.1.2] - 2017-01-27
 ### Changed

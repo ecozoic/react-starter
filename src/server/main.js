@@ -10,6 +10,7 @@ const send = require('koa-send');
 const serve = require('koa-static');
 
 const app = koa();
+const api = require('./api');
 
 app.use(compress());
 
@@ -25,6 +26,8 @@ app.use(etag());
 app.use(mount('/assets', serve('dist/assets', {
   maxage: 365 * 24 * 60 * 60 * 1000
 })));
+
+app.use(mount('/api', api));
 
 app.use(function*() {
   yield send(this, 'dist/index.html', {

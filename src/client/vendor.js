@@ -2,7 +2,7 @@
 // React
 import 'react';
 import 'react-dom';
-import 'react-router';
+import 'react-router-dom';
 
 // Redux
 import 'redux';
@@ -11,5 +11,7 @@ import 'react-redux';
 
 import 'immutable';
 import 'redux-immutable';
+
+import 'redux-thunk';
 
 import 'normalize.css';

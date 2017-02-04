@@ -2,11 +2,15 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 
-import { addTodo } from '../actions';
+import { addTodo, fetchTodos } from '../actions';
 
 class AddTodo extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    this.props.dispatch(fetchTodos());
   }
 
   render() {

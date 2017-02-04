@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import { routes } from './routes';
 
