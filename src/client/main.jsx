@@ -1,8 +1,9 @@
 /* @flow */
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import * as Immutable from 'immutable';
 
 import { App } from './app';
@@ -15,7 +16,11 @@ import './main.scss';
 import './favicon.ico';
 
 const initialState = Immutable.Map();
-const store = createStore(rootReducer, initialState);
+const store = createStore(
+  rootReducer,
+  initialState,
+  applyMiddleware(thunk)
+);
 
 render(
   <Provider store={store}>

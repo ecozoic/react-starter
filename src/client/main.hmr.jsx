@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import * as Immutable from 'immutable';
 
 import { AppContainer } from 'react-hot-loader';
@@ -26,7 +27,8 @@ const store = createStore(
     applyMiddleware(
       createLogger({
         stateTransformer: state => state.toJS()
-      })
+      }),
+      thunk
     ),
     DevTools.instrument()
   )
