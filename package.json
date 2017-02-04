@@ -21,6 +21,7 @@
     "flow-typed": "flow-typed",
     "predocs": "npm run clean:docs",
     "docs": "jsdoc -c jsdoc.conf.json",
+    "storybook": "cross-env NODE_ENV=test start-storybook -p 9001 -c storybook",
     "clean:build": "rimraf dist",
     "clean:docs": "rimraf docs",
     "clean:test": "rimraf coverage",
@@ -39,6 +40,7 @@
   },
   "homepage": "https://github.com/ecozoic/react-starter#readme",
   "devDependencies": {
+    "@kadira/storybook": "2.35.3",
     "babel-core": "6.22.1",
     "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
