@@ -25,10 +25,10 @@ const store = createStore(
   initialState,
   compose(
     applyMiddleware(
+      thunk,
       createLogger({
         stateTransformer: state => state.toJS()
-      }),
-      thunk
+      })
     ),
     DevTools.instrument()
   )
