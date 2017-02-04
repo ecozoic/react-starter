@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Added
 - Added storybook support
+- Added redux-thunk
+- Added API route for todos
 
 ### Changed
 - Updated several dependencies to their latest versions

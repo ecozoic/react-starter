@@ -87,7 +87,7 @@ This will start a Storybook server to play around with stories for new component
 * Storybook
 
 ## Roadmap
-* redux-router / Connected Router
+* react-router-redux / Connected Router
 * Improve documentation
 * More unit test coverage
 * Improve flow typing
