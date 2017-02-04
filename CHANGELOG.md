@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [1.1.3] - 2017-01-31
 ### Changed
 - Updated several dependencies to their latest versions
+- Refactored routes for react-router@4-beta
 
 ## [1.1.2] - 2017-01-27
 ### Changed
