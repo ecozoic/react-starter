@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added storybook support
+
+### Changed
+- Updated several dependencies to their latest versions
+- Updated Node version in .nvmrc and package.json engine declaration
+- Updated README
+
 ## [1.1.3] - 2017-01-31
 ### Changed
 - Updated several dependencies to their latest versions
