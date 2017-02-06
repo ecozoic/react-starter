@@ -76,5 +76,17 @@ describe('Todo', () => {
 
       expect(mockFn).toHaveBeenCalledTimes(1);
     });
+
+    it('has todo class', () => {
+      const todo = shallow(
+        <Todo
+          onClick={function() { }}
+          text={'Todo'}
+          completed={false}
+        />
+      );
+
+      expect(todo.find('li').hasClass('todo')).toBe(true);
+    });
   });
 });
