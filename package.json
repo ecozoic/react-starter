@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -53,6 +53,7 @@
     "cross-env": "3.1.4",
     "css-loader": "0.26.1",
     "enzyme": "2.7.1",
+    "enzyme-to-json": "1.4.5",
     "eslint": "3.15.0",
     "eslint-loader": "1.6.1",
     "eslint-plugin-react": "6.9.0",

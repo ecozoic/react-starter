@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.3.0] - 2017-02-06
+### Added
+- Added snapshot testing support
+- Added unit tests for todo and todo list components
+
 ## [1.2.0] - 2017-02-04
 ### Added
 - Added storybook support
