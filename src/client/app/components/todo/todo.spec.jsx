@@ -6,13 +6,15 @@ import { Todo } from './todo';
 
 describe('Todo', () => {
   it('renders without crashing', () => {
-    mount(
+    const todo = mount(
       <Todo
         onClick={function() { }}
         text={'Todo'}
         completed={false}
       />
     );
+
+    expect(todo).toMatchSnapshot();
   });
 
   describe('render', () => {

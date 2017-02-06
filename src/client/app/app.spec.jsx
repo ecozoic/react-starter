@@ -6,6 +6,7 @@ import { App } from './app';
 
 describe('App', () => {
   it('renders without crashing', () => {
-    mount(<App />);
+    const app = mount(<App />);
+    expect(app).toMatchSnapshot();
   });
 });

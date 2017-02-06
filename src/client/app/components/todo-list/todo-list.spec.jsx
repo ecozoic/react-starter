@@ -6,12 +6,14 @@ import { TodoList } from './todo-list';
 
 describe('TodoList', () => {
   it('renders without crashing', () => {
-    mount(
+    const todoList = mount(
       <TodoList
         todos={[]}
         onTodoClick={function() { }}
       />
     );
+
+    expect(todoList).toMatchSnapshot();
   });
 
   describe('render', () => {

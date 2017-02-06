@@ -1,0 +1,85 @@
+exports[`App renders without crashing 1`] = `
+<App>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": undefined,
+            "pathname": "blank",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }>
+      <div>
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "url": "blank",
+              }
+            }>
+            <PageNotFound
+              action="POP"
+              block={[Function]}
+              component={[Function]}
+              computedMatch={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "url": "blank",
+                }
+              }
+              createHref={[Function]}
+              go={[Function]}
+              goBack={[Function]}
+              goForward={[Function]}
+              length={1}
+              listen={[Function]}
+              location={
+                Object {
+                  "hash": "",
+                  "key": undefined,
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "url": "blank",
+                }
+              }
+              push={[Function]}
+              replace={[Function]}>
+              <div
+                className="pageNotFound">
+                <h1>
+                  404
+                </h1>
+              </div>
+            </PageNotFound>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;
