@@ -81,7 +81,7 @@ describe('TodoList', () => {
       expect(+todoList.find('Todo').key()).toBe(1);
     });
 
-    it('passes onTodoClick to Todo', () => {
+    it('calls onTodoClick with id of clicked todo', () => {
       const mockFn = jest.fn();
 
       const todoList = shallow(
@@ -96,6 +96,7 @@ describe('TodoList', () => {
       todoList.find('Todo').simulate('click');
 
       expect(mockFn).toHaveBeenCalledTimes(1);
+      expect(mockFn.mock.calls[0][0]).toBe(1);
     });
   });
 });
