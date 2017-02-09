@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [1.4.0] - 2017-02-09
 ### Added
 - Added connected-react-router support
 - Added simple About container component to test routing
@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated several dependencies to their latest versions
 - Updated reducer HMR to account for connected-react-router
+- Updated README
 
 ## [1.3.0] - 2017-02-06
 ### Added
