@@ -5,6 +5,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import * as Immutable from 'immutable';
+import { createBrowserHistory } from 'history';
+import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 
 import { AppContainer } from 'react-hot-loader';
 import { DevTools } from './app/containers/dev-tools';
@@ -19,12 +21,15 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
+const history = createBrowserHistory();
 const initialState = Immutable.Map();
+
 const store = createStore(
-  rootReducer,
+  connectRouter(history)(rootReducer),
   initialState,
   compose(
     applyMiddleware(
+      routerMiddleware(history),
       thunk,
       createLogger({
         stateTransformer: state => state.toJS()
@@ -39,7 +44,7 @@ const renderApp = () => {
     <AppContainer>
       <Provider store={store}>
         <div>
-          <App />
+          <App history={history} />
           <DevTools />
         </div>
       </Provider>
@@ -54,6 +59,6 @@ if (module.hot) {
   module.hot.accept('./app', renderApp);
 
   module.hot.accept('./app/reducers', () => {
-    store.replaceReducer(rootReducer);
+    store.replaceReducer(connectRouter(history)(rootReducer));
   });
 }
