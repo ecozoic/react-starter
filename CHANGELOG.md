@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [1.3.0] - 2017-02-06
 ### Added
 - Added snapshot testing support
