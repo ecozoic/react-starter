@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -79,7 +79,7 @@
     "redux-logger": "2.8.1",
     "rimraf": "2.5.4",
     "sass-lint": "1.10.2",
-    "sass-loader": "4.1.1",
+    "sass-loader": "5.0.1",
     "sasslint-webpack-plugin": "1.0.4",
     "selenium-standalone": "6.0.1",
     "style-loader": "0.13.1",
@@ -88,7 +88,9 @@
     "webpack-merge": "2.6.1"
   },
   "dependencies": {
+    "connected-react-router": "4.0.0-beta.3",
     "core-js": "2.4.1",
+    "history": "4.5.1",
     "immutable": "3.8.1",
     "koa": "1.2.4",
     "koa-compress": "1.0.9",
@@ -104,8 +106,7 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-redux": "5.0.2",
-    "react-router-dom": "4.0.0-beta.4",
-    "react-router-redux": "4.0.7",
+    "react-router-dom": "4.0.0-beta.5",
     "redux": "3.6.0",
     "redux-immutable": "3.0.11",
     "redux-thunk": "2.2.0",

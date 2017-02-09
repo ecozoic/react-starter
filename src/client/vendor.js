@@ -7,11 +7,10 @@ import 'react-router-dom';
 // Redux
 import 'redux';
 import 'react-redux';
-//import 'react-router-redux';
-
+import 'history';
+import 'connected-react-router';
 import 'immutable';
 import 'redux-immutable';
-
 import 'redux-thunk';
 
 import 'normalize.css';

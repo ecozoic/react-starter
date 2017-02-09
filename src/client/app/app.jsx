@@ -1,6 +1,6 @@
 /* @flow */
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React, { Component, PropTypes } from 'react';
+import { ConnectedRouter } from 'connected-react-router/immutable';
 
 import { routes } from './routes';
 
@@ -9,14 +9,20 @@ import { routes } from './routes';
  * @extends React.Component
  */
 export class App extends Component {
+  static propTypes = {
+    history: PropTypes.object.isRequired
+  }
+
   /**
    * Render method.
    */
   render() {
+    const { history } = this.props;
+
     return (
-      <BrowserRouter>
+      <ConnectedRouter history={history}>
         { routes }
-      </BrowserRouter>
+      </ConnectedRouter>
     );
   }
 }

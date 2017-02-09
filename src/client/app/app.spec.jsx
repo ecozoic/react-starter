@@ -1,12 +1,12 @@
 /* @flow */
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { App } from './app';
 
 describe('App', () => {
   it('renders without crashing', () => {
-    const app = mount(<App />);
+    const app = shallow(<App history={{}} />);
     expect(app).toMatchSnapshot();
   });
 });
