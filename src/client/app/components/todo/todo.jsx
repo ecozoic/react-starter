@@ -21,7 +21,7 @@ export class Todo extends Component {
           textDecoration: completed ? 'line-through' : 'none'
         }}
       >
-        {text}!
+        {text}
       </li>
     );
   }
