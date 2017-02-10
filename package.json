@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
