@@ -4,6 +4,7 @@ import 'react';
 import 'react-dom';
 import 'react-router-dom';
 import 'react-intl';
+import 'react-tap-event-plugin';
 
 import 'history';
 import 'immutable';
@@ -17,4 +18,7 @@ import 'redux-thunk';
 import 'redux-form/immutable';
 import 'react-intl-redux';
 
-import 'normalize.css';
+// material ui
+import 'material-ui/styles/MuiThemeProvider';
+import 'material-ui/RaisedButton';
+import 'material-ui/TextField';
