@@ -12,6 +12,7 @@ import 'immutable';
 // Redux
 import 'redux';
 import 'react-redux';
+import 'connected-react-router';
 import 'connected-react-router/immutable';
 import 'redux-immutable';
 import 'redux-thunk';

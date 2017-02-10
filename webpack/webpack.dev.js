@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const Visualizer = require('webpack-visualizer-plugin');
 
 const port = 8080;
 
@@ -40,7 +41,10 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new Visualizer({
+      filename: '../webpack/stats/stats.dev.html'
+    })
   ],
 
   devServer: {

@@ -40,3 +40,6 @@ docs
 
 # Nightwatch artifacts
 reports
+
+# webpack visualizer stats
+webpack/stats
