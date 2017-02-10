@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [1.6.0] - 2017-02-10
 ### Added
 - Added react-tap-event-plugin
 - Added material-ui
@@ -12,7 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Swapped out babel-preset-stage-2 for babel-preset-stage-1
 - Swapped out core-js for babel-polyfill
 - Swapped out font-awesome for material icons
-- Updated .gitignore to avoid versioning generated webpack stats files
+- Updated .gitignore to avoid versioning generated webpack stats.html files
+- Updated README
 
 ## [1.5.0] - 2017-02-10
 ### Added
