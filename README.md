@@ -77,7 +77,7 @@ yarn storybook
 This will start a Storybook server to play around with stories for new components
 
 ## Tools & Features
-* react, redux, react-redux, react-router@4-beta, connected-react-router, immutable
+* react, redux, react-redux, react-router@4-beta, connected-react-router, immutable, redux-form, react-intl
 * Build powered by Webpack 2 and Babel 6
 * Optimized production build with UglifyJS + tree-shaking
 * Linting with eslint and sass-lint, static type-checking with Flow
@@ -88,7 +88,6 @@ This will start a Storybook server to play around with stories for new component
 * Storybook sandbox
 
 ## Roadmap
-* i18n
 * Unit test reducers and action creators
 * Improve documentation
 * Improve flow typing
