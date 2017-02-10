@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component, PropTypes } from 'react';
 import { ConnectedRouter } from 'connected-react-router/immutable';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import { routes } from './routes';
 
@@ -20,9 +21,11 @@ export class App extends Component {
     const { history } = this.props;
 
     return (
-      <ConnectedRouter history={history}>
-        { routes }
-      </ConnectedRouter>
+      <MuiThemeProvider>
+        <ConnectedRouter history={history}>
+          { routes }
+        </ConnectedRouter>
+      </MuiThemeProvider>
     );
   }
 }

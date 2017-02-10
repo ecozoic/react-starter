@@ -78,7 +78,8 @@ This will start a Storybook server to play around with stories for new component
 
 ## Tools & Features
 * react, redux, react-redux, react-router@4-beta, connected-react-router, immutable, redux-form, react-intl
-* Build powered by Webpack 2 and Babel 6
+* material ui
+* Build powered by Webpack 2 (+ visualizer plugin) and Babel 6
 * Optimized production build with UglifyJS + tree-shaking
 * Linting with eslint and sass-lint, static type-checking with Flow
 * Unit tests with Jest (+ snapshots), Enzyme, and Istanbul coverage reports
@@ -90,4 +91,5 @@ This will start a Storybook server to play around with stories for new component
 ## Roadmap
 * Unit test reducers and action creators
 * Improve documentation
+* More material ui components / restyle
 * Improve flow typing

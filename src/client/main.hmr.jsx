@@ -9,6 +9,10 @@ import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 import { IntlProvider } from 'react-intl-redux';
 
+// support touch events
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 import { AppContainer } from 'react-hot-loader';
 import { DevTools } from './app/containers/dev-tools';
 import createLogger from 'redux-logger';

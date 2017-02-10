@@ -1,3 +1,3 @@
 /* @flow */
-import 'core-js/es6';
+import 'babel-polyfill';
 import 'whatwg-fetch';

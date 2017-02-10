@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   entry: {
@@ -40,6 +41,9 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: 'assets/[name].[hash].css'
+    }),
+    new Visualizer({
+      filename: '../webpack/stats/stats.prod.html'
     })
   ]
 };
