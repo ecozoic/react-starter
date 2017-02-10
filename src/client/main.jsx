@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 import * as Immutable from 'immutable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
+import { IntlProvider } from 'react-intl-redux';
 
 import { App } from './app';
 import { rootReducer } from './app/reducers';
@@ -18,7 +19,13 @@ import './main.scss';
 import './favicon.ico';
 
 const history = createBrowserHistory();
-const initialState = Immutable.Map();
+const initialState = Immutable.fromJS({
+  intl: {
+    locale: 'en',
+    messages: {}
+  }
+});
+const intlSelector = state => state.get('intl').toJS();
 
 const store = createStore(
   connectRouter(history)(rootReducer),
@@ -31,7 +38,9 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <App history={history} />
+    <IntlProvider intlSelector={intlSelector}>
+      <App history={history} />
+    </IntlProvider>
   </Provider>,
   document.getElementById('app')
 );
