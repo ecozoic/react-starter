@@ -2,11 +2,11 @@
 import { connect } from 'react-redux';
 
 import { toggleTodo } from '../actions';
-import { TodoList } from '../components/todo-list';
+import TodoList from '../components/TodoList/TodoList';
 
 const mapStateToProps = (state) => {
   return {
-    todos: state.get('todos').toJS()
+    todos: state.get('todos').toJS(),
   };
 };
 
@@ -14,11 +14,13 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onTodoClick: (id) => {
       dispatch(toggleTodo(id));
-    }
+    },
   };
 };
 
-export const TodoListContainer =  connect(
+const TodoListContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TodoList);
+
+export default TodoListContainer;

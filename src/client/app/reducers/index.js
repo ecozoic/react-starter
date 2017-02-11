@@ -8,8 +8,10 @@ import { todos } from './todos';
 /**
  * Root reducer
  */
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   todos,
   form,
-  intl: intlReducer
+  intl: intlReducer,
 });
+
+export default rootReducer;

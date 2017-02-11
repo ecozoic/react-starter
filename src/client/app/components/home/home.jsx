@@ -1,32 +1,28 @@
 /* @flow */
-import React, { Component } from 'react';
+import React from 'react';
 
-import styles from './home.scss';
+import styles from './Home.scss';
 import img from '../../../react.png';
 
-import { AddTodoContainer } from '../../containers/add-todo';
-import { TodoListContainer } from '../../containers/todo-list';
+import AddTodoContainer from '../../containers/AddTodo';
+import TodoListContainer from '../../containers/TodoList';
 
 /**
  * Home page component.
- * @extends React.Component
  */
-export class Home extends Component {
-  /**
-   * Render method.
-   */
-  render() {
-    return (
-      <div className={styles.home}>
-        <div className={styles.todosContainer}>
-          <div className={styles.imageContainer}>
-            <img src={img} />
-          </div>
-          <h1 className={styles.todosHeader}>Todo List</h1>
-          <AddTodoContainer />
-          <TodoListContainer />
+function Home() {
+  return (
+    <div className={styles.home}>
+      <div className={styles.todosContainer}>
+        <div className={styles.imageContainer}>
+          <img src={img} alt="logo" />
         </div>
+        <h1 className={styles.todosHeader}>Todo List</h1>
+        <AddTodoContainer />
+        <TodoListContainer />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Home;
