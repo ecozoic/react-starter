@@ -2,7 +2,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 
-import { TodoList } from './todo-list';
+import TodoList from './TodoList';
 
 describe('TodoList', () => {
   it('renders without crashing', () => {

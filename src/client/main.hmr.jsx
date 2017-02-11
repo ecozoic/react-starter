@@ -8,17 +8,14 @@ import * as Immutable from 'immutable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 import { IntlProvider } from 'react-intl-redux';
-
-// support touch events
 import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
 import { AppContainer } from 'react-hot-loader';
-import { DevTools } from './app/containers/dev-tools';
 import createLogger from 'redux-logger';
 
-import { App } from './app';
-import { rootReducer } from './app/reducers';
+import App from './app/App';
+import rootReducer from './app/reducers';
+import DevTools from './app/containers/DevTools';
 
 // global styles
 import './main.scss';
@@ -26,12 +23,14 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
+injectTapEventPlugin();
+
 const history = createBrowserHistory();
 const initialState = Immutable.fromJS({
   intl: {
     locale: 'en',
-    messages: {}
-  }
+    messages: {},
+  },
 });
 const intlSelector = state => state.get('intl').toJS();
 
@@ -43,11 +42,11 @@ const store = createStore(
       routerMiddleware(history),
       thunk,
       createLogger({
-        stateTransformer: state => state.toJS()
-      })
+        stateTransformer: state => state.toJS(),
+      }),
     ),
-    DevTools.instrument()
-  )
+    DevTools.instrument(),
+  ),
 );
 
 const renderApp = () => {
@@ -62,14 +61,14 @@ const renderApp = () => {
         </IntlProvider>
       </Provider>
     </AppContainer>,
-    document.getElementById('app')
+    document.getElementById('app'),
   );
 };
 
 renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app', renderApp);
+  module.hot.accept('./app/App', renderApp);
 
   module.hot.accept('./app/reducers', () => {
     store.replaceReducer(connectRouter(history)(rootReducer));

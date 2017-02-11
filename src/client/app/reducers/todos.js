@@ -9,7 +9,7 @@ export const todo = (state = Immutable.Map(), action) => {
       return Immutable.fromJS({
         id: action.id,
         text: action.text,
-        completed: false
+        completed: false,
       });
     case t.TOGGLE_TODO:
       if (state.get('id') !== action.id) {
@@ -28,7 +28,7 @@ export const todos = (state = Immutable.List(), action) => {
     case t.ADD_TODO:
       return state.push(todo(undefined, action));
     case t.TOGGLE_TODO:
-      return state.map(t => todo(t, action));
+      return state.map(td => todo(td, action));
     default:
       return state;
   }

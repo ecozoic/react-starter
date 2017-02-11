@@ -81,7 +81,7 @@ This will start a Storybook server to play around with stories for new component
 * material ui
 * Build powered by Webpack 2 (+ visualizer plugin) and Babel 6
 * Optimized production build with UglifyJS + tree-shaking
-* Linting with eslint and sass-lint, static type-checking with Flow
+* Linting with eslint (+ airbnb) and sass-lint, static type-checking with Flow
 * Unit tests with Jest (+ snapshots), Enzyme, and Istanbul coverage reports
 * E2E testing with Nightwatch
 * SASS + cssnext for CSS preprocessing

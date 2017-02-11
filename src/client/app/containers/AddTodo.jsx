@@ -8,7 +8,7 @@ import { addTodo, fetchTodos } from '../actions';
 
 class AddTodo extends Component {
   static propTypes = {
-    dispatch: PropTypes.func.isRequired
+    dispatch: PropTypes.func.isRequired,
   }
 
   constructor(props) {
@@ -26,20 +26,24 @@ class AddTodo extends Component {
 
     return (
       <div>
-        <form onSubmit={e => {
-          e.preventDefault();
-          if (!todo || !todo.trim()) {
-            return;
-          }
-          dispatch(addTodo(todo));
-          this.setState({ todo: '' });
-        }}>
-          <TextField type="text" value={todo} onChange={e => this.setState({ todo: e.target.value }) } />
-          <RaisedButton label="Add Todo" primary={true} type="submit" />
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (!todo || !todo.trim()) {
+              return;
+            }
+            dispatch(addTodo(todo));
+            this.setState({ todo: '' });
+          }}
+        >
+          <TextField type="text" value={todo} onChange={e => this.setState({ todo: e.target.value })} />
+          <RaisedButton label="Add Todo" primary type="submit" />
         </form>
       </div>
     );
   }
 }
 
-export const AddTodoContainer = connect()(AddTodo);
+const AddTodoContainer = connect()(AddTodo);
+
+export default AddTodoContainer;

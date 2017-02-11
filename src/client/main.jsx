@@ -9,10 +9,9 @@ import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 import { IntlProvider } from 'react-intl-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
-import { App } from './app';
-import { rootReducer } from './app/reducers';
+import App from './app/App';
+import rootReducer from './app/reducers';
 
 // global styles
 import './main.scss';
@@ -20,12 +19,14 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
+injectTapEventPlugin();
+
 const history = createBrowserHistory();
 const initialState = Immutable.fromJS({
   intl: {
     locale: 'en',
-    messages: {}
-  }
+    messages: {},
+  },
 });
 const intlSelector = state => state.get('intl').toJS();
 
@@ -34,8 +35,8 @@ const store = createStore(
   initialState,
   applyMiddleware(
     routerMiddleware(history),
-    thunk
-  )
+    thunk,
+  ),
 );
 
 render(
@@ -44,5 +45,5 @@ render(
       <App history={history} />
     </IntlProvider>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
