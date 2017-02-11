@@ -5,6 +5,7 @@ let nextTodoId = 0;
 
 export const addTodo = text => ({
   type: t.ADD_TODO,
+  // eslint-disable-next-line no-plusplus
   id: nextTodoId++,
   text,
 });
@@ -23,15 +24,13 @@ export const fetchedTodos = todos => ({
   todos,
 });
 
-export const fetchTodos = () => {
-  return (dispatch) => {
-    dispatch(fetchingTodos());
+export const fetchTodos = () => (dispatch) => {
+  dispatch(fetchingTodos());
 
-    window.fetch('/api/todos')
-      .then(response => response.json())
-      .then((todos) => {
-        dispatch(fetchedTodos(todos));
-        todos.forEach(todo => dispatch(addTodo(todo)));
-      });
-  };
+  window.fetch('/api/todos')
+    .then(response => response.json())
+    .then((todos) => {
+      dispatch(fetchedTodos(todos));
+      todos.forEach(todo => dispatch(addTodo(todo)));
+    });
 };

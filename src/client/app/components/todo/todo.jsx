@@ -5,6 +5,7 @@ import styles from './Todo.scss';
 
 function Todo({ onClick, completed, text }) {
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <li
       className={styles.todo}
       onClick={onClick}

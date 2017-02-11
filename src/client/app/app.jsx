@@ -19,6 +19,7 @@ function App({ history }) {
 }
 
 App.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   history: PropTypes.object.isRequired,
 };
 
