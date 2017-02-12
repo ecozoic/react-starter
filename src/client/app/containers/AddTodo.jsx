@@ -36,7 +36,7 @@ class AddTodo extends Component {
             this.setState({ todo: '' });
           }}
         >
-          <TextField type="text" value={todo} onChange={e => this.setState({ todo: e.target.value })} />
+          <TextField name="todo" type="text" value={todo} onChange={e => this.setState({ todo: e.target.value })} />
           <RaisedButton label="Add Todo" primary type="submit" />
         </form>
       </div>
