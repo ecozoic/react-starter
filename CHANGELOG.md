@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.7.2] - 2017-02-14
+### Changed
+- Updated several depedencies to their latest versions
+
 ## [1.7.1] - 2017-02-12
 ### Changed
 - Updated several dependencies to their latest versions
