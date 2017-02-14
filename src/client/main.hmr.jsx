@@ -8,6 +8,7 @@ import * as Immutable from 'immutable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 import { IntlProvider } from 'react-intl-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { AppContainer } from 'react-hot-loader';
@@ -54,10 +55,12 @@ const renderApp = () => {
     <AppContainer>
       <Provider store={store}>
         <IntlProvider intlSelector={intlSelector}>
-          <div>
-            <App history={history} />
-            <DevTools />
-          </div>
+          <MuiThemeProvider>
+            <div>
+              <App history={history} />
+              <DevTools />
+            </div>
+          </MuiThemeProvider>
         </IntlProvider>
       </Provider>
     </AppContainer>,
