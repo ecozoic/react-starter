@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added concurrently to simplify running multiple commands
+
+### Changed
+- Updated README
+- Updated babel-loader
+
+### Fixed
+- Fixed nightwatch configuration for new selenium-version
+
 ## [1.7.3] - 2017-02-14
 ### Changed
 - Moved MuiThemeProvider to the main.jsx entry point files
