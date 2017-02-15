@@ -15,14 +15,8 @@ yarn
 yarn start
 ```
 
-This will start up a webpack-dev-server with hot module replacement and redux-devtools.
-
-If you have an API exposed by your Node server, you can additionally start up a development Koa server by running:
-```
-yarn serve:dev
-```
-
-This will spin up a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server. The webpack-dev-server is configured to proxy HTTP calls to /api/* routes to the Koa server.
+This will start up a webpack-dev-server with hot module replacement and redux-devtools at http://localhost:8080 and a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server at http://localhost:3000.
+The webpack-dev-server is configured to proxy HTTP calls to /api/* routes to the Koa server.
 
 ## Production
 ```
@@ -30,30 +24,27 @@ yarn build
 yarn serve
 ```
 
-This will generate minified assets in the /dist/ directory and serve them up using a Koa HTTP server. This production-ready server supports HTTP caching, etags, and conditional GET requests.
+This will generate minified assets in the /dist/ directory and serve them up using a Koa HTTP server at http://localhost:8080.
+This production-ready server supports HTTP caching, etags, and conditional GET requests.
+A visualization of the webpack build will be produced in the /webpack/stats directory.
 
 ## Tests
 ```
 yarn test
 ```
 
-This will execute Jest unit tests and generate Istanbul coverage reports for both the client and server. You can run the tests separately as well.
-```
-yarn test:client
-yarn test:server
-```
+This will execute Jest unit tests and generate Istanbul coverage reports for both the client and server.
 
 To run Nightwatch e2e tests, ensure the app is running with either ```yarn start``` or ```yarn serve``` and then run:
 ```
 yarn e2e
 ```
 
-To develop using TDD (Jest in ```--watch``` mode) for either the client or server, run:
+To develop using TDD (Jest in ```--watch``` mode), run:
 ```
-yarn tdd:client
-yarn tdd:server
+yarn tdd
 ```
-Note that the TDD scripts do not generate coverage reports.
+This command will start the webpack-dev-server, Koa server and Jest. Note that the TDD scripts do not generate coverage reports.
 
 ## Documentation
 ```

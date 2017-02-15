@@ -4,7 +4,7 @@ export default {
 
     home.navigate();
 
-    home.expect.element('@header').text.to.contain('Todo List!');
+    home.expect.element('@header').text.to.contain('Todo List');
 
     client.end();
   }
