@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated README
 - Updated babel-loader
+- Updated yarn engine declaration in package.json to 0.20.3
 
 ### Fixed
 - Fixed nightwatch configuration for new selenium-version
