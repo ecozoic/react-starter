@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"npm run serve:dev\" \"npm run start:dev\"",
