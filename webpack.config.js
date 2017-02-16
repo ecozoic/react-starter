@@ -1,3 +1,6 @@
+// load environment configuration
+require('dotenv').config();
+
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack/webpack.common');
 

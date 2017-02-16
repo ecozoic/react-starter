@@ -15,7 +15,7 @@ yarn
 yarn start
 ```
 
-This will start up a webpack-dev-server with hot module replacement and redux-devtools at http://localhost:8080 and a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server at http://localhost:3000.
+This will start up a webpack-dev-server with hot module replacement and redux-devtools at http://localhost:8080 and a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server at http://localhost:3000. 
 The webpack-dev-server is configured to proxy HTTP calls to /api/* routes to the Koa server.
 
 ## Production
@@ -24,9 +24,9 @@ yarn build
 yarn serve
 ```
 
-This will generate minified assets in the /dist/ directory and serve them up using a Koa HTTP server at http://localhost:8080.
-This production-ready server supports HTTP caching, etags, and conditional GET requests.
-A visualization of the webpack build will be produced in the /webpack/stats directory.
+This will generate minified assets in the /dist/ directory and serve them up using a Koa HTTP server at http://localhost:8080. 
+This production-ready server supports HTTP caching, etags, and conditional GET requests. 
+A visualization of the webpack build will be produced in the /webpack/stats directory. 
 
 ## Tests
 ```
@@ -66,6 +66,11 @@ yarn storybook
 ```
 
 This will start a Storybook server to play around with stories for new components
+
+## Configuration
+You can add environment specific configuration settings by creating a .env file in the root directory. .env.sample shows an example format. 
+This file will be loaded by dotenv for both the client and server processes. 
+You can expose these values to your Webpack build by using the DefinePlugin in webpack.common.js.
 
 ## Tools & Features
 * react, redux, react-redux, react-router@4-beta, connected-react-router, immutable, redux-form, react-intl
