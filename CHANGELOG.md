@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated vscode settings for flow plugin
+
 ## [1.9.0] - 2017-02-16
 ### Added
 - Added dotenv to handle environment specific configuration
