@@ -43,3 +43,6 @@ reports
 
 # webpack visualizer stats
 webpack/stats
+
+# environment configuration
+.env

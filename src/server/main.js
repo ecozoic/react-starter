@@ -1,3 +1,6 @@
+// load environment configuration
+require('dotenv').config();
+
 const koa = require('koa');
 
 const compress = require('koa-compress');
