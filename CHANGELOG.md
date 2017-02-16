@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated several dependencies to their latest versions
 - Updated gitignore to ignore .env files
+- Updated README
 
 ## [1.8.0] - 2017-02-15
 ### Added
