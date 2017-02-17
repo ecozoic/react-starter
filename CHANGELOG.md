@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated vscode settings for flow plugin
 
+### Fixed
+- Fixed jsdoc babel configuration
+- Ignore .DS_Store
+
 ## [1.9.0] - 2017-02-16
 ### Added
 - Added dotenv to handle environment specific configuration
