@@ -46,3 +46,5 @@ webpack/stats
 
 # environment configuration
 .env
+
+.DS_Store
