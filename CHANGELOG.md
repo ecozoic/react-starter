@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Changed
 - Updated vscode settings for flow plugin
+- Updated several dependencies to their latest versions
 
 ### Fixed
 - Fixed jsdoc babel configuration
