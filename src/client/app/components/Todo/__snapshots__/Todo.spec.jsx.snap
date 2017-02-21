@@ -1,8 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Todo renders without crashing 1`] = `
 <Todo
   completed={false}
   onClick={[Function]}
-  text="Todo">
+  text="Todo"
+>
   <li
     className="todo"
     onClick={[Function]}
@@ -10,7 +13,8 @@ exports[`Todo renders without crashing 1`] = `
       Object {
         "textDecoration": "none",
       }
-    }>
+    }
+  >
     Todo
   </li>
 </Todo>

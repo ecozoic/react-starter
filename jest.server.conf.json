@@ -3,6 +3,6 @@
   "collectCoverageFrom": ["src/server/**/*.js"],
   "coverageDirectory": "<rootDir>/coverage/server",
   "coverageReporters": ["json", "lcov"],
-  "testEnvironment": "node",
-  "testPathDirs": ["src/server"]
+  "roots": ["src/server"],
+  "testEnvironment": "node"
 }
