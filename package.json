@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.9.5",
+  "version": "1.10.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"npm run serve:dev\" \"npm run start:dev\"",
@@ -104,10 +104,12 @@
     "koa-route": "2.4.2",
     "koa-send": "3.3.0",
     "koa-static": "2.1.0",
+    "lodash": "4.17.4",
     "material-ui": "0.17.0",
     "react": "15.4.2",
     "react-addons-test-utils": "15.4.2",
     "react-dom": "15.4.2",
+    "react-helmet": "4.0.0",
     "react-hot-loader": "3.0.0-beta.6",
     "react-intl": "2.2.3",
     "react-intl-redux": "0.4.1",

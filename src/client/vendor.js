@@ -5,6 +5,7 @@ import 'react-dom';
 import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
+import 'react-helmet';
 
 import 'history';
 import 'immutable';

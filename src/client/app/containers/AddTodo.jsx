@@ -13,7 +13,10 @@ class AddTodo extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { todo: '' };
+
+    this.state = {
+      todo: '',
+    };
   }
 
   componentDidMount() {
