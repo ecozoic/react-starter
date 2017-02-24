@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"npm run serve:dev\" \"npm run start:dev\"",
@@ -60,7 +60,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
-    "extract-text-webpack-plugin": "2.0.0-rc.0",
+    "extract-text-webpack-plugin": "2.0.0",
     "file-loader": "0.10.0",
     "flow-bin": "0.40.0",
     "flow-typed": "2.0.0",
