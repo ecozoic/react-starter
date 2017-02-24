@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.9.5] - 2017-02-24
+### Changed
+- Updated several depedencies to their latest versions
+
 ## [1.9.4] - 2017-02-23
 ### Changed
 - Upgrade to Node 6.10.0
