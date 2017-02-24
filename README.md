@@ -73,11 +73,14 @@ This file will be loaded by dotenv for both the client and server processes.
 You can expose these values to your Webpack build by using the DefinePlugin in webpack.common.js.
 
 ## Tools & Features
-* react, redux, react-redux, react-router@4-beta, connected-react-router, immutable, redux-form, react-intl
-* material ui
+* react, react-router@4, react-intl, react-helmet, material-ui
+* immutable, history, fetch, lodash
+* redux, react-redux, connected-react-router, redux-immutable, redux-form, react-intl-redux, redux-thunk
+* redux-devtools, redux-logger, react-hot-loader@3 for HMR
+* koa HTTP server and API
 * Build powered by Webpack 2 (+ visualizer plugin) and Babel 6
 * Optimized production build with UglifyJS + tree-shaking
-* Linting with eslint (+ airbnb) and sass-lint, static type-checking with Flow
+* Linting with eslint (+ airbnb) and sass-lint, optional static type-checking with Flow
 * Unit tests with Jest (+ snapshots), Enzyme, and Istanbul coverage reports
 * E2E testing with Nightwatch
 * SASS + cssnext for CSS preprocessing

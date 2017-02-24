@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import styles from './Home.scss';
 import img from '../../../react.png';
@@ -13,6 +14,7 @@ import TodoListContainer from '../../containers/TodoList';
 function Home() {
   return (
     <div className={styles.home}>
+      <Helmet title="Todo List" />
       <div className={styles.todosContainer}>
         <div className={styles.imageContainer}>
           <img src={img} alt="logo" />

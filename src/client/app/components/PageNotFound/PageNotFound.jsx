@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import styles from './PageNotFound.scss';
 
@@ -9,6 +10,7 @@ import styles from './PageNotFound.scss';
 function PageNotFound() {
   return (
     <div className={styles.pageNotFound}>
+      <Helmet title="404" />
       <h1>404</h1>
     </div>
   );

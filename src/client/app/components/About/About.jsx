@@ -2,6 +2,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
+import Helmet from 'react-helmet';
 
 /**
  * About page component.
@@ -9,6 +10,7 @@ import { push } from 'connected-react-router';
 function About({ dispatch }) {
   return (
     <div>
+      <Helmet title="About" />
       <h1>About</h1>
       <button onClick={() => dispatch(push('/'))}>Go Home</button>
     </div>
