@@ -2,10 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [1.10.0] - 2017-02-24
 ### Added
 - Added react-helmet support
-- Added lodash
+- Added lodash b/c its always good to have lodash
 
 ### Changed
 - Updated README
