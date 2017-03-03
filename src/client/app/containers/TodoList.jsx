@@ -2,10 +2,11 @@
 import { connect } from 'react-redux';
 
 import { toggleTodo } from '../actions';
+import { getTodos } from '../selectors';
 import TodoList from '../components/TodoList/TodoList';
 
 const mapStateToProps = state => ({
-  todos: state.get('todos').toJS(),
+  todos: getTodos(state),
 });
 
 const mapDispatchToProps = dispatch => ({

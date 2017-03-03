@@ -1,12 +1,12 @@
 /* @flow */
-import * as Immutable from 'immutable';
+import { List, Map } from 'immutable';
 
 import * as t from '../constants';
 
-export const todo = (state = Immutable.Map(), action) => {
+export const todo = (state = Map(), action) => {
   switch (action.type) {
     case t.ADD_TODO:
-      return Immutable.fromJS({
+      return Map({
         id: action.id,
         text: action.text,
         completed: false,
@@ -16,14 +16,13 @@ export const todo = (state = Immutable.Map(), action) => {
         return state;
       }
 
-      return state.set('completed', !state.get('completed'));
-
+      return state.update('completed', completed => !completed);
     default:
       return state;
   }
 };
 
-export const todos = (state = Immutable.List(), action) => {
+export const todos = (state = List(), action) => {
   switch (action.type) {
     case t.ADD_TODO:
       return state.push(todo(undefined, action));

@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import { mount, shallow } from 'enzyme';
+import { List, fromJS } from 'immutable';
 
 import TodoList from './TodoList';
 
@@ -8,7 +9,7 @@ describe('TodoList', () => {
   it('renders without crashing', () => {
     const todoList = mount(
       <TodoList
-        todos={[]}
+        todos={List()}
         onTodoClick={function() { }}
       />
     );
@@ -20,7 +21,7 @@ describe('TodoList', () => {
     it('displays an unordered list', () => {
       const todoList = shallow(
         <TodoList
-          todos={[]}
+          todos={List()}
           onTodoClick={function() { }}
         />
       );
@@ -31,7 +32,7 @@ describe('TodoList', () => {
     it('has todo list class', () => {
       const todoList = shallow(
         <TodoList
-          todos={[]}
+          todos={List()}
           onTodoClick={function() { }}
         />
       );
@@ -42,11 +43,11 @@ describe('TodoList', () => {
     it('renders a todo for each todo in props', () => {
       const todoList = shallow(
         <TodoList
-          todos={[
+          todos={fromJS([
             { id: 1, text: 'Todo 1', completed: false },
             { id: 2, text: 'Todo 2', completed: true },
             { id: 3, text: 'Todo 3', completed: false }
-          ]}
+          ])}
           onTodoClick={function() { }}
         />
       );
@@ -57,9 +58,9 @@ describe('TodoList', () => {
     it('renders todo with proper props', () => {
       const todoList = shallow(
         <TodoList
-          todos={[
+          todos={fromJS([
             { id: 1, text: 'Todo 1', completed: false }
-          ]}
+          ])}
           onTodoClick={function() { }}
         />
       );
@@ -73,9 +74,9 @@ describe('TodoList', () => {
     it('sets the todo id as the key', () => {
       const todoList = shallow(
         <TodoList
-          todos={[
+          todos={fromJS([
             { id: 1, text: 'Todo 1', completed: false }
-          ]}
+          ])}
           onTodoClick={function() { }}
         />
       );
@@ -88,9 +89,9 @@ describe('TodoList', () => {
 
       const todoList = shallow(
         <TodoList
-          todos={[
+          todos={fromJS([
             { id: 1, text: 'Todo 1', completed: false }
-          ]}
+          ])}
           onTodoClick={mockFn}
         />
       );

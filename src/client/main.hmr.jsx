@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import * as Immutable from 'immutable';
+import { fromJS } from 'immutable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
 import { IntlProvider } from 'react-intl-redux';
@@ -27,7 +27,7 @@ import './favicon.ico';
 injectTapEventPlugin();
 
 const history = createBrowserHistory();
-const initialState = Immutable.fromJS({
+const initialState = fromJS({
   intl: {
     locale: 'en',
     messages: {},

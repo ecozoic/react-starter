@@ -6,6 +6,7 @@ import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
+import 'react-immutable-proptypes';
 
 import 'history';
 import 'immutable';
@@ -19,6 +20,7 @@ import 'redux-immutable';
 import 'redux-thunk';
 import 'redux-form/immutable';
 import 'react-intl-redux';
+import 'reselect';
 
 // material ui
 import 'material-ui/styles/MuiThemeProvider';
