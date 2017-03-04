@@ -2,9 +2,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from '../components/Home/Home';
-import PageNotFound from '../components/PageNotFound/PageNotFound';
-import AboutContainer from '../components/About/About';
+import Home from '../components/Home';
+import PageNotFound from '../components/PageNotFound';
+import AboutContainer from '../components/About';
 
 const routes = (
   <div>

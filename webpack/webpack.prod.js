@@ -5,7 +5,7 @@ const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   entry: {
-    polyfills: './src/client/polyfills',
+    polyfill: './src/client/polyfill',
     vendor: './src/client/vendor',
     app: './src/client/main'
   },

@@ -13,7 +13,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { AppContainer } from 'react-hot-loader';
 import createLogger from 'redux-logger';
 
-import App from './app/App';
+import App from './app';
 import rootReducer from './app/reducers';
 import DevTools from './app/containers/DevTools';
 
@@ -62,7 +62,7 @@ const renderApp = () => {
 renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app/App', renderApp);
+  module.hot.accept('./app', renderApp);
 
   module.hot.accept('./app/reducers', () => {
     store.replaceReducer(connectRouter(history)(rootReducer));

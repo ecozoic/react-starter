@@ -6,7 +6,7 @@ const port = 8080;
 
 module.exports = {
   entry: {
-    polyfills: './src/client/polyfills',
+    polyfill: './src/client/polyfill',
     vendor: './src/client/vendor',
     app: [
       'react-hot-loader/patch',

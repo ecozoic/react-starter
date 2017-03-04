@@ -1,7 +1,7 @@
 /* @flow */
 import React, { PropTypes } from 'react';
 
-import Todo from '../Todo/Todo';
+import Todo from '../Todo';
 import styles from './TodoList.scss';
 
 function TodoList({ todos, onTodoClick }) {

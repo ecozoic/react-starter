@@ -10,7 +10,7 @@ import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import App from './app/App';
+import App from './app';
 import rootReducer from './app/reducers';
 
 // global styles
