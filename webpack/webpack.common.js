@@ -36,7 +36,7 @@ module.exports = {
       glob: 'src/client/**/*.s?(a|c)ss'
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      name: ['app', 'vendor', 'polyfill']
     }),
     new HtmlWebpackPlugin({
       template: 'src/client/index.html'
