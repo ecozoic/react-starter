@@ -1,6 +1,6 @@
 /* @flow */
-import { combineReducers } from 'redux-immutable';
-import { reducer as form } from 'redux-form/immutable';
+import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form';
 import { intlReducer as intl } from 'react-intl-redux';
 
 import { todos } from './todos';

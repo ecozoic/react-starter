@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import { ConnectedRouter } from 'connected-react-router/immutable';
+import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';
 

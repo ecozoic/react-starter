@@ -6,17 +6,13 @@ import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
-import 'react-immutable-proptypes';
 
 import 'history';
-import 'immutable';
 
 // Redux
 import 'redux';
 import 'react-redux';
 import 'connected-react-router';
-import 'connected-react-router/immutable';
-import 'redux-immutable';
 import 'redux-thunk';
 import 'redux-form/immutable';
 import 'react-intl-redux';

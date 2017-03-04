@@ -1,6 +1,5 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import Todo from '../Todo/Todo';
 import styles from './TodoList.scss';
@@ -10,9 +9,9 @@ function TodoList({ todos, onTodoClick }) {
     <ul className={styles.todoList}>
       {todos.map(todo =>
         <Todo
-          key={todo.get('id')}
-          {...todo.toJS()}
-          onClick={() => onTodoClick(todo.get('id'))}
+          key={todo.id}
+          {...todo}
+          onClick={() => onTodoClick(todo.id)}
         />,
       )}
     </ul>
@@ -20,12 +19,12 @@ function TodoList({ todos, onTodoClick }) {
 }
 
 TodoList.propTypes = {
-  todos: ImmutablePropTypes.listOf(
-    ImmutablePropTypes.contains({
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.number.isRequired,
       completed: PropTypes.bool.isRequired,
       text: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
   onTodoClick: PropTypes.func.isRequired,
 };

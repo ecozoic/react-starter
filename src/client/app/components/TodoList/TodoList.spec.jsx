@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { List, fromJS } from 'immutable';
 
 import TodoList from './TodoList';
 
@@ -9,9 +8,9 @@ describe('TodoList', () => {
   it('renders without crashing', () => {
     const todoList = mount(
       <TodoList
-        todos={List()}
-        onTodoClick={function() { }}
-      />
+        todos={[]}
+        onTodoClick={function noop() { }}
+      />,
     );
 
     expect(todoList).toMatchSnapshot();
@@ -21,9 +20,9 @@ describe('TodoList', () => {
     it('displays an unordered list', () => {
       const todoList = shallow(
         <TodoList
-          todos={List()}
-          onTodoClick={function() { }}
-        />
+          todos={[]}
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(todoList.find('ul').length).toBe(1);
@@ -32,9 +31,9 @@ describe('TodoList', () => {
     it('has todo list class', () => {
       const todoList = shallow(
         <TodoList
-          todos={List()}
-          onTodoClick={function() { }}
-        />
+          todos={[]}
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(todoList.hasClass('todoList')).toBe(true);
@@ -43,13 +42,13 @@ describe('TodoList', () => {
     it('renders a todo for each todo in props', () => {
       const todoList = shallow(
         <TodoList
-          todos={fromJS([
+          todos={[
             { id: 1, text: 'Todo 1', completed: false },
             { id: 2, text: 'Todo 2', completed: true },
-            { id: 3, text: 'Todo 3', completed: false }
-          ])}
-          onTodoClick={function() { }}
-        />
+            { id: 3, text: 'Todo 3', completed: false },
+          ]}
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(todoList.find('Todo').length).toBe(3);
@@ -58,11 +57,11 @@ describe('TodoList', () => {
     it('renders todo with proper props', () => {
       const todoList = shallow(
         <TodoList
-          todos={fromJS([
-            { id: 1, text: 'Todo 1', completed: false }
-          ])}
-          onTodoClick={function() { }}
-        />
+          todos={[
+            { id: 1, text: 'Todo 1', completed: false },
+          ]}
+          onTodoClick={function noop() { }}
+        />,
       );
 
       const todo = todoList.find('Todo');
@@ -74,11 +73,11 @@ describe('TodoList', () => {
     it('sets the todo id as the key', () => {
       const todoList = shallow(
         <TodoList
-          todos={fromJS([
-            { id: 1, text: 'Todo 1', completed: false }
-          ])}
-          onTodoClick={function() { }}
-        />
+          todos={[
+            { id: 1, text: 'Todo 1', completed: false },
+          ]}
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(+todoList.find('Todo').key()).toBe(1);
@@ -89,11 +88,11 @@ describe('TodoList', () => {
 
       const todoList = shallow(
         <TodoList
-          todos={fromJS([
-            { id: 1, text: 'Todo 1', completed: false }
-          ])}
+          todos={[
+            { id: 1, text: 'Todo 1', completed: false },
+          ]}
           onTodoClick={mockFn}
-        />
+        />,
       );
 
       todoList.find('Todo').simulate('click');
