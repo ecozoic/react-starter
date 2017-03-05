@@ -14,7 +14,7 @@ import 'redux';
 import 'react-redux';
 import 'connected-react-router';
 import 'redux-thunk';
-import 'redux-form/immutable';
+import 'redux-form';
 import 'react-intl-redux';
 import 'reselect';
 

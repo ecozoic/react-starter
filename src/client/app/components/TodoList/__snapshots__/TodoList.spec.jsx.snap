@@ -6,7 +6,7 @@ exports[`TodoList renders without crashing 1`] = `
   todos={Array []}
 >
   <ul
-    className="todoList"
+    className="TodoList"
   />
 </TodoList>
 `;

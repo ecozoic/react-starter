@@ -2,16 +2,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import styles from './PageNotFound.scss';
+import './PageNotFound.scss';
 
 /**
  * Page not found component.
  */
 function PageNotFound() {
   return (
-    <div className={styles.pageNotFound}>
+    <div className="PageNotFound">
       <Helmet title="404" />
-      <h1>404</h1>
+      <h1 className="PageNotFound__header">404</h1>
     </div>
   );
 }

@@ -36,7 +36,7 @@ describe('TodoList', () => {
         />,
       );
 
-      expect(todoList.hasClass('todoList')).toBe(true);
+      expect(todoList.hasClass('TodoList')).toBe(true);
     });
 
     it('renders a todo for each todo in props', () => {

@@ -7,13 +7,8 @@ exports[`Todo renders without crashing 1`] = `
   text="Todo"
 >
   <li
-    className="todo"
+    className="Todo"
     onClick={[Function]}
-    style={
-      Object {
-        "textDecoration": "none",
-      }
-    }
   >
     Todo
   </li>

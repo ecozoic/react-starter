@@ -2,7 +2,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import styles from './Home.scss';
+import './Home.scss';
 import img from '../../../react.png';
 
 import AddTodoContainer from '../../containers/AddTodo';
@@ -13,13 +13,13 @@ import TodoListContainer from '../../containers/TodoList';
  */
 function Home() {
   return (
-    <div className={styles.home}>
+    <div className="Home">
       <Helmet title="Todo List" />
-      <div className={styles.todosContainer}>
-        <div className={styles.imageContainer}>
-          <img src={img} alt="logo" />
+      <div className="Home__todos">
+        <div className="Home__image-container">
+          <img className="Home__image" src={img} alt="logo" />
         </div>
-        <h1 className={styles.todosHeader}>Todo List</h1>
+        <h1 className="Home__header">Todo List</h1>
         <AddTodoContainer />
         <TodoListContainer />
       </div>

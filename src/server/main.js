@@ -15,11 +15,13 @@ const serve = require('koa-static');
 const app = koa();
 const api = require('./api');
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 app.use(compress());
 
 app.use(favicon('dist/favicon.ico'));
 
-if (process.env.NODE_ENV === 'development') {
+if (isDevelopment) {
   app.use(logger());
 }
 
@@ -27,17 +29,19 @@ app.use(conditional());
 app.use(etag());
 
 app.use(mount('/assets', serve('dist/assets', {
-  maxage: 365 * 24 * 60 * 60 * 1000
+  maxage: 365 * 24 * 60 * 60 * 1000,
 })));
 
 app.use(mount('/api', api));
 
-app.use(function*() {
+app.use(function* index() {
   yield send(this, 'dist/index.html', {
-    maxage: 0
+    maxage: 0,
   });
 });
 
-const port = process.env.PORT || 8080;
+const port = isDevelopment ? process.env.PROXY_PORT : process.env.PORT;
 app.listen(port);
+
+// eslint-disable-next-line no-console
 console.log(`Server listening on port: ${port}`);

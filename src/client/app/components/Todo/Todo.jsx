@@ -1,17 +1,19 @@
 /* @flow */
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
-import styles from './Todo.scss';
+import './Todo.scss';
 
 function Todo({ onClick, completed, text }) {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <li
-      className={styles.todo}
+      className={classNames(
+        'Todo', {
+          'Todo--completed': completed,
+        },
+      )}
       onClick={onClick}
-      style={{
-        textDecoration: completed ? 'line-through' : 'none',
-      }}
     >
       {text}
     </li>

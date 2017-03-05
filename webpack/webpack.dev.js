@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const Visualizer = require('webpack-visualizer-plugin');
 
-const port = 8080;
+const { PORT, HOST, PROXY_PORT } = process.env;
 
 module.exports = {
   entry: {
@@ -10,7 +10,7 @@ module.exports = {
     vendor: './src/client/vendor',
     app: [
       'react-hot-loader/patch',
-      `webpack-dev-server/client?http://localhost:${port}`,
+      `webpack-dev-server/client?http://${HOST}:${PORT}`,
       'webpack/hot/only-dev-server',
       './src/client/main.hmr'
     ]
@@ -21,8 +21,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: 'assets/[name].js',
-    chunkFilename: 'assets/[id].chunk.js'
+    filename: 'assets/js/[name].js',
+    chunkFilename: 'assets/js/[id].chunk.js'
   },
 
   module: {
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.s?(a|c)ss$/,
         use: [
           'style-loader',
-          'css-loader?modules&importLoaders=2&camelCase',
+          'css-loader?importLoaders=2',
           'postcss-loader',
           'sass-loader'
         ]
@@ -54,9 +54,10 @@ module.exports = {
     compress: true,
     contentBase: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    port,
+    port: PORT,
+    host: HOST,
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': `http://${HOST}:${PROXY_PORT}`
     }
   }
 };

@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        use: 'file-loader?name=assets/images/[name].[hash].[ext]'
+        use: 'file-loader?name=assets/img/[name].[hash].[ext]'
       },
       {
         test: /\.ico$/,
@@ -43,8 +43,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'APP_NAME': JSON.stringify(process.env.APP_NAME)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     })
   ],

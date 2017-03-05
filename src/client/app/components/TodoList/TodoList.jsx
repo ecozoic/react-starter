@@ -2,11 +2,11 @@
 import React, { PropTypes } from 'react';
 
 import Todo from '../Todo';
-import styles from './TodoList.scss';
+import './TodoList.scss';
 
 function TodoList({ todos, onTodoClick }) {
   return (
-    <ul className={styles.todoList}>
+    <ul className="TodoList">
       {todos.map(todo =>
         <Todo
           key={todo.id}

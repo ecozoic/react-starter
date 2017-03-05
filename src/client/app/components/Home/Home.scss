@@ -1,28 +1,28 @@
-.home {
+.Home {
   display: flex;
   justify-content: center;
   min-height: 100vh;
   padding: 48px;
 
-  .todos-container {
+  &__todos {
     display: flex;
     flex-direction: column;
   }
 
-  .image-container {
+  &__image-container {
     align-self: center;
     border-radius: 100%;
     height: 217px;
     overflow: hidden;
     width: 217px;
-
-    img {
-      height: 217px;
-      width: 217px;
-    }
   }
 
-  .todos-header {
+  &__image {
+    height: 217px;
+    width: 217px;
+  }
+
+  &__header {
     text-align: center;
   }
 }
