@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 import { intlReducer as intl } from 'react-intl-redux';
 
-import { todos } from './todos';
+import { todosReducer as todos } from './todos';
 
 /**
  * Root reducer

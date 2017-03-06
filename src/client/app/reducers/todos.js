@@ -1,7 +1,7 @@
 /* @flow */
 import * as t from '../constants';
 
-export const todo = (state = {}, action) => {
+export const todoReducer = (todo = {}, action) => {
   switch (action.type) {
     case t.ADD_TODO:
       return {
@@ -10,29 +10,29 @@ export const todo = (state = {}, action) => {
         completed: false,
       };
     case t.TOGGLE_TODO:
-      if (state.id !== action.id) {
-        return state;
+      if (todo.id !== action.id) {
+        return todo;
       }
 
       return {
-        ...state,
-        completed: !state.completed,
+        ...todo,
+        completed: !todo.completed,
       };
     default:
-      return state;
+      return todo;
   }
 };
 
-export const todos = (state = [], action) => {
+export const todosReducer = (todos = [], action) => {
   switch (action.type) {
     case t.ADD_TODO:
       return [
-        ...state,
-        todo(undefined, action),
+        ...todos,
+        todoReducer(undefined, action),
       ];
     case t.TOGGLE_TODO:
-      return state.map(td => todo(td, action));
+      return todos.map(td => todoReducer(td, action));
     default:
-      return state;
+      return todos;
   }
 };
