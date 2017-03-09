@@ -42,7 +42,7 @@ describe('Todo', () => {
         />,
       );
 
-      expect(todo.find('li').hasClass('Todo--completed')).toBe(true);
+      expect(todo.find('li').props().style.textDecoration).toEqual('line-through');
     });
 
     it('displays no strikethrough if incomplete', () => {
@@ -54,7 +54,7 @@ describe('Todo', () => {
         />,
       );
 
-      expect(todo.find('li').hasClass('Todo--completed')).toBe(false);
+      expect(todo.find('li').props().style.textDecoration).toEqual(undefined);
     });
 
     it('fires onclick when clicked', () => {
@@ -71,18 +71,6 @@ describe('Todo', () => {
       todo.find('li').simulate('click');
 
       expect(mockFn).toHaveBeenCalledTimes(1);
-    });
-
-    it('has todo class', () => {
-      const todo = shallow(
-        <Todo
-          onClick={function noop() { }}
-          text={'Todo'}
-          completed={false}
-        />,
-      );
-
-      expect(todo.find('li').hasClass('Todo')).toBe(true);
     });
   });
 });

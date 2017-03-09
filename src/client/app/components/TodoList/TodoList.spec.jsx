@@ -28,17 +28,6 @@ describe('TodoList', () => {
       expect(todoList.find('ul').length).toBe(1);
     });
 
-    it('has todo list class', () => {
-      const todoList = shallow(
-        <TodoList
-          todos={[]}
-          onTodoClick={function noop() { }}
-        />,
-      );
-
-      expect(todoList.hasClass('TodoList')).toBe(true);
-    });
-
     it('renders a todo for each todo in props', () => {
       const todoList = shallow(
         <TodoList
@@ -80,7 +69,7 @@ describe('TodoList', () => {
         />,
       );
 
-      expect(+todoList.find('Todo').key()).toBe(1);
+      expect(todoList.find('Todo').key()).toEqual('.$1');
     });
 
     it('calls onTodoClick with id of clicked todo', () => {

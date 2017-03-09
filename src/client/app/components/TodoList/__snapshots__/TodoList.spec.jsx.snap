@@ -6,7 +6,12 @@ exports[`TodoList renders without crashing 1`] = `
   todos={Array []}
 >
   <ul
-    className="TodoList"
+    data-radium={true}
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
   />
 </TodoList>
 `;

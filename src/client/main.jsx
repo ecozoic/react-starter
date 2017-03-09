@@ -9,12 +9,10 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import { StyleRoot } from 'radium';
 
 import App from './app';
 import rootReducer from './app/reducers';
-
-// global styles
-import './main.scss';
 
 // favicon
 import './favicon.ico';
@@ -37,7 +35,9 @@ render(
   <Provider store={store}>
     <IntlProvider>
       <MuiThemeProvider>
-        <App history={history} />
+        <StyleRoot>
+          <App history={history} />
+        </StyleRoot>
       </MuiThemeProvider>
     </IntlProvider>
   </Provider>,

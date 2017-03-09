@@ -25,20 +25,6 @@ module.exports = {
     chunkFilename: 'assets/js/[id].chunk.js'
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.s?(a|c)ss$/,
-        use: [
-          'style-loader',
-          'css-loader?importLoaders=2',
-          'postcss-loader',
-          'sass-loader'
-        ]
-      }
-    ]
-  },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),

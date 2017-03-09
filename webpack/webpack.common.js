@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const SassLintPlugin = require('sasslint-webpack-plugin');
 
 module.exports = {
   resolve: {
@@ -32,9 +31,6 @@ module.exports = {
   },
 
   plugins: [
-    new SassLintPlugin({
-      glob: 'src/client/**/*.s?(a|c)ss'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfill']
     }),

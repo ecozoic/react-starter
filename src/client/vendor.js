@@ -6,12 +6,12 @@ import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
-
-import 'history';
+import 'radium';
 
 // Redux
 import 'redux';
 import 'react-redux';
+import 'history';
 import 'connected-react-router';
 import 'redux-thunk';
 import 'redux-form';
