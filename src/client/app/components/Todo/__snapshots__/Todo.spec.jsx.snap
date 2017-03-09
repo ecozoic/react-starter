@@ -7,11 +7,12 @@ exports[`Todo renders without crashing 1`] = `
   text="Todo"
 >
   <li
-    className="todo"
+    data-radium={true}
     onClick={[Function]}
     style={
       Object {
-        "textDecoration": "none",
+        "fontSize": "18px",
+        "userSelect": "none",
       }
     }
   >

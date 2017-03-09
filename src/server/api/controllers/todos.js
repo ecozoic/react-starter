@@ -3,10 +3,10 @@ const route = require('koa-route');
 
 const app = koa();
 
-app.use(route.get('/', fetch));
-
 function* fetch() {
   this.body = yield ['Hey', 'Ho', 'Let\'s Go'];
 }
+
+app.use(route.get('/', fetch));
 
 module.exports = app;

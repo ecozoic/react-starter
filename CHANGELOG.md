@@ -2,6 +2,31 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.0.0] - 2017-03-08
+### Added
+- Added radium support for CSS-in-JS
+- Added reselect
+- Added redux-mock-store
+- Added unit tests for reducers, actions, and selectors
+- Added .eslintignore file
+- Added dedicated storybook section to .babelrc
+- Added color to provide color tooling to JS
+- Added index.js files to improve importing components
+- Added deep-freeze to prevent mutation during tests
+
+### Changed
+- Updated several dependencies to their latest versions
+- Updated README
+- Improved .env configuration
+- Upgraded yarn to 0.21.3
+- Improved webpack configuration
+
+### Removed
+- Removed ImmutableJS
+- Removed CSS modules
+- Removed SASS and other CSS-related dependencies
+- Removed .gitattributes
+
 ## [1.10.1]- 2017-02-24
 ### Changed
 - Updated several dependencies to their latest versions

@@ -4,18 +4,15 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import * as Immutable from 'immutable';
 import { createBrowserHistory } from 'history';
-import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import { StyleRoot } from 'radium';
 
-import App from './app/App';
+import App from './app';
 import rootReducer from './app/reducers';
-
-// global styles
-import './main.scss';
 
 // favicon
 import './favicon.ico';
@@ -23,13 +20,7 @@ import './favicon.ico';
 injectTapEventPlugin();
 
 const history = createBrowserHistory();
-const initialState = Immutable.fromJS({
-  intl: {
-    locale: 'en',
-    messages: {},
-  },
-});
-const intlSelector = state => state.get('intl').toJS();
+const initialState = {};
 
 const store = createStore(
   connectRouter(history)(rootReducer),
@@ -42,9 +33,11 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <IntlProvider intlSelector={intlSelector}>
+    <IntlProvider>
       <MuiThemeProvider>
-        <App history={history} />
+        <StyleRoot>
+          <App history={history} />
+        </StyleRoot>
       </MuiThemeProvider>
     </IntlProvider>
   </Provider>,

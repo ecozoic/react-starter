@@ -1,9 +1,9 @@
 /* @flow */
-import { combineReducers } from 'redux-immutable';
-import { reducer as form } from 'redux-form/immutable';
-import { intlReducer } from 'react-intl-redux';
+import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form';
+import { intlReducer as intl } from 'react-intl-redux';
 
-import { todos } from './todos';
+import { todosReducer as todos } from './todos';
 
 /**
  * Root reducer
@@ -11,7 +11,7 @@ import { todos } from './todos';
 const rootReducer = combineReducers({
   todos,
   form,
-  intl: intlReducer,
+  intl,
 });
 
 export default rootReducer;

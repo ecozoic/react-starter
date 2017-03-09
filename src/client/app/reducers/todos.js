@@ -1,35 +1,38 @@
 /* @flow */
-import * as Immutable from 'immutable';
-
 import * as t from '../constants';
 
-export const todo = (state = Immutable.Map(), action) => {
+export const todoReducer = (todo = {}, action) => {
   switch (action.type) {
     case t.ADD_TODO:
-      return Immutable.fromJS({
+      return {
         id: action.id,
         text: action.text,
         completed: false,
-      });
+      };
     case t.TOGGLE_TODO:
-      if (state.get('id') !== action.id) {
-        return state;
+      if (todo.id !== action.id) {
+        return todo;
       }
 
-      return state.set('completed', !state.get('completed'));
-
+      return {
+        ...todo,
+        completed: !todo.completed,
+      };
     default:
-      return state;
+      return todo;
   }
 };
 
-export const todos = (state = Immutable.List(), action) => {
+export const todosReducer = (todos = [], action) => {
   switch (action.type) {
     case t.ADD_TODO:
-      return state.push(todo(undefined, action));
+      return [
+        ...todos,
+        todoReducer(undefined, action),
+      ];
     case t.TOGGLE_TODO:
-      return state.map(td => todo(td, action));
+      return todos.map(td => todoReducer(td, action));
     default:
-      return state;
+      return todos;
   }
 };

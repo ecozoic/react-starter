@@ -6,19 +6,17 @@ import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
-
-import 'history';
-import 'immutable';
+import 'radium';
 
 // Redux
 import 'redux';
 import 'react-redux';
+import 'history';
 import 'connected-react-router';
-import 'connected-react-router/immutable';
-import 'redux-immutable';
 import 'redux-thunk';
-import 'redux-form/immutable';
+import 'redux-form';
 import 'react-intl-redux';
+import 'reselect';
 
 // material ui
 import 'material-ui/styles/MuiThemeProvider';

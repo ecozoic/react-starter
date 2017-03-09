@@ -6,7 +6,8 @@ const todos = require('./controllers/todos');
 
 app.use(mount('/todos', todos));
 
-app.use(function*() {
+// eslint-disable-next-line require-yield
+app.use(function* notFound() {
   this.status = 404;
 });
 

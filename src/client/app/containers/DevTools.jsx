@@ -8,7 +8,7 @@ const DevTools = createDevTools(
     toggleVisibilityKey="ctrl-h"
     changePositionKey="ctrl-q"
   >
-    <LogMonitor theme="monokai" select={state => state.toJS()} />
+    <LogMonitor theme="monokai" />
   </DockMonitor>,
 );
 

@@ -9,8 +9,8 @@ describe('TodoList', () => {
     const todoList = mount(
       <TodoList
         todos={[]}
-        onTodoClick={function() { }}
-      />
+        onTodoClick={function noop() { }}
+      />,
     );
 
     expect(todoList).toMatchSnapshot();
@@ -21,22 +21,11 @@ describe('TodoList', () => {
       const todoList = shallow(
         <TodoList
           todos={[]}
-          onTodoClick={function() { }}
-        />
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(todoList.find('ul').length).toBe(1);
-    });
-
-    it('has todo list class', () => {
-      const todoList = shallow(
-        <TodoList
-          todos={[]}
-          onTodoClick={function() { }}
-        />
-      );
-
-      expect(todoList.hasClass('todoList')).toBe(true);
     });
 
     it('renders a todo for each todo in props', () => {
@@ -45,10 +34,10 @@ describe('TodoList', () => {
           todos={[
             { id: 1, text: 'Todo 1', completed: false },
             { id: 2, text: 'Todo 2', completed: true },
-            { id: 3, text: 'Todo 3', completed: false }
+            { id: 3, text: 'Todo 3', completed: false },
           ]}
-          onTodoClick={function() { }}
-        />
+          onTodoClick={function noop() { }}
+        />,
       );
 
       expect(todoList.find('Todo').length).toBe(3);
@@ -58,10 +47,10 @@ describe('TodoList', () => {
       const todoList = shallow(
         <TodoList
           todos={[
-            { id: 1, text: 'Todo 1', completed: false }
+            { id: 1, text: 'Todo 1', completed: false },
           ]}
-          onTodoClick={function() { }}
-        />
+          onTodoClick={function noop() { }}
+        />,
       );
 
       const todo = todoList.find('Todo');
@@ -74,13 +63,13 @@ describe('TodoList', () => {
       const todoList = shallow(
         <TodoList
           todos={[
-            { id: 1, text: 'Todo 1', completed: false }
+            { id: 1, text: 'Todo 1', completed: false },
           ]}
-          onTodoClick={function() { }}
-        />
+          onTodoClick={function noop() { }}
+        />,
       );
 
-      expect(+todoList.find('Todo').key()).toBe(1);
+      expect(todoList.find('Todo').key()).toEqual('.$1');
     });
 
     it('calls onTodoClick with id of clicked todo', () => {
@@ -89,10 +78,10 @@ describe('TodoList', () => {
       const todoList = shallow(
         <TodoList
           todos={[
-            { id: 1, text: 'Todo 1', completed: false }
+            { id: 1, text: 'Todo 1', completed: false },
           ]}
           onTodoClick={mockFn}
-        />
+        />,
       );
 
       todoList.find('Todo').simulate('click');
