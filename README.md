@@ -73,7 +73,7 @@ This file will be loaded by dotenv for both the client and server processes.
 You can expose these values to your Webpack build by using the DefinePlugin in webpack.common.js.
 
 ## Tools & Features
-* react, react-router@4, react-intl, react-helmet, material-ui, radium
+* react, react-router@4, react-intl, react-helmet, material-ui, aphrodite
 * redux, react-redux, connected-react-router, redux-form, react-intl-redux, redux-thunk
 * history, fetch, lodash, moment, color
 * redux-devtools, redux-logger, redux-mock-store, react-hot-loader@3 for HMR
