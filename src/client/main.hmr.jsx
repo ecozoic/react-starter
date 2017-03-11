@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import promise from 'redux-promise-middleware';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
@@ -32,6 +33,7 @@ const store = createStore(
     applyMiddleware(
       routerMiddleware(history),
       thunk,
+      promise(),
       createLogger(),
     ),
     DevTools.instrument(),
