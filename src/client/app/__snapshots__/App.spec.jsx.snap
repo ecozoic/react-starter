@@ -4,21 +4,19 @@ exports[`App renders without crashing 1`] = `
 <Connect(ConnectedRouter)
   history={Object {}}
 >
-  <div>
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={[Function]}
-        path="/about"
-      />
-      <Route
-        component={[Function]}
-      />
-    </Switch>
-  </div>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/about"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
 </Connect(ConnectedRouter)>
 `;
