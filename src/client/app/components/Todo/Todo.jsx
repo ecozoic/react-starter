@@ -1,8 +1,8 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import Radium from 'radium';
+import { StyleSheet, css } from 'aphrodite';
 
-const styles = {
+const styles = StyleSheet.create({
   todo: {
     fontSize: '18px',
     userSelect: 'none',
@@ -10,16 +10,16 @@ const styles = {
   completed: {
     textDecoration: 'line-through',
   },
-};
+});
 
 function Todo({ onClick, completed, text }) {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <li
-      style={[
+      className={css(
         styles.todo,
         completed && styles.completed,
-      ]}
+      )}
       onClick={onClick}
     >
       {text}
@@ -33,4 +33,4 @@ Todo.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default Radium(Todo);
+export default Todo;

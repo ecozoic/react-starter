@@ -7,13 +7,11 @@ import PageNotFound from '../components/PageNotFound';
 import AboutContainer from '../components/About';
 
 const routes = (
-  <div>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={AboutContainer} />
-      <Route component={PageNotFound} />
-    </Switch>
-  </div>
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/about" component={AboutContainer} />
+    <Route component={PageNotFound} />
+  </Switch>
 );
 
 export default routes;

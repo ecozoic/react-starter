@@ -7,14 +7,8 @@ exports[`Todo renders without crashing 1`] = `
   text="Todo"
 >
   <li
-    data-radium={true}
+    className="todo_15z6f1n"
     onClick={[Function]}
-    style={
-      Object {
-        "fontSize": "18px",
-        "userSelect": "none",
-      }
-    }
   >
     Todo
   </li>

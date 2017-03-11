@@ -1,41 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders without crashing 1`] = `
-<div>
-  <Style
-    rules={
-      Object {
-        "*": Object {
-          "boxSizing": "border-box",
-        },
-        "body": Object {
-          "background": "#eee",
-          "color": "#111",
-          "fontFamily": "\\"Roboto\\", sans-serif",
-        },
-      }
-    }
-    scopeSelector=""
-  />
-  <Connect(ConnectedRouter)
-    history={Object {}}
-  >
-    <div>
-      <Switch>
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/"
-        />
-        <Route
-          component={[Function]}
-          path="/about"
-        />
-        <Route
-          component={[Function]}
-        />
-      </Switch>
-    </div>
-  </Connect(ConnectedRouter)>
-</div>
+<Connect(ConnectedRouter)
+  history={Object {}}
+>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/about"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
+</Connect(ConnectedRouter)>
 `;
