@@ -76,6 +76,7 @@
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
+    "aphrodite": "1.2.0",
     "babel-polyfill": "6.23.0",
     "color": "1.0.3",
     "connected-react-router": "4.0.0-beta.4",
@@ -98,7 +99,6 @@
     "lodash": "4.17.4",
     "material-ui": "0.17.0",
     "moment": "2.17.1",
-    "radium": "0.18.1",
     "react": "15.4.2",
     "react-addons-test-utils": "15.4.2",
     "react-dom": "15.4.2",

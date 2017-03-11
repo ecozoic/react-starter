@@ -69,7 +69,7 @@ describe('TodoList', () => {
         />,
       );
 
-      expect(todoList.find('Todo').key()).toEqual('.$1');
+      expect(todoList.find('Todo').key()).toEqual('1');
     });
 
     it('calls onTodoClick with id of clicked todo', () => {

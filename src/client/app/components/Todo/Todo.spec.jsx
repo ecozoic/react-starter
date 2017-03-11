@@ -33,7 +33,7 @@ describe('Todo', () => {
       expect(actual).toBe(expected);
     });
 
-    it('displays strikethrough if completed', () => {
+    it.skip('displays strikethrough if completed', () => {
       const todo = shallow(
         <Todo
           onClick={function noop() { }}
@@ -45,7 +45,7 @@ describe('Todo', () => {
       expect(todo.find('li').props().style.textDecoration).toEqual('line-through');
     });
 
-    it('displays no strikethrough if incomplete', () => {
+    it.skip('displays no strikethrough if incomplete', () => {
       const todo = shallow(
         <Todo
           onClick={function noop() { }}

@@ -1,18 +1,18 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import Radium from 'radium';
+import { StyleSheet, css } from 'aphrodite';
 
 import Todo from '../Todo';
 
-const styles = {
+const styles = StyleSheet.create({
   todoList: {
     cursor: 'pointer',
   },
-};
+});
 
 function TodoList({ todos, onTodoClick }) {
   return (
-    <ul style={[styles.todoList]}>
+    <ul className={css(styles.todoList)}>
       {todos.map(todo =>
         <Todo
           key={todo.id}
@@ -35,4 +35,4 @@ TodoList.propTypes = {
   onTodoClick: PropTypes.func.isRequired,
 };
 
-export default Radium(TodoList);
+export default TodoList;

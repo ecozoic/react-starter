@@ -9,7 +9,6 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { StyleRoot } from 'radium';
 
 import { AppContainer } from 'react-hot-loader';
 import createLogger from 'redux-logger';
@@ -46,9 +45,7 @@ const renderApp = () => {
         <IntlProvider>
           <MuiThemeProvider>
             <div>
-              <StyleRoot>
-                <App history={history} />
-              </StyleRoot>
+              <App history={history} />
               <DevTools />
             </div>
           </MuiThemeProvider>

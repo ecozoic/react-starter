@@ -6,7 +6,6 @@ import 'react-router-dom';
 import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
-import 'radium';
 
 // Redux
 import 'redux';
@@ -17,6 +16,10 @@ import 'redux-thunk';
 import 'redux-form';
 import 'react-intl-redux';
 import 'reselect';
+
+// CSS-in-JS
+import 'aphrodite';
+import 'color';
 
 // material ui
 import 'material-ui/styles/MuiThemeProvider';

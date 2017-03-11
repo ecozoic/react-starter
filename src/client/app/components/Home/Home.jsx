@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Radium from 'radium';
+import { StyleSheet, css } from 'aphrodite';
 import Helmet from 'react-helmet';
 
 import img from '../../../react.png';
@@ -8,7 +8,7 @@ import img from '../../../react.png';
 import AddTodoContainer from '../../containers/AddTodo';
 import TodoListContainer from '../../containers/TodoList';
 
-const styles = {
+const styles = StyleSheet.create({
   home: {
     display: 'flex',
     justifyContent: 'center',
@@ -33,20 +33,20 @@ const styles = {
   header: {
     textAlign: 'center',
   },
-};
+});
 
 /**
  * Home page component.
  */
 function Home() {
   return (
-    <div style={[styles.home]}>
+    <div className={css(styles.home)}>
       <Helmet title="Todo List" />
-      <div style={[styles.todos]}>
-        <div style={[styles.imageContainer]}>
-          <img style={[styles.image]} src={img} alt="logo" />
+      <div className={css(styles.todos)}>
+        <div className={css(styles.imageContainer)}>
+          <img className={css(styles.image)} src={img} alt="logo" />
         </div>
-        <h1 style={[styles.header]}>Todo List</h1>
+        <h1 className={css(styles.header)}>Todo List</h1>
         <AddTodoContainer />
         <TodoListContainer />
       </div>
@@ -54,4 +54,4 @@ function Home() {
   );
 }
 
-export default Radium(Home);
+export default Home;

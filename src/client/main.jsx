@@ -9,7 +9,6 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { StyleRoot } from 'radium';
 
 import App from './app';
 import rootReducer from './app/reducers';
@@ -35,9 +34,7 @@ render(
   <Provider store={store}>
     <IntlProvider>
       <MuiThemeProvider>
-        <StyleRoot>
-          <App history={history} />
-        </StyleRoot>
+        <App history={history} />
       </MuiThemeProvider>
     </IntlProvider>
   </Provider>,
