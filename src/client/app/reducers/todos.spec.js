@@ -1,6 +1,6 @@
 import deepFreeze from 'deep-freeze';
 
-import * as t from '../constants';
+import { ADD_TODO, TOGGLE_TODO } from '../constants';
 
 import {
   todoReducer,
@@ -10,9 +10,11 @@ import {
 describe('todoReducer', () => {
   it('adds a new todo', () => {
     const action = {
-      type: t.ADD_TODO,
-      id: 1,
-      text: 'Todo',
+      type: ADD_TODO,
+      payload: {
+        id: 1,
+        text: 'Todo',
+      },
     };
 
     const todoBefore = {};
@@ -23,16 +25,18 @@ describe('todoReducer', () => {
     const todoAfter = todoReducer(todoBefore, action);
 
     expect(todoAfter).toEqual({
-      id: action.id,
-      text: action.text,
+      id: action.payload.id,
+      text: action.payload.text,
       completed: false,
     });
   });
 
   it('toggles an existing todo', () => {
     const action = {
-      type: t.TOGGLE_TODO,
-      id: 1,
+      type: TOGGLE_TODO,
+      payload: {
+        id: 1,
+      },
     };
 
     const todoBefore = {
@@ -54,8 +58,10 @@ describe('todoReducer', () => {
 
   it('returns unchanged todo if toggle action has wrong id', () => {
     const action = {
-      type: t.TOGGLE_TODO,
-      id: 0,
+      type: TOGGLE_TODO,
+      payload: {
+        id: 0,
+      },
     };
 
     const todoBefore = {
@@ -96,14 +102,19 @@ describe('todoReducer', () => {
 describe('todosReducer', () => {
   it('adds a new todo', () => {
     const action1 = {
-      type: t.ADD_TODO,
-      id: 1,
-      text: 'Todo',
+      type: ADD_TODO,
+      payload: {
+        id: 1,
+        text: 'Todo 1',
+      },
     };
 
     const action2 = {
-      ...action1,
-      id: 2,
+      type: ADD_TODO,
+      payload: {
+        id: 2,
+        text: 'Todo 2',
+      },
     };
 
     const todosBefore = [];
@@ -114,17 +125,19 @@ describe('todosReducer', () => {
 
     let todosAfter = todosReducer(todosBefore, action1);
     expect(todosAfter.length).toEqual(1);
-    expect(todosAfter[0].id).toEqual(action1.id);
+    expect(todosAfter[0].id).toEqual(action1.payload.id);
 
     todosAfter = todosReducer(todosAfter, action2);
     expect(todosAfter.length).toEqual(2);
-    expect(todosAfter[1].id).toEqual(action2.id);
+    expect(todosAfter[1].id).toEqual(action2.payload.id);
   });
 
   it('toggles an existing todo', () => {
     const action = {
-      type: t.TOGGLE_TODO,
-      id: 1,
+      type: TOGGLE_TODO,
+      payload: {
+        id: 1,
+      },
     };
 
     const todosBefore = [{

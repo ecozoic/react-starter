@@ -1,5 +1,8 @@
 /* @flow */
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
-export const FETCHING_TODOS = 'FETCHING_TODOS';
-export const FETCHED_TODOS = 'FETCHED_TODOS';
+
+export const FETCH_TODOS = 'FETCH_TODOS';
+export const FETCH_TODOS_PENDING = 'FETCH_TODOS_PENDING';
+export const FETCH_TODOS_FULFILLED = 'FETCH_TODOS_FULFILLED';
+export const FETCH_TODOS_REJECTED = 'FETCH_TODOS_REJECTED';

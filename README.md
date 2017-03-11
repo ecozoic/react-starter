@@ -74,7 +74,7 @@ You can expose these values to your Webpack build by using the DefinePlugin in w
 
 ## Tools & Features
 * react, react-router@4, react-intl, react-helmet, material-ui, aphrodite
-* redux, react-redux, connected-react-router, redux-form, react-intl-redux, redux-thunk
+* redux, react-redux, connected-react-router, redux-form, react-intl-redux, redux-thunk, redux-promise-middleware
 * history, fetch, lodash, moment, color
 * redux-devtools, redux-logger, redux-mock-store, react-hot-loader@3 for HMR
 * koa HTTP server and API

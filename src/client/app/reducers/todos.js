@@ -1,16 +1,16 @@
 /* @flow */
-import * as t from '../constants';
+import { ADD_TODO, TOGGLE_TODO } from '../constants';
 
 export const todoReducer = (todo = {}, action) => {
   switch (action.type) {
-    case t.ADD_TODO:
+    case ADD_TODO:
       return {
-        id: action.id,
-        text: action.text,
+        id: action.payload.id,
+        text: action.payload.text,
         completed: false,
       };
-    case t.TOGGLE_TODO:
-      if (todo.id !== action.id) {
+    case TOGGLE_TODO:
+      if (todo.id !== action.payload.id) {
         return todo;
       }
 
@@ -25,12 +25,12 @@ export const todoReducer = (todo = {}, action) => {
 
 export const todosReducer = (todos = [], action) => {
   switch (action.type) {
-    case t.ADD_TODO:
+    case ADD_TODO:
       return [
         ...todos,
         todoReducer(undefined, action),
       ];
-    case t.TOGGLE_TODO:
+    case TOGGLE_TODO:
       return todos.map(td => todoReducer(td, action));
     default:
       return todos;
