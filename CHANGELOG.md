@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.2.0] - 2017-03-11
+### Added
+- Added redux-promise-middleware
+
+### Changed
+- Refactored actions to be FSA-compliant
+
 ## [2.1.0] - 2017-03-11
 ### Added
 - Added aphrodite
