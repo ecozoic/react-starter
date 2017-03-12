@@ -2457,9 +2457,9 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-ejs@~0.8.3:
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-0.8.8.tgz#ffdc56dcc35d02926dd50ad13439bbc54061d598"
+ejs@0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-0.8.3.tgz#db8aac47ff80a7df82b4c82c126fe8970870626f"
 
 electron-to-chromium@^1.2.5:
   version "1.2.6"
@@ -4696,6 +4696,10 @@ lodash._baseclone@^3.0.0:
     lodash.isarray "^3.0.0"
     lodash.keys "^3.0.0"
 
+lodash._baseclone@^4.0.0:
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/lodash._baseclone/-/lodash._baseclone-4.5.7.tgz#ce42ade08384ef5d62fa77c30f61a46e686f8434"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -4728,6 +4732,10 @@ lodash._isiterateecall@^3.0.0:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/lodash._isiterateecall/-/lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c"
 
+lodash._stack@^4.0.0:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/lodash._stack/-/lodash._stack-4.1.3.tgz#751aa76c1b964b047e76d14fc72a093fcb5e2dd0"
+
 lodash.assign@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-3.2.0.tgz#3ce9f0234b4b2223e296b8fa0ac1fee8ebca64fa"
@@ -4752,7 +4760,7 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
-lodash.clone@^3.0.3:
+lodash.clone@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-3.0.3.tgz#84688c73d32b5a90ca25616963f189252a997043"
   dependencies:
@@ -4797,9 +4805,16 @@ lodash.defaults@^4.0.1:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
 
-lodash.defaultsdeep@^4.3.2:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.0.tgz#bec1024f85b1bd96cbea405b23c14ad6443a6f81"
+lodash.defaultsdeep@4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.3.2.tgz#6c1a586e6c5647b0e64e2d798141b8836158be8a"
+  dependencies:
+    lodash._baseclone "^4.0.0"
+    lodash._stack "^4.0.0"
+    lodash.isplainobject "^4.0.0"
+    lodash.keysin "^4.0.0"
+    lodash.mergewith "^4.0.0"
+    lodash.rest "^4.0.0"
 
 lodash.filter@^4.4.0, lodash.filter@^4.6.0:
   version "4.6.0"
@@ -4829,7 +4844,7 @@ lodash.isnil@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
 
-lodash.isplainobject@^4.0.6:
+lodash.isplainobject@^4.0.0, lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
 
@@ -4840,6 +4855,10 @@ lodash.keys@^3.0.0, lodash.keys@^3.1.2:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.keysin@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.keysin/-/lodash.keysin-4.2.0.tgz#8cc3fb35c2d94acc443a1863e02fa40799ea6f28"
 
 lodash.map@^4.4.0:
   version "4.6.0"
@@ -4852,6 +4871,10 @@ lodash.memoize@^4.1.0:
 lodash.merge@^4.4.0, lodash.merge@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
+
+lodash.mergewith@^4.0.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
 
 lodash.omitby@^4.5.0:
   version "4.6.0"
@@ -4876,6 +4899,10 @@ lodash.reduce@^4.4.0:
 lodash.reject@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reject/-/lodash.reject-4.6.0.tgz#80d6492dc1470864bbf583533b651f42a9f52415"
+
+lodash.rest@^4.0.0:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/lodash.rest/-/lodash.rest-4.0.5.tgz#954ef75049262038c96d1fc98b28fdaf9f0772aa"
 
 lodash.restparam@^3.0.0:
   version "3.6.1"
@@ -5079,13 +5106,13 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
 
-"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3:
+"minimatch@2 || 3", minimatch@3.0.3, minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@~0.2.11, minimatch@~0.2.14:
+minimatch@~0.2.11:
   version "0.2.14"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-0.2.14.tgz#c74e780574f63c6f9a090e90efbe6ef53a6a756a"
   dependencies:
@@ -5116,7 +5143,7 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-mkpath@>=0.1.0:
+mkpath@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mkpath/-/mkpath-1.0.0.tgz#ebb3a977e7af1c683ae6fda12b545a6ba6c5853d"
 
@@ -5197,20 +5224,20 @@ netmask@~1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/netmask/-/netmask-1.0.6.tgz#20297e89d86f6f6400f250d9f4f6b4c1945fcd35"
 
-nightwatch@0.9.12:
-  version "0.9.12"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-0.9.12.tgz#5b4a66b26a770db871ef091f484c9eba10e0d260"
+nightwatch@0.9.13:
+  version "0.9.13"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-0.9.13.tgz#459d744369644844214a902562204d57b7378f74"
   dependencies:
     chai-nightwatch "~0.1.x"
-    ejs "~0.8.3"
-    lodash.clone "^3.0.3"
-    lodash.defaultsdeep "^4.3.2"
-    minimatch "~0.2.14"
-    mkpath ">=0.1.0"
+    ejs "0.8.3"
+    lodash.clone "3.0.3"
+    lodash.defaultsdeep "4.3.2"
+    minimatch "3.0.3"
+    mkpath "1.0.0"
     mocha-nightwatch "2.2.9"
-    optimist ">=0.3.5"
-    proxy-agent ">=2.0.0"
-    q "^1.1.2"
+    optimist "0.6.1"
+    proxy-agent "2.0.0"
+    q "1.4.1"
 
 no-case@^2.2.0:
   version "2.3.1"
@@ -5511,7 +5538,7 @@ opn@4.0.2:
     object-assign "^4.0.1"
     pinkie-promise "^2.0.0"
 
-optimist@>=0.3.5, optimist@^0.6.1, optimist@~0.6.0:
+optimist@0.6.1, optimist@^0.6.1, optimist@~0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
   dependencies:
@@ -6093,7 +6120,7 @@ proxy-addr@~1.1.3:
     forwarded "~0.1.0"
     ipaddr.js "1.2.0"
 
-proxy-agent@>=2.0.0:
+proxy-agent@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/proxy-agent/-/proxy-agent-2.0.0.tgz#57eb5347aa805d74ec681cb25649dba39c933499"
   dependencies:
@@ -6142,7 +6169,7 @@ pure-color@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pure-color/-/pure-color-1.2.0.tgz#702d2f2819dd545b1fde5116fca5f0c2dad2d18d"
 
-q@^1.1.2:
+q@1.4.1, q@^1.1.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
 
