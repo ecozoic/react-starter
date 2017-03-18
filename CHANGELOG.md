@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.2.1] - 2017-03-18
+### Changed
+- Updated several dependencies to their latest versions
+- Replaced "npm run" with "yarn" in package.json scripts
+
 ## [2.2.0] - 2017-03-11
 ### Added
 - Added redux-promise-middleware
