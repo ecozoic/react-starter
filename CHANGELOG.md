@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.3.0] - 2017-03-23
+### Added
+- Added classnames
+
+### Changed
+- Improved aphrodite test setup with identity-obj-proxy and updated snapshots
+- Improved webpack dotenv configuration system
+- Updated several dependences to their latest versions
+- Upgraded Node to 6.10.1
+- Refactored for react-helmet 5.0.0
+- Updated README
+
+### Removed
+- Removed jest/test-setup.js and correpsonding configuration option
+
 ## [2.2.1] - 2017-03-18
 ### Changed
 - Updated several dependencies to their latest versions

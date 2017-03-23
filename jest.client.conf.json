@@ -4,10 +4,10 @@
   "coverageDirectory": "<rootDir>/coverage/client",
   "coverageReporters": ["json", "lcov"],
   "moduleNameMapper": {
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/jest/file-mock.js"
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/jest/file-mock.js",
+    "^aphrodite$": "<rootDir>/jest/aphrodite-mock.js"
   },
   "roots": ["src/client"],
-  "setupTestFrameworkScriptFile": "<rootDir>/jest/test-setup.js",
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "testEnvironment": "jsdom"
 }

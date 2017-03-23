@@ -38,9 +38,10 @@ module.exports = {
       template: 'src/client/index.html'
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-      }
+      'process.env': Object.keys(process.env).reduce((prev, curr) => {
+        prev[curr] = JSON.stringify(process.env[curr]);
+        return prev;
+      }, {})
     })
   ],
 
