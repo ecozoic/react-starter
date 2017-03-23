@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
 function Home() {
   return (
     <div className={css(styles.home)}>
-      <Helmet title="Todo List" />
+      <Helmet>
+        <title>Todo List</title>
+      </Helmet>
       <div className={css(styles.todos)}>
         <div className={css(styles.imageContainer)}>
           <img className={css(styles.image)} src={img} alt="logo" />

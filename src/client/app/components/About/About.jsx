@@ -10,7 +10,9 @@ import Helmet from 'react-helmet';
 function About({ dispatch }) {
   return (
     <div>
-      <Helmet title="About" />
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <h1>About</h1>
       <button onClick={() => dispatch(push('/'))}>Go Home</button>
     </div>

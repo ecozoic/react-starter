@@ -15,7 +15,9 @@ const styles = StyleSheet.create({
 function PageNotFound() {
   return (
     <div>
-      <Helmet title="404" />
+      <Helmet>
+        <title>404</title>
+      </Helmet>
       <h1 className={css(styles.header)}>404</h1>
     </div>
   );

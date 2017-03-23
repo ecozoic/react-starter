@@ -12,7 +12,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { AppContainer } from 'react-hot-loader';
-import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 
 import App from './app';
 import rootReducer from './app/reducers';
