@@ -6288,9 +6288,9 @@ react-fuzzy@^0.3.3:
     classnames "^2.2.3"
     fuse.js "^2.2.0"
 
-react-helmet@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.0.1.tgz#ffaf4553bb47c68a65edc53782d7fc6706796343"
+react-helmet@5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.0.2.tgz#2905f9e174650b74c26983d75dc45f3ebf561890"
   dependencies:
     deep-equal "^1.0.1"
     object-assign "^4.1.1"
@@ -6616,9 +6616,9 @@ redux-devtools@3.3.2:
     lodash "^4.2.0"
     redux-devtools-instrument "^1.0.1"
 
-redux-form@6.6.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-6.6.0.tgz#a26f05d5a2b317596733718031dec94126a0f05c"
+redux-form@6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-6.6.1.tgz#368dc4fc41301bfb1cd471b059a2215573649c8c"
   dependencies:
     deep-equal "^1.0.1"
     es6-error "^4.0.0"
