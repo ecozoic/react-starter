@@ -81,7 +81,7 @@
     "aphrodite": "1.2.0",
     "babel-polyfill": "6.23.0",
     "color": "1.0.3",
-    "connected-react-router": "4.0.0",
+    "connected-react-router": "4.1.0",
     "cross-env": "4.0.0",
     "deep-freeze": "0.0.1",
     "dotenv": "4.0.0",
