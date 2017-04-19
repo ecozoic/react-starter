@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.4.0] - 2017-04-19
+### Added
+- .gitattributes
+
+### Changed
+- Upgraded to React 15.5
+- Refactored code to use standalone prop-types package
+- Swapped out react-addons-test-utils for react-test-renderer
+- Updated several dependencies to their latest version
+- Updated Node and Yarn versions in package.json and .nvmrc
+
 ## [2.3.0] - 2017-03-23
 ### Added
 - Added classnames
