@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"yarn serve:dev\" \"yarn start:dev\"",
