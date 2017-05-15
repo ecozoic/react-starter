@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
 function Todo({ onClick, completed, text }) {
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <li
       className={css(
         styles.todo,

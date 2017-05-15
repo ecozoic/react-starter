@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
 function TodoList({ todos, onTodoClick }) {
   return (
     <ul className={css(styles.todoList)}>
-      {todos.map(todo =>
+      {todos.map(todo => (
         <Todo
           key={todo.id}
           {...todo}
           onClick={() => onTodoClick(todo.id)}
-        />,
-      )}
+        />
+      ))}
     </ul>
   );
 }

@@ -5,12 +5,12 @@
   "globals_path": "nightwatch/globals",
   "selenium": {
     "start_process": true,
-    "server_path": "./node_modules/selenium-standalone/.selenium/selenium-server/3.3.1-server.jar",
+    "server_path": "./node_modules/selenium-standalone/.selenium/selenium-server/3.4.0-server.jar",
     "host": "127.0.0.1",
     "port": 4444,
     "log_path": "./reports",
     "cli_args": {
-      "webdriver.chrome.driver": "./node_modules/selenium-standalone/.selenium/chromedriver/2.28-x64-chromedriver"
+      "webdriver.chrome.driver": "./node_modules/selenium-standalone/.selenium/chromedriver/2.29-x64-chromedriver"
     }
   },
   "test_settings": {
