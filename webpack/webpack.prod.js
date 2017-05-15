@@ -27,7 +27,12 @@ module.exports = {
           fallback: 'style-loader',
           use: 'css-loader?modules&importLoaders=2&camelCase&localIdentName=[name]__[local]--[hash:base64:5]&minimize!postcss-loader!sass-loader',
         })
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: 'awesome-typescript-loader?useCache'
+      },
     ]
   },
 

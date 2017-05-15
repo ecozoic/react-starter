@@ -35,11 +35,11 @@ node_modules
 # Webpack bundles
 dist
 
+# ATL cache
+.awcache
+
 # documentation
 docs
-
-# Nightwatch artifacts
-reports
 
 # webpack visualizer stats
 webpack/stats

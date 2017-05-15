@@ -1,0 +1,7 @@
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+
+export const FETCH_TODOS = 'FETCH_TODOS';
+export const FETCH_TODOS_PENDING = `${FETCH_TODOS}_PENDING`;
+export const FETCH_TODOS_FULFILLED = `${FETCH_TODOS}_FULFILLED`;
+export const FETCH_TODOS_REJECTED = `${FETCH_TODOS}_REJECTED`;

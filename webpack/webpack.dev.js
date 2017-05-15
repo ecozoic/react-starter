@@ -35,6 +35,14 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          'react-hot-loader/webpack',
+          'awesome-typescript-loader?useCache'
+        ]
       }
     ]
   },

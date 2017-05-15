@@ -1,24 +1,20 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   resolve: {
-    extensions: ['.jsx', '.js']
+    extensions: ['.tsx', '.ts', '.jsx', '.js']
   },
 
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        use: 'eslint-loader'
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: 'babel-loader?cacheDirectory'
+        use: 'tslint-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
@@ -32,6 +28,7 @@ module.exports = {
   },
 
   plugins: [
+    new CheckerPlugin(),
     new SassLintPlugin({
       glob: 'src/client/**/*.s?(a|c)ss'
     }),

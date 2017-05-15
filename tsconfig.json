@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "rootDir": "src/client",
+    "outDir": "dist",
+    "sourceMap": true,
+    "lib": ["es2015", "dom"],
+    "allowJs": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist",
+    "webpack",
+    "jest",
+    "src/server",
+    "postcss.config.js",
+    "webpack.config.js"
+  ]
+}
