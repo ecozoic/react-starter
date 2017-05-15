@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
+import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { IntlProvider } from 'react-intl-redux';
@@ -24,6 +25,7 @@ import './favicon.ico';
 injectTapEventPlugin();
 
 const history = createBrowserHistory();
+const sagaMiddleware = createSagaMiddleware();
 const initialState = {};
 
 const store = createStore(
@@ -34,6 +36,7 @@ const store = createStore(
       routerMiddleware(history),
       thunk,
       promise(),
+      sagaMiddleware,
       createLogger(),
     ),
     DevTools.instrument(),

@@ -1,26 +1,21 @@
 /* @flow */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, css } from 'aphrodite';
 
 import Todo from '../Todo';
 
-const styles = StyleSheet.create({
-  todoList: {
-    cursor: 'pointer',
-  },
-});
+import styles from './TodoList.scss';
 
 function TodoList({ todos, onTodoClick }) {
   return (
-    <ul className={css(styles.todoList)}>
-      {todos.map(todo =>
+    <ul className={styles.todoList}>
+      {todos.map(todo => (
         <Todo
           key={todo.id}
           {...todo}
           onClick={() => onTodoClick(todo.id)}
-        />,
-      )}
+        />
+      ))}
     </ul>
   );
 }

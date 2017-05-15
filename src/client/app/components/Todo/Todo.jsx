@@ -1,26 +1,15 @@
 /* @flow */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, css } from 'aphrodite';
+import classNames from 'classnames';
 
-const styles = StyleSheet.create({
-  todo: {
-    fontSize: '18px',
-    userSelect: 'none',
-  },
-  completed: {
-    textDecoration: 'line-through',
-  },
-});
+import styles from './Todo.scss';
 
 function Todo({ onClick, completed, text }) {
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <li
-      className={css(
-        styles.todo,
-        completed && styles.completed,
-      )}
+      className={classNames(styles.todo, { [styles.completed]: completed })}
       onClick={onClick}
     >
       {text}

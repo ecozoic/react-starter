@@ -1,13 +1,8 @@
 /* @flow */
 import React from 'react';
 import Helmet from 'react-helmet';
-import { StyleSheet, css } from 'aphrodite';
 
-const styles = StyleSheet.create({
-  header: {
-    fontSize: '20px',
-  },
-});
+import styles from './PageNotFound.scss';
 
 /**
  * Page not found component.
@@ -18,7 +13,7 @@ function PageNotFound() {
       <Helmet>
         <title>404</title>
       </Helmet>
-      <h1 className={css(styles.header)}>404</h1>
+      <h1 className={styles.header}>404</h1>
     </div>
   );
 }

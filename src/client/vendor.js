@@ -17,10 +17,11 @@ import 'redux-promise-middleware';
 import 'redux-form';
 import 'react-intl-redux';
 import 'reselect';
+import 'redux-saga';
 
 // CSS-in-JS
-import 'aphrodite';
 import 'color';
+import 'classnames';
 
 // material ui
 import 'material-ui/styles/MuiThemeProvider';
