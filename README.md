@@ -72,8 +72,8 @@ Add environment specific configuration settings by creating a `.env` file in the
 This file will be loaded by dotenv for both the client and server processes. 
 
 ## Tools & Features
-* react, react-router@4, material-ui, aphrodite
-* redux, connected-react-router, redux-thunk, redux-promise-middleware
+* react, react-router@4, material-ui, css modules
+* redux, connected-react-router, redux-thunk, redux-promise-middleware, redux-saga
 * redux-devtools, react-hot-loader@3 for HMR
 * koa
 * webpack, babel
