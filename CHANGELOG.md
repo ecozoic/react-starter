@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.5.0] - 2017-05-15
+### Added
+- redux saga
+- flux-standard-action lib to verify actions are FSA-compliant
+
+### Changed
+- Swapped out aphrodite for webpack CSS modules
+- Updated several dependencies to their latest versions
+- Updated README
+- Updated Node and Yarn versions in package.json and .nvmrc
+
 ## [2.4.0] - 2017-04-19
 ### Added
 - .gitattributes
