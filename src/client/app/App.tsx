@@ -10,7 +10,7 @@ import routes from './routes';
 function App({ history }) {
   return (
     <ConnectedRouter history={history}>
-      { routes }
+      {routes}
     </ConnectedRouter>
   );
 }

@@ -117,7 +117,7 @@ describe('todosReducer', () => {
       },
     };
 
-    const todosBefore = [];
+    const todosBefore: any[] = [];
 
     deepFreeze(action1);
     deepFreeze(action2);
@@ -172,7 +172,7 @@ describe('todosReducer', () => {
       type: 'NOPE',
     };
 
-    const todos = [];
+    const todos: any[] = [];
 
     deepFreeze(action);
     deepFreeze(todos);

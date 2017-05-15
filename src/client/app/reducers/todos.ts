@@ -1,6 +1,6 @@
 import { ADD_TODO, TOGGLE_TODO } from '../constants';
 
-export const todoReducer = (todo = {}, action) => {
+export const todoReducer = (todo = {}, action: any) => {
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -22,7 +22,7 @@ export const todoReducer = (todo = {}, action) => {
   }
 };
 
-export const todosReducer = (todos = [], action) => {
+export const todosReducer = (todos = [], action: any) => {
   switch (action.type) {
     case ADD_TODO:
       return [

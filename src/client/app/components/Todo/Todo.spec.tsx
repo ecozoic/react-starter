@@ -3,11 +3,13 @@ import { mount, shallow } from 'enzyme';
 
 import Todo from './Todo';
 
+const noop = () => undefined;
+
 describe('Todo', () => {
   it('renders without crashing', () => {
     const todo = mount(
       <Todo
-        onClick={function noop() { }}
+        onClick={noop}
         text={'Todo'}
         completed={false}
       />,
@@ -20,7 +22,7 @@ describe('Todo', () => {
     it('displays todo text', () => {
       const todo = shallow(
         <Todo
-          onClick={function noop() { }}
+          onClick={noop}
           text={'Todo'}
           completed={false}
         />,
@@ -35,9 +37,9 @@ describe('Todo', () => {
     it.skip('displays strikethrough if completed', () => {
       const todo = shallow(
         <Todo
-          onClick={function noop() { }}
+          onClick={noop}
           text={'Todo'}
-          completed
+          completed={true}
         />,
       );
 
@@ -47,7 +49,7 @@ describe('Todo', () => {
     it.skip('displays no strikethrough if incomplete', () => {
       const todo = shallow(
         <Todo
-          onClick={function noop() { }}
+          onClick={noop}
           text={'Todo'}
           completed={false}
         />,

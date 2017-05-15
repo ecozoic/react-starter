@@ -3,12 +3,14 @@ import { mount, shallow } from 'enzyme';
 
 import TodoList from './TodoList';
 
+const noop = () => undefined;
+
 describe('TodoList', () => {
   it('renders without crashing', () => {
     const todoList = mount(
       <TodoList
         todos={[]}
-        onTodoClick={function noop() { }}
+        onTodoClick={noop}
       />,
     );
 
@@ -20,7 +22,7 @@ describe('TodoList', () => {
       const todoList = shallow(
         <TodoList
           todos={[]}
-          onTodoClick={function noop() { }}
+          onTodoClick={noop}
         />,
       );
 
@@ -28,14 +30,16 @@ describe('TodoList', () => {
     });
 
     it('renders a todo for each todo in props', () => {
+      const todos = [
+        { id: 1, text: 'Todo 1', completed: false },
+        { id: 2, text: 'Todo 2', completed: true },
+        { id: 3, text: 'Todo 3', completed: false },
+      ];
+
       const todoList = shallow(
         <TodoList
-          todos={[
-            { id: 1, text: 'Todo 1', completed: false },
-            { id: 2, text: 'Todo 2', completed: true },
-            { id: 3, text: 'Todo 3', completed: false },
-          ]}
-          onTodoClick={function noop() { }}
+          todos={todos}
+          onTodoClick={noop}
         />,
       );
 
@@ -43,12 +47,14 @@ describe('TodoList', () => {
     });
 
     it('renders todo with proper props', () => {
+      const todos = [
+        { id: 1, text: 'Todo 1', completed: false }
+      ];
+
       const todoList = shallow(
         <TodoList
-          todos={[
-            { id: 1, text: 'Todo 1', completed: false },
-          ]}
-          onTodoClick={function noop() { }}
+          todos={todos}
+          onTodoClick={noop}
         />,
       );
 
@@ -59,12 +65,14 @@ describe('TodoList', () => {
     });
 
     it('sets the todo id as the key', () => {
+      const todos = [
+        { id: 1, text: 'Todo 1', completed: false }
+      ];
+
       const todoList = shallow(
         <TodoList
-          todos={[
-            { id: 1, text: 'Todo 1', completed: false },
-          ]}
-          onTodoClick={function noop() { }}
+          todos={todos}
+          onTodoClick={noop}
         />,
       );
 
@@ -74,11 +82,13 @@ describe('TodoList', () => {
     it('calls onTodoClick with id of clicked todo', () => {
       const mockFn = jest.fn();
 
+      const todos = [
+        { id: 1, text: 'Todo 1', completed: false }
+      ];
+
       const todoList = shallow(
         <TodoList
-          todos={[
-            { id: 1, text: 'Todo 1', completed: false },
-          ]}
+          todos={todos}
           onTodoClick={mockFn}
         />,
       );

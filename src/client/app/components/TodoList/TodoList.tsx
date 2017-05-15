@@ -1,3 +1,4 @@
+/* tslint:disable:jsx-no-lambda */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,7 +9,7 @@ import styles from './TodoList.scss';
 function TodoList({ todos, onTodoClick }) {
   return (
     <ul className={styles.todoList}>
-      {todos.map(todo => (
+      {todos.map((todo: any) => (
         <Todo
           key={todo.id}
           {...todo}
