@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import img from '../../../react.png';
-
 import AddTodoContainer from '../../containers/AddTodo';
 import TodoListContainer from '../../containers/TodoList';
 
-import styles from './Home.scss';
+const img = require('../../../react.png');
+const styles = require('./Home.scss');
 
 /**
  * Home page component.

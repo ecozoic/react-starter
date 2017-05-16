@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { todoShape, Todo } from '../../models';
 import TodoComponent from '../Todo';
 
-import styles from './TodoList.scss';
+const styles = require('./TodoList.scss');
 
 interface TodoListProps {
   todos: Todo[];

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import styles from './PageNotFound.scss';
+const styles = require('./PageNotFound.scss');
 
 /**
  * Page not found component.
