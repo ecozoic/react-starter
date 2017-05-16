@@ -11,7 +11,3 @@ export const todoShape = PropTypes.shape({
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
 });
-
-export interface TodosState {
-
-}

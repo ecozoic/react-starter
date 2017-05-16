@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 
 import { toggleTodo } from '../actions';
 import { getTodos } from '../selectors';
+import { State } from '../reducers';
 import TodoList from '../components/TodoList';
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: State) => ({
   todos: getTodos(state),
 });
 

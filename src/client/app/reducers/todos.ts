@@ -1,6 +1,10 @@
 import { ADD_TODO, TOGGLE_TODO } from '../constants';
+import { Todo } from '../models';
+import { AddTodoAction, ToggleTodoAction } from '../actions';
 
-export const todoReducer = (todo = {}, action: any) => {
+type TodosAction = AddTodoAction | ToggleTodoAction;
+
+export const todoReducer = (todo: Todo, action: TodosAction) => {
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -22,7 +26,7 @@ export const todoReducer = (todo = {}, action: any) => {
   }
 };
 
-export const todosReducer = (todos = [], action: any) => {
+export const todosReducer = (todos: Todo[] = [], action: TodosAction) => {
   switch (action.type) {
     case ADD_TODO:
       return [

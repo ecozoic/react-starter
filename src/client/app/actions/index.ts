@@ -1,10 +1,35 @@
+import { Action as ReduxAction } from 'redux';
+
 import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS } from '../constants';
 
 const { fetch } = window;
-
 let nextTodoId = 0;
 
-export const addTodo = (text: string) => ({
+export interface Action<P, M> extends ReduxAction {
+  readonly type: string;
+  readonly payload?: P;
+  readonly meta?: M;
+  readonly error?: boolean;
+}
+
+export interface AddTodoPayload {
+  readonly id: number;
+  readonly text: string;
+}
+
+export interface ToggleTodoPayload {
+  readonly id: number;
+}
+
+export interface AddTodoAction extends Action<AddTodoPayload, undefined>  {
+  type: ADD_TODO;
+}
+
+export interface ToggleTodoAction extends Action<ToggleTodoPayload, undefined> {
+  type: TOGGLE_TODO;
+}
+
+export const addTodo: (text: string) => AddTodoAction = (text: string) => ({
   type: ADD_TODO,
   payload: {
     // tslint:disable-next-line:no-increment-decrement
@@ -13,13 +38,14 @@ export const addTodo = (text: string) => ({
   },
 });
 
-export const toggleTodo = (id: number) => ({
+export const toggleTodo: (id: number) => ToggleTodoAction = (id: number) => ({
   type: TOGGLE_TODO,
   payload: {
     id,
   },
 });
 
+// TODO: improve typing
 export const fetchTodos = () => (dispatch: Function) => dispatch({
   type: FETCH_TODOS,
   payload: fetch('/api/todos')
