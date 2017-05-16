@@ -14,7 +14,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './app';
 import rootReducer from './app/reducers';
 
-// favicon
 import './favicon.ico';
 
 injectTapEventPlugin();

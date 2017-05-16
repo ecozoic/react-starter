@@ -18,7 +18,6 @@ import App from './app';
 import rootReducer from './app/reducers';
 import DevTools from './app/containers/DevTools';
 
-// favicon
 import './favicon.ico';
 
 injectTapEventPlugin();
