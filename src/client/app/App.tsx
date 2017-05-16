@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { History } from 'history';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';
 
+interface AppProps {
+  history: History;
+}
+
 /**
  * Main application component.
  */
-function App({ history }) {
-  return (
-    <ConnectedRouter history={history}>
-      {routes}
-    </ConnectedRouter>
-  );
-}
+class App extends Component<AppProps, undefined> {
+  static propTypes = {
+    history: PropTypes.object.isRequired,
+  };
 
-App.propTypes = {
-  history: PropTypes.object.isRequired,
-};
+  render() {
+    const { history } = this.props;
+
+    return (
+      <ConnectedRouter history={history}>
+        {routes}
+      </ConnectedRouter>
+    );
+  }
+}
 
 export default App;

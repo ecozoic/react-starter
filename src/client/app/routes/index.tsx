@@ -6,7 +6,7 @@ import PageNotFound from '../components/PageNotFound';
 
 const routes = (
   <Switch>
-    <Route exact={true} path="/" component={Home} />
+    <Route exact path="/" component={Home} />
     <Route component={PageNotFound} />
   </Switch>
 );

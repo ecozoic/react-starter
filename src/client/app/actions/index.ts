@@ -23,8 +23,8 @@ export const toggleTodo = (id: number) => ({
 export const fetchTodos = () => (dispatch: Function) => dispatch({
   type: FETCH_TODOS,
   payload: fetch('/api/todos')
-    .then(response => response.json())
-    .then((todos: any[]) => {
-      todos.forEach(todo => dispatch(addTodo(todo)));
+    .then((response) => response.json())
+    .then((todos: string[]) => {
+      todos.forEach((todo) => dispatch(addTodo(todo)));
     }),
 });

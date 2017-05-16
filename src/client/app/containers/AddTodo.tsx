@@ -6,12 +6,20 @@ import TextField from 'material-ui/TextField';
 
 import { addTodo, fetchTodos } from '../actions';
 
-class AddTodo extends Component<any, any> {
+interface AddTodoProps {
+  dispatch: Function;
+}
+
+interface AddTodoState {
+  todo: string;
+}
+
+class AddTodo extends Component<AddTodoProps, AddTodoState> {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-  }
+  };
 
-  constructor(props: any) {
+  constructor(props: AddTodoProps) {
     super(props);
 
     this.state = {
@@ -23,10 +31,11 @@ class AddTodo extends Component<any, any> {
   }
 
   componentDidMount() {
+    // TODO: only fetch if not initialized
     this.props.dispatch(fetchTodos());
   }
 
-  onSubmit(event: FormEvent<any>) {
+  onSubmit(event: FormEvent<HTMLFormElement>) {
     const { dispatch } = this.props;
     const { todo } = this.state;
 
@@ -40,7 +49,7 @@ class AddTodo extends Component<any, any> {
     this.setState({ todo: '' });
   }
 
-  onChange(event: ChangeEvent<any>) {
+  onChange(event: ChangeEvent<HTMLInputElement>) {
     this.setState({ todo: event.target.value });
   }
 
@@ -58,7 +67,7 @@ class AddTodo extends Component<any, any> {
           />
           <RaisedButton
             label="Add Todo"
-            primary={true}
+            primary
             type="submit"
           />
         </form>

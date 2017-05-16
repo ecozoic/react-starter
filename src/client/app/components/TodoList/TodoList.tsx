@@ -1,34 +1,37 @@
-/* tslint:disable:jsx-no-lambda */
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Todo from '../Todo';
+import { todoShape, Todo } from '../../models';
+import TodoComponent from '../Todo';
 
 import styles from './TodoList.scss';
 
-function TodoList({ todos, onTodoClick }) {
-  return (
-    <ul className={styles.todoList}>
-      {todos.map((todo: any) => (
-        <Todo
-          key={todo.id}
-          {...todo}
-          onClick={() => onTodoClick(todo.id)}
-        />
-      ))}
-    </ul>
-  );
+interface TodoListProps {
+  todos: Todo[];
+  onTodoClick: (id: number) => void;
 }
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  onTodoClick: PropTypes.func.isRequired,
-};
+class TodoList extends Component<TodoListProps, undefined> {
+  static propTypes = {
+    todos: PropTypes.arrayOf(todoShape).isRequired,
+    onTodoClick: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const { todos, onTodoClick } = this.props;
+
+    return (
+      <ul className={styles.todoList}>
+        {todos.map((todo) => (
+          <TodoComponent
+            onClick={() => onTodoClick(todo.id)}
+            completed={todo.completed}
+            text={todo.text}
+          />
+        ))}
+      </ul>
+    );
+  }
+}
 
 export default TodoList;

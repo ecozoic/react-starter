@@ -30,7 +30,7 @@ export const todosReducer = (todos = [], action: any) => {
         todoReducer(undefined, action),
       ];
     case TOGGLE_TODO:
-      return todos.map(td => todoReducer(td, action));
+      return todos.map((td) => todoReducer(td, action));
     default:
       return todos;
   }

@@ -7,7 +7,7 @@ const { PORT, HOST, PROXY_PORT } = process.env;
 module.exports = {
   entry: {
     polyfill: './src/client/polyfill',
-    vendor: './src/client/vendor',
+    vendor: './src/client/vendor.hmr',
     app: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://${HOST}:${PORT}`,

@@ -48,7 +48,7 @@ describe('TodoList', () => {
 
     it('renders todo with proper props', () => {
       const todos = [
-        { id: 1, text: 'Todo 1', completed: false }
+        { id: 1, text: 'Todo 1', completed: false },
       ];
 
       const todoList = shallow(
@@ -66,7 +66,7 @@ describe('TodoList', () => {
 
     it('sets the todo id as the key', () => {
       const todos = [
-        { id: 1, text: 'Todo 1', completed: false }
+        { id: 1, text: 'Todo 1', completed: false },
       ];
 
       const todoList = shallow(
@@ -83,7 +83,7 @@ describe('TodoList', () => {
       const mockFn = jest.fn();
 
       const todos = [
-        { id: 1, text: 'Todo 1', completed: false }
+        { id: 1, text: 'Todo 1', completed: false },
       ];
 
       const todoList = shallow(
