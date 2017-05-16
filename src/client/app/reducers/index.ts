@@ -15,8 +15,8 @@ const rootReducer = combineReducers<State>({
 });
 
 export interface State {
-  form: FormStateMap;
-  intl: IntlState;
+  form?: FormStateMap;
+  intl?: IntlState;
   todos: Todo[];
 }
 

@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     polyfill: './src/client/polyfill',
     vendor: './src/client/vendor',
-    app: './src/client/main'
+    app: './src/client/main',
   },
 
   devtool: 'source-map',
@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
     filename: 'assets/js/[name].[hash].js',
-    chunkFilename: 'assets/js/[id].[hash].chunk.js'
+    chunkFilename: 'assets/js/[id].[hash].chunk.js',
   },
 
   module: {
@@ -25,15 +25,31 @@ module.exports = {
         test: /\.s?(a|c)ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?modules&importLoaders=2&camelCase&localIdentName=[name]__[local]--[hash:base64:5]&minimize!postcss-loader!sass-loader',
-        })
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                importLoaders: 2,
+                camelCase: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+                minimize: true,
+              },
+            },
+            'postcss-loader',
+            'sass-loader',
+          ],
+        }),
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: 'awesome-typescript-loader?useCache'
+        loader: 'awesome-typescript-loader',
+        options: {
+          useCache: true,
+        },
       },
-    ]
+    ],
   },
 
   plugins: [
@@ -41,14 +57,15 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
-        warnings: false
-      }
+        warnings: false,
+      },
     }),
     new ExtractTextPlugin({
-      filename: 'assets/css/[name].[hash].css'
+      filename: 'assets/css/[name].[hash].css',
+      allChunks: true,
     }),
     new Visualizer({
-      filename: '../webpack/stats/stats.prod.html'
-    })
-  ]
+      filename: '../webpack/stats/stats.prod.html',
+    }),
+  ],
 };

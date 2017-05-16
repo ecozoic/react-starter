@@ -1,6 +1,9 @@
 import deepFreeze from 'deep-freeze';
+import { Action } from 'redux';
 
 import { ADD_TODO, TOGGLE_TODO } from '../constants';
+import { Todo } from '../models';
+import { AddTodoAction, ToggleTodoAction } from '../actions';
 
 import {
   todoReducer,
@@ -9,7 +12,7 @@ import {
 
 describe('todoReducer', () => {
   it('adds a new todo', () => {
-    const action = {
+    const action: AddTodoAction = {
       type: ADD_TODO,
       payload: {
         id: 1,
@@ -17,12 +20,9 @@ describe('todoReducer', () => {
       },
     };
 
-    const todoBefore = {};
-
-    deepFreeze(todoBefore);
     deepFreeze(action);
 
-    const todoAfter = todoReducer(todoBefore, action);
+    const todoAfter = todoReducer(undefined, action);
 
     expect(todoAfter).toEqual({
       id: action.payload.id,
@@ -32,15 +32,16 @@ describe('todoReducer', () => {
   });
 
   it('toggles an existing todo', () => {
-    const action = {
+    const action: ToggleTodoAction = {
       type: TOGGLE_TODO,
       payload: {
         id: 1,
       },
     };
 
-    const todoBefore = {
+    const todoBefore: Todo = {
       id: 1,
+      text: 'Todo',
       completed: false,
     };
 
@@ -57,15 +58,16 @@ describe('todoReducer', () => {
   });
 
   it('returns unchanged todo if toggle action has wrong id', () => {
-    const action = {
+    const action: ToggleTodoAction = {
       type: TOGGLE_TODO,
       payload: {
         id: 0,
       },
     };
 
-    const todoBefore = {
+    const todoBefore: Todo = {
       id: 1,
+      text: 'Todo',
       completed: false,
     };
 
@@ -77,7 +79,9 @@ describe('todoReducer', () => {
   });
 
   it('returns initial state', () => {
-    const action = {};
+    const action: Action = {
+      type: '@@INIT',
+    };
 
     deepFreeze(action);
 
@@ -86,11 +90,15 @@ describe('todoReducer', () => {
   });
 
   it('returns existing state for unknown action', () => {
-    const action = {
-      type: 'NOPE',
+    const action: Action = {
+      type: '@@UNKNOWN',
     };
 
-    const todo = {};
+    const todo: Todo = {
+      id: 1,
+      text: 'Todo',
+      completed: false,
+    };
 
     deepFreeze(action);
     deepFreeze(todo);
@@ -101,7 +109,7 @@ describe('todoReducer', () => {
 
 describe('todosReducer', () => {
   it('adds a new todo', () => {
-    const action1 = {
+    const action1: AddTodoAction = {
       type: ADD_TODO,
       payload: {
         id: 1,
@@ -109,7 +117,7 @@ describe('todosReducer', () => {
       },
     };
 
-    const action2 = {
+    const action2: AddTodoAction = {
       type: ADD_TODO,
       payload: {
         id: 2,
@@ -117,7 +125,7 @@ describe('todosReducer', () => {
       },
     };
 
-    const todosBefore: any[] = [];
+    const todosBefore: Todo[] = [];
 
     deepFreeze(action1);
     deepFreeze(action2);
@@ -133,15 +141,16 @@ describe('todosReducer', () => {
   });
 
   it('toggles an existing todo', () => {
-    const action = {
+    const action: ToggleTodoAction = {
       type: TOGGLE_TODO,
       payload: {
         id: 1,
       },
     };
 
-    const todosBefore = [{
+    const todosBefore: Todo[] = [{
       id: 1,
+      text: 'Todo',
       completed: false,
     }];
 
@@ -158,7 +167,9 @@ describe('todosReducer', () => {
   });
 
   it('returns initial state', () => {
-    const action = {};
+    const action: Action = {
+      type: '@@INIT',
+    };
 
     deepFreeze(action);
 
@@ -168,11 +179,11 @@ describe('todosReducer', () => {
   });
 
   it('returns existing state for unknown action', () => {
-    const action = {
-      type: 'NOPE',
+    const action: Action = {
+      type: '@@UNKNOWN',
     };
 
-    const todos: any[] = [];
+    const todos: Todo[] = [];
 
     deepFreeze(action);
     deepFreeze(todos);

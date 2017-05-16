@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { mount, shallow } from 'enzyme';
 
 import TodoList from './TodoList';
+import { TodoProps } from '../Todo/Todo';
 
-const noop = () => undefined;
+const noop: () => void = () => undefined;
 
 describe('TodoList', () => {
   it('renders without crashing', () => {
@@ -59,9 +60,10 @@ describe('TodoList', () => {
       );
 
       const todo = todoList.find('Todo');
+      const props = todo.props() as TodoProps;
 
-      expect(todo.props().completed).toBe(false);
-      expect(todo.props().text).toBe('Todo 1');
+      expect(props.completed).toBe(false);
+      expect(props.text).toBe('Todo 1');
     });
 
     it('sets the todo id as the key', () => {

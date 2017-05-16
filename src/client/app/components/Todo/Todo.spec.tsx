@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme';
 
 import Todo from './Todo';
 
-const noop = () => undefined;
+const noop: () => void = () => undefined;
 
 describe('Todo', () => {
   it('renders without crashing', () => {

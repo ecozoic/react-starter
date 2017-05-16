@@ -10,7 +10,7 @@ const styles = require('./Home.scss');
 /**
  * Home page component.
  */
-class Home extends Component<undefined, undefined> {
+class Home extends Component<any, undefined> {
   render() {
     return (
       <div className={styles.home}>

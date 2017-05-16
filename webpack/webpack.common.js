@@ -5,7 +5,7 @@ const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js']
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
 
   module: {
@@ -14,17 +14,23 @@ module.exports = {
         test: /\.tsx?$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        use: 'tslint-loader'
+        loader: 'tslint-loader',
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        use: 'file-loader?name=assets/img/[name].[hash].[ext]'
+        loader: 'file-loader',
+        options: {
+          name: 'assets/img/[name].[hash].[ext]',
+        },
       },
       {
         test: /\.ico$/,
-        use: 'file-loader?name=[name].[ext]'
-      }
-    ]
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
+    ],
   },
 
   plugins: [
@@ -43,10 +49,10 @@ module.exports = {
         prev[curr] = JSON.stringify(process.env[curr]);
         return prev;
       }, {})
-    })
+    }),
   ],
 
   performance: {
-    hints: false
-  }
+    hints: false,
+  },
 };

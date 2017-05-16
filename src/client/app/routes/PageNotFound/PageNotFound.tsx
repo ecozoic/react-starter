@@ -6,7 +6,7 @@ const styles = require('./PageNotFound.scss');
 /**
  * Page not found component.
  */
-class PageNotFound extends Component<undefined, undefined> {
+class PageNotFound extends Component<any, undefined> {
   render() {
     return (
       <div>

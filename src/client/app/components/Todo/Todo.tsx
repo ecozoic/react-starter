@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const styles = require('./Todo.scss');
 
-interface TodoProps {
+export interface TodoProps {
   onClick: EventHandler<MouseEvent<HTMLLIElement>>;
   completed: boolean;
   text: string;

@@ -6,7 +6,7 @@ import TodoComponent from '../Todo';
 
 const styles = require('./TodoList.scss');
 
-interface TodoListProps {
+export interface TodoListProps {
   todos: Todo[];
   onTodoClick: (id: number) => void;
 }

@@ -1,8 +1,9 @@
 import { getTodos } from './';
+import { Todo } from '../models';
 
 describe('getTodos', () => {
   it('returns todos from state', () => {
-    const todos: any[] = [];
+    const todos: Todo[] = [];
     const state = {
       todos,
     };
