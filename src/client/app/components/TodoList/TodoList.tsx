@@ -24,6 +24,7 @@ class TodoList extends Component<TodoListProps, undefined> {
       <ul className={styles.todoList}>
         {todos.map((todo) => (
           <TodoComponent
+            key={todo.id}
             onClick={() => onTodoClick(todo.id)}
             completed={todo.completed}
             text={todo.text}

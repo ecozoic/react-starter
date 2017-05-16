@@ -1,4 +1,5 @@
-import { Action as ReduxAction } from 'redux';
+import { Action as ReduxAction, Dispatch } from 'redux';
+import { State } from '../reducers';
 
 import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS } from '../constants';
 
@@ -45,8 +46,7 @@ export const toggleTodo: (id: number) => ToggleTodoAction = (id: number) => ({
   },
 });
 
-// TODO: improve typing
-export const fetchTodos = () => (dispatch: Function) => dispatch({
+export const fetchTodos = () => (dispatch: Dispatch<State>) => dispatch({
   type: FETCH_TODOS,
   payload: fetch('/api/todos')
     .then((response) => response.json())
