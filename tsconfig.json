@@ -12,7 +12,9 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
     "node_modules",

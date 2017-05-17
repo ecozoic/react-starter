@@ -86,7 +86,7 @@ describe('todoReducer', () => {
     deepFreeze(action);
 
     const todo = todoReducer(undefined, action);
-    expect(todo).toEqual({});
+    expect(todo).toEqual(undefined);
   });
 
   it('returns existing state for unknown action', () => {

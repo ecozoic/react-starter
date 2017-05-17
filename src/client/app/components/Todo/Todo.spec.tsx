@@ -34,7 +34,7 @@ describe('Todo', () => {
       expect(actual).toBe(expected);
     });
 
-    it.skip('displays strikethrough if completed', () => {
+    it('has completed class if completed', () => {
       const todo = shallow(
         <Todo
           onClick={noop}
@@ -43,10 +43,12 @@ describe('Todo', () => {
         />,
       );
 
-      expect(todo.find('li').props().style.textDecoration).toEqual('line-through');
+      const classes = todo.find('li').props().className.split(' ');
+
+      expect(classes.indexOf('completed') > -1).toEqual(true);
     });
 
-    it.skip('displays no strikethrough if incomplete', () => {
+    it('does not have completed class if incomplete', () => {
       const todo = shallow(
         <Todo
           onClick={noop}
@@ -55,7 +57,9 @@ describe('Todo', () => {
         />,
       );
 
-      expect(todo.find('li').props().style.textDecoration).toEqual(undefined);
+      const classes = todo.find('li').props().className.split(' ');
+
+      expect(classes.indexOf('completed') > -1).toEqual(false);
     });
 
     it('fires onclick when clicked', () => {
