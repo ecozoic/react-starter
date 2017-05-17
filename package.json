@@ -18,7 +18,7 @@
     "serve": "cross-env NODE_ENV=production node src/server/main.js",
     "serve:dev": "cross-env NODE_ENV=development nodemon --inspect src/server/main.js",
     "predocs": "yarn clean:docs",
-    "docs": "jsdoc -c jsdoc.conf.json",
+    "docs": "typedoc --out docs src/client --exclude \"**/*.spec.+(ts|tsx)\" --mode file",
     "clean:build": "rimraf dist",
     "clean:docs": "rimraf docs",
     "clean:test": "rimraf coverage",
