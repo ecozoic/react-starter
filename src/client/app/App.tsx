@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import { History } from 'history';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';

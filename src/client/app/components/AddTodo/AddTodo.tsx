@@ -1,5 +1,6 @@
-import React, { Component, FormEvent, ChangeEvent } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Component, FormEvent, ChangeEvent } from 'react';
+import * as PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 

@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 
 import TodoList from './TodoList';

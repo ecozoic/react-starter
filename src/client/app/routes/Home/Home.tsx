@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import AddTodoContainer from '../../containers/AddTodo';

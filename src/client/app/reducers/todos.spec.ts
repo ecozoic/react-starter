@@ -1,4 +1,4 @@
-import deepFreeze from 'deep-freeze';
+import * as deepFreeze from 'deep-freeze';
 import { Action } from 'redux';
 
 import { ADD_TODO, TOGGLE_TODO } from '../constants';
