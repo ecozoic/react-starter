@@ -1,7 +1,7 @@
 # react-starter
 [![Build Status](https://travis-ci.org/ecozoic/react-starter.svg?branch=master)](https://travis-ci.org/ecozoic/react-starter) [![Dependency Status](https://david-dm.org/ecozoic/react-starter.svg)](https://david-dm.org/ecozoic/react-starter) [![devDependency Status](https://david-dm.org/ecozoic/react-starter/dev-status.png)](https://david-dm.org/ecozoic/react-starter?type=dev)
 
-This project is a scaffold to start new react+redux projects powered by Webpack and TypeScript.
+This project is a scaffold to start new React+Redux projects powered by Webpack+TypeScript.
 
 ## Installation
 ```
@@ -16,7 +16,7 @@ yarn start
 ```
 
 Starts a webpack-dev-server with HMR and redux-devtools at http://localhost:8080 and a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server at http://localhost:3000. 
-The webpack-dev-server is configured to proxy HTTP calls to /api/* routes to the Koa server.
+The webpack-dev-server is configured to proxy HTTP calls to `/api/*` routes to the Koa server.
 
 ## Production
 ```
