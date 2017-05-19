@@ -1,7 +1,7 @@
 # react-starter
 [![Build Status](https://travis-ci.org/ecozoic/react-starter.svg?branch=master)](https://travis-ci.org/ecozoic/react-starter) [![Dependency Status](https://david-dm.org/ecozoic/react-starter.svg)](https://david-dm.org/ecozoic/react-starter) [![devDependency Status](https://david-dm.org/ecozoic/react-starter/dev-status.png)](https://david-dm.org/ecozoic/react-starter?type=dev)
 
-This project is a scaffold to start new react+redux projects powered by Webpack.
+This project is a scaffold to start new react+redux projects powered by Webpack and TypeScript.
 
 ## Installation
 ```
@@ -35,11 +35,6 @@ yarn test
 
 Executes Jest unit tests and generate Istanbul coverage reports for both the client and server.
 
-To run Nightwatch e2e tests, ensure the app is running with either ```yarn start``` or ```yarn serve``` and then run:
-```
-yarn e2e
-```
-
 To develop using TDD (Jest in ```--watch``` mode), run:
 ```
 yarn tdd
@@ -51,36 +46,23 @@ Starts the webpack-dev-server, Koa, and Jest.
 yarn docs
 ```
 
-Generates jsdoc documentation.
-
-## Flow
-```
-yarn flow
-```
-
-Executes static type-checking with flow.
-
-## Storybook
-```
-yarn storybook
-```
-
-Starts a Storybook server to play around with stories for new components
+Generates typedoc documentation.
 
 ## Configuration
 Add environment specific configuration settings by creating a `.env` file in the root directory. `.env.sample` shows an example format. 
 This file will be loaded by dotenv for both the client and server processes. 
 
 ## Tools & Features
-* react, react-router@4, material-ui, css modules
+* react, react-router
 * redux, connected-react-router, redux-thunk, redux-promise-middleware, redux-saga
-* redux-devtools, react-hot-loader@3 for HMR
+* redux-devtools, react-hot-loader
+* material-ui, css modules, scss
+* webpack, typescript
+* uglifyJS + tree-shaking
 * koa
-* webpack, babel
-* uglifyJS + treeshaking
-* eslint, flow
-* jest, enzyme, istanbul, nightwatch
-* jsdoc, storybook
+* tslint, sasslint
+* jest, enzyme, istanbul
+* typedoc
 
 ## Roadmap
 * Improve documentation
