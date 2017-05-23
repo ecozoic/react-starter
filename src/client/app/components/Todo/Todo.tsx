@@ -1,17 +1,16 @@
 import * as React from 'react';
-import { Component, EventHandler, MouseEvent } from 'react';
 import * as PropTypes from 'prop-types';
 import * as classNames from 'classnames';
 
 const styles = require('./Todo.scss');
 
 export interface TodoProps {
-  onClick: EventHandler<MouseEvent<HTMLLIElement>>;
+  onClick: React.EventHandler<React.MouseEvent<HTMLLIElement>>;
   completed: boolean;
   text: string;
 }
 
-class Todo extends Component<TodoProps, undefined> {
+class Todo extends React.Component<TodoProps, undefined> {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
     completed: PropTypes.bool.isRequired,

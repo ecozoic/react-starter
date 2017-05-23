@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Component } from 'react';
 import Helmet from 'react-helmet';
 
 const styles = require('./PageNotFound.scss');
@@ -7,7 +6,7 @@ const styles = require('./PageNotFound.scss');
 /**
  * Page not found component.
  */
-class PageNotFound extends Component<any, undefined> {
+class PageNotFound extends React.Component<any, undefined> {
   render() {
     return (
       <div>

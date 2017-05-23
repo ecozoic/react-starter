@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Component } from 'react';
 import * as PropTypes from 'prop-types';
 
 import { todoShape, Todo } from '../../models';
@@ -12,7 +11,7 @@ export interface TodoListProps {
   onTodoClick: (id: number) => void;
 }
 
-class TodoList extends Component<TodoListProps, undefined> {
+class TodoList extends React.Component<TodoListProps, undefined> {
   static propTypes = {
     todos: PropTypes.arrayOf(todoShape).isRequired,
     onTodoClick: PropTypes.func.isRequired,
@@ -23,7 +22,7 @@ class TodoList extends Component<TodoListProps, undefined> {
 
     return (
       <ul className={styles.todoList}>
-        {todos.map((todo) => (
+        {todos.map(todo => (
           <TodoComponent
             key={todo.id}
             onClick={() => onTodoClick(todo.id)}

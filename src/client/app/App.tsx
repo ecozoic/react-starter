@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Component } from 'react';
 import { History } from 'history';
 import * as PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
@@ -13,7 +12,7 @@ interface AppProps {
 /**
  * Main application component.
  */
-class App extends Component<AppProps, undefined> {
+class App extends React.Component<AppProps, undefined> {
   static propTypes = {
     history: PropTypes.object.isRequired,
   };

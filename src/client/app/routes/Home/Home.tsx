@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import AddTodoContainer from '../../containers/AddTodo';
@@ -11,7 +10,7 @@ const styles = require('./Home.scss');
 /**
  * Home page component.
  */
-class Home extends Component<any, undefined> {
+class Home extends React.Component<any, undefined> {
   render() {
     return (
       <div className={styles.home}>

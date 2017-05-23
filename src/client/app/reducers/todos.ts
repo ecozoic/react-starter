@@ -34,7 +34,7 @@ export const todosReducer = (todos: Todo[] = [], action: TodosAction) => {
         todoReducer(undefined, action),
       ];
     case TOGGLE_TODO:
-      return todos.map((td) => todoReducer(td, action));
+      return todos.map(td => todoReducer(td, action));
     default:
       return todos;
   }

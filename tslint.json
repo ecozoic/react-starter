@@ -1,27 +1,18 @@
 {
   "extends": [
-    "tslint:latest",
+    "tslint-config-airbnb",
     "tslint-react"
   ],
   "rules": {
-    "interface-name": [
-      false
-    ],
-    "member-access": [
-      false
-    ],
-    "no-var-requires": false,
-    "object-literal-sort-keys": false,
-    "ordered-imports": [
-      false
-    ],
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
+    "import-name": false,
     "jsx-no-multiline-js": false,
     "jsx-boolean-value": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ]
   }
 }
