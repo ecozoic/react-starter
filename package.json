@@ -76,8 +76,8 @@
     "sass-lint": "1.10.2",
     "sass-loader": "6.0.5",
     "sasslint-webpack-plugin": "1.0.4",
-    "style-loader": "0.18.0",
-    "tslint": "5.2.0",
+    "style-loader": "0.18.1",
+    "tslint": "5.3.2",
     "tslint-config-airbnb": "5.0.1",
     "tslint-loader": "3.5.3",
     "tslint-react": "3.0.0",
@@ -140,6 +140,6 @@
   "engines": {
     "node": "6.10.3",
     "npm": "3.10.10",
-    "yarn": "0.24.4"
+    "yarn": "0.24.5"
   }
 }
