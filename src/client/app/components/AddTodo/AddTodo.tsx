@@ -3,12 +3,12 @@ import * as PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-interface AddTodoProps {
+export interface AddTodoProps {
   onInit: () => void;
   onSubmit: (todo: string) => void;
 }
 
-interface AddTodoState {
+export interface AddTodoState {
   todo: string;
 }
 
