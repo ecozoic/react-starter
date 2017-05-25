@@ -1,19 +1,18 @@
 import * as React from 'react';
-import { Component, FormEvent, ChangeEvent } from 'react';
 import * as PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-interface AddTodoProps {
+export interface AddTodoProps {
   onInit: () => void;
   onSubmit: (todo: string) => void;
 }
 
-interface AddTodoState {
+export interface AddTodoState {
   todo: string;
 }
 
-class AddTodo extends Component<AddTodoProps, AddTodoState> {
+class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
   static propTypes = {
     onInit: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
@@ -35,7 +34,7 @@ class AddTodo extends Component<AddTodoProps, AddTodoState> {
     this.props.onInit();
   }
 
-  handleSubmit(event: FormEvent<HTMLFormElement>) {
+  handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     const { onSubmit } = this.props;
     const { todo } = this.state;
 
@@ -50,7 +49,7 @@ class AddTodo extends Component<AddTodoProps, AddTodoState> {
     this.setState({ todo: '' });
   }
 
-  handleChange(event: ChangeEvent<HTMLInputElement>) {
+  handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     this.setState({ todo: event.target.value });
   }
 

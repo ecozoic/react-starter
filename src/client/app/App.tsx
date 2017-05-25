@@ -1,32 +1,27 @@
 import * as React from 'react';
-import { Component } from 'react';
 import { History } from 'history';
 import * as PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';
 
-interface AppProps {
+export interface AppProps {
   history: History;
 }
 
 /**
- * Main application component.
+ * Main application component
  */
-class App extends Component<AppProps, undefined> {
-  static propTypes = {
-    history: PropTypes.object.isRequired,
-  };
+const App: React.SFC<AppProps> = ({ history }) => {
+  return (
+    <ConnectedRouter history={history}>
+      {routes}
+    </ConnectedRouter>
+  );
+};
 
-  render() {
-    const { history } = this.props;
-
-    return (
-      <ConnectedRouter history={history}>
-        {routes}
-      </ConnectedRouter>
-    );
-  }
-}
+App.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default App;

@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [3.0.1] - 2017-05-25
+### Changed
+- Improved tslint configuration to use tslint-config-airbnb
+- Refactor components to use SFCs
+- Updated several dependencies to their latest versions
+
 ## [3.0.0] - 2017-05-19
 ### Added
 - TypeScript support
