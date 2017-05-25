@@ -43,7 +43,7 @@
     "@types/jest": "19.2.3",
     "@types/material-ui": "0.17.7",
     "@types/prop-types": "15.5.1",
-    "@types/react": "15.0.25",
+    "@types/react": "15.0.24",
     "@types/react-dom": "15.5.0",
     "@types/react-helmet": "5.0.2",
     "@types/react-hot-loader": "3.0.1",
@@ -92,7 +92,7 @@
     "tslint-react": "3.0.0",
     "typedoc": "0.7.1",
     "typescript": "2.3.3",
-    "webpack": "2.6.0",
+    "webpack": "2.6.1",
     "webpack-dev-server": "2.4.5",
     "webpack-merge": "4.1.0",
     "webpack-visualizer-plugin": "0.1.11"

@@ -4,37 +4,30 @@ import { AddTodoAction, ToggleTodoAction } from '../actions';
 
 type TodosAction = AddTodoAction | ToggleTodoAction;
 
-export const todoReducer = (todo: Todo, action: TodosAction) => {
-  switch (action.type) {
-    case ADD_TODO:
-      return {
-        id: action.payload.id,
-        text: action.payload.text,
-        completed: false,
-      };
-    case TOGGLE_TODO:
-      if (todo.id !== action.payload.id) {
-        return todo;
-      }
+export const INITIAL_STATE: Todo[] = [];
 
-      return {
-        ...todo,
-        completed: !todo.completed,
-      };
-    default:
-      return todo;
-  }
-};
-
-export const todosReducer = (todos: Todo[] = [], action: TodosAction) => {
+export const todosReducer = (todos: Todo[] = INITIAL_STATE, action: TodosAction) => {
   switch (action.type) {
     case ADD_TODO:
       return [
         ...todos,
-        todoReducer(undefined, action),
+        {
+          id: action.payload.id,
+          text: action.payload.text,
+          completed: false,
+        },
       ];
     case TOGGLE_TODO:
-      return todos.map(td => todoReducer(td, action));
+      return todos.map((todo) => {
+        if (todo.id !== action.payload.id) {
+          return todo;
+        }
+
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      });
     default:
       return todos;
   }

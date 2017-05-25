@@ -1,9 +1,9 @@
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 
-import { State } from '../reducers';
-import { addTodo, fetchTodos } from '../actions';
-import AddTodo from '../components/AddTodo';
+import { State } from '../../reducers';
+import { addTodo, fetchTodos } from '../../actions';
+import AddTodo from '../../components/AddTodo';
 
 const mapDispatchToProps = (dispatch: Dispatch<State>) => ({
   onSubmit: (todo: string) => {
