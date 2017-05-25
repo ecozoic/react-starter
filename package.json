@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"yarn serve:dev\" \"yarn start:dev\"",
@@ -99,7 +99,6 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
-    "color": "1.0.3",
     "connected-react-router": "4.2.1",
     "core-js": "2.4.1",
     "cross-env": "5.0.0",
@@ -116,10 +115,7 @@
     "koa-route": "2.4.2",
     "koa-send": "3.3.0",
     "koa-static": "2.1.0",
-    "lodash": "4.17.4",
     "material-ui": "0.18.1",
-    "moment": "2.18.1",
-    "normalizr": "3.2.3",
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4",

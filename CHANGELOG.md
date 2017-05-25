@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [3.0.2] - 2017-05-25
+### Changed
+- Refactor reducers and containers
+- Update webpack to 2.6.1
+- Revert @types/react to 15.0.24
+
+### Removed
+- Removed unused dependencies
+
 ## [3.0.1] - 2017-05-25
 ### Changed
 - Improved tslint configuration to use tslint-config-airbnb
