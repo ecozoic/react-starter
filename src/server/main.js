@@ -43,5 +43,4 @@ app.use(function* index() {
 const port = isDevelopment ? process.env.PROXY_PORT : process.env.PORT;
 app.listen(port);
 
-// eslint-disable-next-line no-console
 console.log(`Server listening on port: ${port}`);
