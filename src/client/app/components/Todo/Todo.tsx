@@ -10,29 +10,26 @@ export interface TodoProps {
   text: string;
 }
 
-class Todo extends React.Component<TodoProps, undefined> {
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired,
-  };
+const Todo: React.SFC<TodoProps> = ({ onClick, completed, text }) => {
+  const className = classNames(
+    styles.todo,
+    { [styles.completed]: completed },
+  );
 
-  render() {
-    const { onClick, completed, text } = this.props;
-    const className = classNames(
-      styles.todo,
-      { [styles.completed]: completed },
-    );
+  return (
+    <li
+      className={className}
+      onClick={onClick}
+    >
+      {text}
+    </li>
+  );
+};
 
-    return (
-      <li
-        className={className}
-        onClick={onClick}
-      >
-        {text}
-      </li>
-    );
-  }
-}
+Todo.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  completed: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default Todo;

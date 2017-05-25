@@ -11,28 +11,24 @@ export interface TodoListProps {
   onTodoClick: (id: number) => void;
 }
 
-class TodoList extends React.Component<TodoListProps, undefined> {
-  static propTypes = {
-    todos: PropTypes.arrayOf(todoShape).isRequired,
-    onTodoClick: PropTypes.func.isRequired,
-  };
+const TodoList: React.SFC<TodoListProps> = ({ todos, onTodoClick }) => {
+  return (
+    <ul className={styles.todoList}>
+      {todos.map(todo => (
+        <TodoComponent
+          key={todo.id}
+          onClick={() => onTodoClick(todo.id)}
+          completed={todo.completed}
+          text={todo.text}
+        />
+      ))}
+    </ul>
+  );
+};
 
-  render() {
-    const { todos, onTodoClick } = this.props;
-
-    return (
-      <ul className={styles.todoList}>
-        {todos.map(todo => (
-          <TodoComponent
-            key={todo.id}
-            onClick={() => onTodoClick(todo.id)}
-            completed={todo.completed}
-            text={todo.text}
-          />
-        ))}
-      </ul>
-    );
-  }
-}
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(todoShape).isRequired,
+  onTodoClick: PropTypes.func.isRequired,
+};
 
 export default TodoList;
