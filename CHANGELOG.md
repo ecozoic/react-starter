@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Refactor reducers and containers
 - Update webpack to 2.6.1
 - Revert @types/react to 15.0.24
+- Updated README
 
 ### Removed
 - Removed unused dependencies
