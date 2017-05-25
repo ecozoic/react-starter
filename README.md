@@ -54,7 +54,8 @@ This file will be loaded by dotenv for both the client and server processes.
 
 ## Tools & Features
 * react, react-router
-* redux, connected-react-router, redux-thunk, redux-promise-middleware, redux-saga
+* redux, connected-react-router
+* redux-thunk, redux-promise-middleware, redux-saga
 * redux-devtools, react-hot-loader
 * material-ui, css modules, scss
 * webpack, typescript

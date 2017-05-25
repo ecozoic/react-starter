@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A starter kit for React+Redux UIs",
   "scripts": {
     "start": "concurrently \"yarn serve:dev\" \"yarn start:dev\"",
@@ -43,7 +43,7 @@
     "@types/jest": "19.2.3",
     "@types/material-ui": "0.17.7",
     "@types/prop-types": "15.5.1",
-    "@types/react": "15.0.25",
+    "@types/react": "15.0.24",
     "@types/react-dom": "15.5.0",
     "@types/react-helmet": "5.0.2",
     "@types/react-hot-loader": "3.0.1",
@@ -92,14 +92,13 @@
     "tslint-react": "3.0.0",
     "typedoc": "0.7.1",
     "typescript": "2.3.3",
-    "webpack": "2.6.0",
+    "webpack": "2.6.1",
     "webpack-dev-server": "2.4.5",
     "webpack-merge": "4.1.0",
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
     "classnames": "2.2.5",
-    "color": "1.0.3",
     "connected-react-router": "4.2.1",
     "core-js": "2.4.1",
     "cross-env": "5.0.0",
@@ -116,10 +115,7 @@
     "koa-route": "2.4.2",
     "koa-send": "3.3.0",
     "koa-static": "2.1.0",
-    "lodash": "4.17.4",
     "material-ui": "0.18.1",
-    "moment": "2.18.1",
-    "normalizr": "3.2.3",
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4",

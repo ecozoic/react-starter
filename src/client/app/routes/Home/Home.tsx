@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import AddTodoContainer from '../../containers/AddTodo';
-import TodoListContainer from '../../containers/TodoList';
+import AddTodo from '../../containers/AddTodo';
+import TodoList from '../../containers/TodoList';
 
 const img = require('../../../react.png');
 const styles = require('./Home.scss');
@@ -21,8 +21,8 @@ const Home: React.SFC<any> = () => {
           <img className={styles.image} src={img} alt="logo" />
         </div>
         <h1 className={styles.header}>Todo List</h1>
-        <AddTodoContainer />
-        <TodoListContainer />
+        <AddTodo />
+        <TodoList />
       </div>
     </div>
   );
