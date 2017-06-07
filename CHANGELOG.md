@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated Node to 6.11.0
+
 ## [3.0.2] - 2017-05-25
 ### Changed
 - Refactor reducers and containers
