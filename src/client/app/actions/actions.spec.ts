@@ -15,7 +15,6 @@ describe('addTodo', () => {
     expect(isFSA(action)).toEqual(true);
     expect(action.type).toEqual(ADD_TODO);
     expect(action.payload.text).toEqual(text);
-    expect(action.payload.id).toEqual(expect.any(Number));
   });
 });
 

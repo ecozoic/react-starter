@@ -1,12 +1,15 @@
-import { Action as ReduxAction, Dispatch } from 'redux';
-import { State } from '../reducers';
+import { Action as ReduxAction } from 'redux';
 
-import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS } from '../constants';
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  FETCH_TODOS,
+  FETCH_TODOS_PENDING,
+  FETCH_TODOS_FULFILLED,
+  FETCH_TODOS_REJECTED,
+} from '../constants';
 
-const { fetch } = window;
-let nextTodoId = 0;
-
-export interface Action<P, M> extends ReduxAction {
+export interface Action<P = undefined, M = undefined> extends ReduxAction {
   readonly type: string;
   readonly payload?: P;
   readonly meta?: M;
@@ -14,7 +17,6 @@ export interface Action<P, M> extends ReduxAction {
 }
 
 export interface AddTodoPayload {
-  readonly id: number;
   readonly text: string;
 }
 
@@ -22,35 +24,59 @@ export interface ToggleTodoPayload {
   readonly id: number;
 }
 
-export interface AddTodoAction extends Action<AddTodoPayload, undefined>  {
+export interface AddTodoAction extends Action<AddTodoPayload>  {
   type: ADD_TODO;
 }
 
-export interface ToggleTodoAction extends Action<ToggleTodoPayload, undefined> {
+export interface ToggleTodoAction extends Action<ToggleTodoPayload> {
   type: TOGGLE_TODO;
 }
 
-export const addTodo: (text: string) => AddTodoAction = (text: string) => ({
+export interface FetchTodosAction extends Action {
+  type: FETCH_TODOS;
+}
+
+export interface FetchTodosPendingAction extends Action {
+  type: FETCH_TODOS_PENDING;
+}
+
+export interface FetchTodosFulfilledAction extends Action<string[]> {
+  type: FETCH_TODOS_FULFILLED;
+}
+
+export interface FetchTodosRejectedAction extends Action<Error> {
+  type: FETCH_TODOS_REJECTED;
+}
+
+export const addTodo: (text: string) => AddTodoAction = text => ({
   type: ADD_TODO,
   payload: {
-    // tslint:disable-next-line:no-increment-decrement
-    id: nextTodoId++,
     text,
   },
 });
 
-export const toggleTodo: (id: number) => ToggleTodoAction = (id: number) => ({
+export const toggleTodo: (id: number) => ToggleTodoAction = id => ({
   type: TOGGLE_TODO,
   payload: {
     id,
   },
 });
 
-export const fetchTodos = () => (dispatch: Dispatch<State>) => dispatch({
+export const fetchTodos: () => FetchTodosAction = () => ({
   type: FETCH_TODOS,
-  payload: fetch('/api/todos')
-    .then(response => response.json())
-    .then((todos: string[]) => {
-      todos.forEach(todo => dispatch(addTodo(todo)));
-    }),
+});
+
+export const fetchTodosPending: () => FetchTodosPendingAction = () => ({
+  type: FETCH_TODOS_PENDING,
+});
+
+export const fetchTodosFulfilled: (todos: string[]) => FetchTodosFulfilledAction = todos => ({
+  type: FETCH_TODOS_FULFILLED,
+  payload: todos,
+});
+
+export const fetchTodosRejected: (error: Error) => FetchTodosRejectedAction = error => ({
+  type: FETCH_TODOS_REJECTED,
+  payload: error,
+  error: true,
 });

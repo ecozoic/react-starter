@@ -2,8 +2,6 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import promise from 'redux-promise-middleware';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
@@ -17,6 +15,7 @@ import { createLogger } from 'redux-logger';
 import App from './app';
 import rootReducer from './app/reducers';
 import DevTools from './app/containers/DevTools';
+import saga from './app/sagas';
 
 import './favicon.ico';
 
@@ -32,14 +31,14 @@ const store = createStore(
   compose(
     applyMiddleware(
       routerMiddleware(history),
-      thunk,
-      promise(),
       sagaMiddleware,
       createLogger(),
     ),
     DevTools.instrument(),
   ),
 );
+
+sagaMiddleware.run(saga);
 
 const renderApp = () => {
   render(

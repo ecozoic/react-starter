@@ -2,8 +2,6 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import promise from 'redux-promise-middleware';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
@@ -13,6 +11,7 @@ import * as injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './app';
 import rootReducer from './app/reducers';
+import saga from './app/sagas';
 
 import './favicon.ico';
 
@@ -27,11 +26,11 @@ const store = createStore(
   initialState,
   applyMiddleware(
     routerMiddleware(history),
-    thunk,
-    promise(),
     sagaMiddleware,
   ),
 );
+
+sagaMiddleware.run(saga);
 
 render(
   <Provider store={store}>
