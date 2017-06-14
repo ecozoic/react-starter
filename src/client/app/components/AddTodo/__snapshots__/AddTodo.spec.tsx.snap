@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddTodo /> renders without crashing 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <TextField
+      disabled={false}
+      floatingLabelFixed={false}
+      fullWidth={false}
+      multiLine={false}
+      name="todo"
+      onChange={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value=""
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Add Todo"
+      labelPosition="after"
+      primary={true}
+      secondary={false}
+      type="submit"
+    />
+  </form>
+</div>
+`;

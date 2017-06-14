@@ -1,12 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoList renders without crashing 1`] = `
-<TodoList
-  onTodoClick={[Function]}
-  todos={Array []}
->
-  <ul
-    className="todoList"
-  />
-</TodoList>
+exports[`<TodoList /> renders without crashing 1`] = `
+<ul
+  className="todoList"
+/>
 `;

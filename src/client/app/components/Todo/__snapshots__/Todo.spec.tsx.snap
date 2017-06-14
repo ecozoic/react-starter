@@ -1,16 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Todo renders without crashing 1`] = `
-<Todo
-  completed={false}
+exports[`<Todo /> renders without crashing 1`] = `
+<li
+  className="todo"
   onClick={[Function]}
-  text="Todo"
 >
-  <li
-    className="todo"
-    onClick={[Function]}
-  >
-    Todo
-  </li>
-</Todo>
+  Todo
+</li>
 `;
