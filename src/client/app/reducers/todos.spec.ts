@@ -1,9 +1,8 @@
 import * as deepFreeze from 'deep-freeze';
 import { Action } from 'redux';
 
-import { ADD_TODO, TOGGLE_TODO } from '../constants';
 import { Todo } from '../models';
-import { AddTodoAction, ToggleTodoAction } from '../actions';
+import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions';
 
 import {
   todosReducer,
@@ -12,19 +11,8 @@ import {
 
 describe('todosReducer', () => {
   it('adds a new todo', () => {
-    const action1: AddTodoAction = {
-      type: ADD_TODO,
-      payload: {
-        text: 'Todo 1',
-      },
-    };
-
-    const action2: AddTodoAction = {
-      type: ADD_TODO,
-      payload: {
-        text: 'Todo 2',
-      },
-    };
+    const action1 = addTodo('Todo 1');
+    const action2 = addTodo('Todo 2');
 
     const todosBefore: Todo[] = [];
 
@@ -40,12 +28,7 @@ describe('todosReducer', () => {
   });
 
   it('toggles an existing todo', () => {
-    const action: ToggleTodoAction = {
-      type: TOGGLE_TODO,
-      payload: {
-        id: 1,
-      },
-    };
+    const action = toggleTodo(1);
 
     const todosBefore: Todo[] = [{
       id: 1,
@@ -63,6 +46,38 @@ describe('todosReducer', () => {
     todosAfter = todosReducer(todosAfter, action);
     expect(todosAfter.length).toEqual(1);
     expect(todosAfter[0].completed).toEqual(false);
+  });
+
+  it('noops if requested todo to toggle not found', () => {
+    const action = toggleTodo(100);
+
+    const todosBefore: Todo[] = [{
+      id: 1,
+      text: 'Todo',
+      completed: false,
+    }];
+
+    deepFreeze(action);
+    deepFreeze(todosBefore);
+
+    const todosAfter = todosReducer(todosBefore, action);
+    expect(todosAfter).toEqual(todosBefore);
+  });
+
+  it('adds fetched todos to state', () => {
+    const todos = ['foo', 'bar', 'baz'];
+    const action = fetchTodosFulfilled(todos);
+
+    const todosBefore: Todo[] = [];
+
+    deepFreeze(action);
+    deepFreeze(todosBefore);
+
+    const todosAfter = todosReducer(todosBefore, action);
+    expect(todosAfter.length).toEqual(todos.length);
+    todosAfter.forEach((todo, idx) => {
+      expect(todo.text).toEqual(todos[idx]);
+    });
   });
 
   it('returns initial state', () => {

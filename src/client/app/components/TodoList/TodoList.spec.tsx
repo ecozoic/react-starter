@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 
-import TodoList from './TodoList';
+import TodoList from './';
 import { TodoProps } from '../Todo/Todo';
 
 const noop: () => void = () => undefined;
