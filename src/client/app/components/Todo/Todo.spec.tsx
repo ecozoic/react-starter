@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import Todo from './';
+import { noop } from '../../utils';
 
-const noop: () => void = () => undefined;
+import Todo from './';
 
 describe('<Todo />', () => {
   it('renders without crashing', () => {

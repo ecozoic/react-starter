@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import * as injectTapEventPlugin from 'react-tap-event-plugin';
+
+import { noop } from '../../utils';
 
 import AddTodo from './';
-
-const noop: () => void = () => undefined;
 
 describe('<AddTodo />', () => {
   it('renders without crashing', () => {
@@ -121,6 +123,27 @@ describe('<AddTodo />', () => {
       instance.handleChange(event);
 
       expect(addTodo.state('todo')).toEqual(todo);
+    });
+  });
+
+  describe('componentDidMount', () => {
+    beforeAll(() => {
+      injectTapEventPlugin();
+    });
+
+    it('calls onInit after mounting', () => {
+      const onInit = jest.fn();
+
+      mount(
+        <MuiThemeProvider>
+          <AddTodo
+            onInit={onInit}
+            onSubmit={noop}
+          />
+        </MuiThemeProvider>,
+      );
+
+      expect(onInit).toHaveBeenCalledTimes(1);
     });
   });
 });

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
+import { noop } from '../../utils';
+
 import TodoList from './';
 import { TodoProps } from '../Todo/Todo';
-
-const noop: () => void = () => undefined;
 
 describe('<TodoList />', () => {
   it('renders without crashing', () => {
