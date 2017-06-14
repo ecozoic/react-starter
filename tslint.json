@@ -8,6 +8,7 @@
     "jsx-no-multiline-js": false,
     "jsx-boolean-value": false,
     "jsx-no-lambda": false,
+    "object-shorthand-properties-first": false,
     "variable-name": [
       true,
       "ban-keywords",

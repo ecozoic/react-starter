@@ -11,8 +11,6 @@ import 'redux';
 import 'react-redux';
 import 'history';
 import 'connected-react-router';
-import 'redux-thunk';
-import 'redux-promise-middleware';
 import 'redux-form';
 import 'react-intl-redux';
 import 'reselect';

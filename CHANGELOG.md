@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [3.1.0] - 2017-06-14
+### Added
+- More unit tests
+
+### Changed
+- Refactored to use redux-saga
+- Updated Node to 6.11.0
+- Updated React to 15.6.0
+- Updated several other dependencies to latest versions
+
+### Removed
+- Removed redux-thunk and redux-promise-middleware
+
 ## [3.0.2] - 2017-05-25
 ### Changed
 - Refactor reducers and containers
