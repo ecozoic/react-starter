@@ -1,22 +1,19 @@
-// React
+// react
 import 'react';
 import 'react-dom';
 import 'react-router-dom';
-import 'react-intl';
 import 'react-tap-event-plugin';
 import 'react-helmet';
 
-// Redux
+// redux
 import 'redux';
 import 'react-redux';
-import 'history';
 import 'connected-react-router';
-import 'redux-form';
-import 'react-intl-redux';
 import 'reselect';
 import 'redux-saga';
 
-// CSS-in-JS
+// other third party
+import 'history';
 import 'classnames';
 
 // material ui

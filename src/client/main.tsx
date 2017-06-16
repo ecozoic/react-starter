@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
-import { IntlProvider } from 'react-intl-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -34,11 +33,9 @@ sagaMiddleware.run(saga);
 
 render(
   <Provider store={store}>
-    <IntlProvider>
-      <MuiThemeProvider>
-        <App history={history} />
-      </MuiThemeProvider>
-    </IntlProvider>
+    <MuiThemeProvider>
+      <App history={history} />
+    </MuiThemeProvider>
   </Provider>,
   document.getElementById('app'),
 );
