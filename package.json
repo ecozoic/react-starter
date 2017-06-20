@@ -1,7 +1,7 @@
 {
   "name": "react-starter",
   "version": "3.1.1",
-  "description": "A starter kit for React+Redux UIs",
+  "description": "A starter kit for React+Redux+Rxjs UIs",
   "scripts": {
     "start": "concurrently \"yarn serve:dev\" \"yarn start:dev\"",
     "start:dev": "cross-env NODE_ENV=development webpack-dev-server",
@@ -121,8 +121,9 @@
     "react-router-dom": "4.1.1",
     "react-tap-event-plugin": "2.0.1",
     "redux": "3.7.0",
-    "redux-saga": "0.15.3",
+    "redux-observable": "0.14.1",
     "reselect": "3.0.1",
+    "rxjs": "5.4.1",
     "whatwg-fetch": "2.0.3"
   },
   "engines": {

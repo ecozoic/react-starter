@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added rxjs and redux-observable
+
+### Removed
+- Removed redux-saga
+
+### Changed
+- Updated README
+
 ## [3.1.1] - 2017-06-20
 ### Changed
 - Updated several dependencies to their latest versions
