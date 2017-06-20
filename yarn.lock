@@ -98,9 +98,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-redux@4.4.40":
-  version "4.4.40"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.40.tgz#268d1a9b9a42e52562450e2c306630fa38db36ad"
+"@types/react-redux@4.4.44":
+  version "4.4.44"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.44.tgz#821c99b0eac22c3e32621bc0eba08062f1c07b63"
   dependencies:
     "@types/react" "*"
     redux "^3.6.0"

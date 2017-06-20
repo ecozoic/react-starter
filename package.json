@@ -47,7 +47,7 @@
     "@types/react-dom": "15.5.0",
     "@types/react-helmet": "5.0.2",
     "@types/react-hot-loader": "3.0.1",
-    "@types/react-redux": "4.4.40",
+    "@types/react-redux": "4.4.44",
     "@types/react-router-dom": "4.0.4",
     "@types/react-tap-event-plugin": "0.0.30",
     "@types/redux-devtools": "3.0.37",
