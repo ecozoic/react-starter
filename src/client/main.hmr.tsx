@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, StoreEnhancerStoreCreator } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
@@ -12,7 +12,7 @@ import { AppContainer } from 'react-hot-loader';
 import { createLogger } from 'redux-logger';
 
 import App from './app';
-import rootReducer from './app/reducers';
+import rootReducer, { State } from './app/reducers';
 import DevTools from './app/containers/DevTools';
 import saga from './app/sagas';
 
@@ -22,12 +22,12 @@ injectTapEventPlugin();
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
-const initialState = {};
+const initialState = {} as State;
 
-const store = createStore(
+const store = createStore<State>(
   connectRouter(history)(rootReducer),
   initialState,
-  compose(
+  compose<StoreEnhancerStoreCreator<State>>(
     applyMiddleware(
       routerMiddleware(history),
       sagaMiddleware,

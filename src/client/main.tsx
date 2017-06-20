@@ -9,7 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './app';
-import rootReducer from './app/reducers';
+import rootReducer, { State } from './app/reducers';
 import saga from './app/sagas';
 
 import './favicon.ico';
@@ -18,9 +18,9 @@ injectTapEventPlugin();
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
-const initialState = {};
+const initialState = {} as State;
 
-const store = createStore(
+const store = createStore<State>(
   connectRouter(history)(rootReducer),
   initialState,
   applyMiddleware(
