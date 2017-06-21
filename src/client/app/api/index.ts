@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 
 const { fetch } = window;
-const API_URL = '/api/todoss';
+const API_URL = '/api/todos';
 
 export const getTodos: () => Observable<string[]> = () => {
   return Observable.fromPromise(
