@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { mount, shallow } from 'enzyme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import * as injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { noop } from '../../utils';
 

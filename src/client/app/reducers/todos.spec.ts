@@ -1,4 +1,4 @@
-import * as deepFreeze from 'deep-freeze';
+import deepFreeze from 'deep-freeze';
 import { Action } from 'redux';
 
 import { Todo } from '../models';
