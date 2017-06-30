@@ -1,7 +1,7 @@
 # react-starter
 [![Build Status](https://travis-ci.org/ecozoic/react-starter.svg?branch=master)](https://travis-ci.org/ecozoic/react-starter) [![Dependency Status](https://david-dm.org/ecozoic/react-starter.svg)](https://david-dm.org/ecozoic/react-starter) [![devDependency Status](https://david-dm.org/ecozoic/react-starter/dev-status.png)](https://david-dm.org/ecozoic/react-starter?type=dev)
 
-This project is a scaffold to start new React+Redux projects powered by Webpack+TypeScript.
+This project is a scaffold to start new React+Redux+Rxjs projects powered by Webpack+TypeScript.
 
 ## Installation
 ```
@@ -54,7 +54,7 @@ This file will be loaded by dotenv for both the client and server processes.
 
 ## Tools & Features
 * react, react-router
-* redux, connected-react-router, redux-saga
+* redux, connected-react-router, redux-observable
 * redux-devtools, react-hot-loader
 * material-ui, css modules, scss
 * webpack, typescript
@@ -69,4 +69,4 @@ This file will be loaded by dotenv for both the client and server processes.
 * Improve server error handling
 * Auth boilerplate
 * Server-side rendering
-* Upgrade to Node7/Koa2
+* Upgrade to Node8/Koa2

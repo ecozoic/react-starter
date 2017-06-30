@@ -1,35 +1,32 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import createSagaMiddleware from 'redux-saga';
+import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import * as injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './app';
 import rootReducer, { State } from './app/reducers';
-import saga from './app/sagas';
+import rootEpic from './app/epics';
 
 import './favicon.ico';
 
 injectTapEventPlugin();
 
 const history = createBrowserHistory();
-const sagaMiddleware = createSagaMiddleware();
 const initialState = {} as State;
 
-const store = createStore<State>(
+const store = createStore(
   connectRouter(history)(rootReducer),
   initialState,
   applyMiddleware(
     routerMiddleware(history),
-    sagaMiddleware,
+    createEpicMiddleware(rootEpic),
   ),
 );
-
-sagaMiddleware.run(saga);
 
 render(
   <Provider store={store}>
