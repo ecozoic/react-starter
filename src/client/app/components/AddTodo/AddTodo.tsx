@@ -6,6 +6,7 @@ import TextField from 'material-ui/TextField';
 export interface AddTodoProps {
   onInit: () => void;
   onSubmit: (todo: string) => void;
+  disabled?: boolean;
 }
 
 export interface AddTodoState {
@@ -16,6 +17,11 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
   static propTypes = {
     onInit: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    disabled: false,
   };
 
   constructor(props: AddTodoProps) {
@@ -55,6 +61,7 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
 
   render() {
     const { todo } = this.state;
+    const { disabled } = this.props;
 
     return (
       <div>
@@ -64,11 +71,13 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
             type="text"
             value={todo}
             onChange={this.handleChange}
+            disabled={disabled}
           />
           <RaisedButton
             label="Add Todo"
             primary
             type="submit"
+            disabled={disabled}
           />
         </form>
       </div>

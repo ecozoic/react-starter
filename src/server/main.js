@@ -1,7 +1,7 @@
-// load environment configuration
 require('dotenv').config();
 
 const koa = require('koa');
+const ms = require('ms');
 
 const compress = require('koa-compress');
 const conditional = require('koa-conditional-get');
@@ -29,14 +29,14 @@ app.use(conditional());
 app.use(etag());
 
 app.use(mount('/assets', serve('dist/assets', {
-  maxage: 365 * 24 * 60 * 60 * 1000,
+  maxage: ms('1 year'),
 })));
 
 app.use(mount('/api', api));
 
 app.use(function* index() {
   yield send(this, 'dist/index.html', {
-    maxage: 0,
+    maxage: ms('5 minutes'),
   });
 });
 

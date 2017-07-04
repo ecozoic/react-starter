@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 
 import { State } from '../../reducers';
 import { addTodo, fetchTodos } from '../../actions';
+import { getPending, getError } from '../../selectors';
 import AddTodo from '../../components/AddTodo';
+
+const mapStateToProps = (state: State) => ({
+  disabled: getPending(state) || !!getError(state),
+});
 
 const mapDispatchToProps = (dispatch: Dispatch<State>) => ({
   onSubmit: (todo: string) => {
@@ -14,8 +19,8 @@ const mapDispatchToProps = (dispatch: Dispatch<State>) => ({
   },
 });
 
-const AddTodoContainer = connect(
-  undefined,
+const AddTodoContainer = connect<any, any, any>(
+  mapStateToProps,
   mapDispatchToProps,
 )(AddTodo);
 
