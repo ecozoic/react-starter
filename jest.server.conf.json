@@ -1,8 +1,0 @@
-{
-  "collectCoverage": false,
-  "collectCoverageFrom": ["src/server/**/*.js"],
-  "coverageDirectory": "<rootDir>/coverage/server",
-  "coverageReporters": ["json", "lcov"],
-  "roots": ["src/server"],
-  "testEnvironment": "node"
-}

@@ -6,13 +6,13 @@ const { PORT, HOST, PROXY_PORT } = process.env;
 
 module.exports = {
   entry: {
-    polyfill: './src/client/polyfill',
-    vendor: './src/client/vendor.hmr',
+    polyfill: './src/polyfill',
+    vendor: './src/vendor.hmr',
     app: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://${HOST}:${PORT}`,
       'webpack/hot/only-dev-server',
-      './src/client/main.hmr',
+      './src/main.hmr',
     ],
   },
 
@@ -77,8 +77,5 @@ module.exports = {
     publicPath: '/',
     port: PORT,
     host: HOST,
-    proxy: {
-      '/api': `http://${HOST}:${PROXY_PORT}`,
-    },
   },
 };

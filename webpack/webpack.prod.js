@@ -5,9 +5,9 @@ const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   entry: {
-    polyfill: './src/client/polyfill',
-    vendor: './src/client/vendor',
-    app: './src/client/main',
+    polyfill: './src/polyfill',
+    vendor: './src/vendor',
+    app: './src/main',
   },
 
   devtool: 'source-map',
