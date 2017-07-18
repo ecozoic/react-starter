@@ -36,13 +36,13 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new SassLintPlugin({
-      glob: 'src/client/**/*.s?(a|c)ss'
+      glob: 'src/**/*.s?(a|c)ss'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfill']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/client/index.html'
+      template: 'src/index.html'
     }),
     new webpack.DefinePlugin({
       'process.env': Object.keys(process.env).reduce((prev, curr) => {

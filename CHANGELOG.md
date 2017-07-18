@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [4.0.0 - 2017-07-18]
+### Added
+- Added pushstate-server
+- Added dotenv-cli to load .env for pushstate-server
+
+### Changed
+- Updated Webpack to 3.3.0
+- Updated Typescript to 2.4.1
+- Updated several dependencies to their latest versions
+- Updated README
+
+### Removed
+- Removed all Koa code and dependencies, we goin' serverless!
+
 ## [3.2.0 - 2017-06-30]
 ### Added
 - Added rxjs and redux-observable

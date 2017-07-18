@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { Store } from 'redux';
 
 import { Action, fetchTodosFulfilled, fetchTodosPending, fetchTodosRejected } from '../actions';

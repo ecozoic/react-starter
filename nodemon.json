@@ -1,4 +1,0 @@
-{
-  "ignore": ["*.spec.js"],
-  "watch": ["src/server"]
-}
