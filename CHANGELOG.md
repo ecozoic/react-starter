@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Added dotenv-cli to load .env for pushstate-server
 
 ### Changed
+- Updated Webpack to 3.3.0
 - Updated Typescript to 2.4.1
 - Updated several dependencies to their latest versions
 - Updated README
