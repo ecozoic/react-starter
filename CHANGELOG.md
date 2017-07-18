@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Added
 - Added pushstate-server
+- Added dotenv-cli to load .env for pushstate-server
 
 ### Changed
 - Updated Typescript to 2.4.1
