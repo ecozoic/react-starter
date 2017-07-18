@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [4.0.0 - 2017-07-18]
 ### Added
 - Added pushstate-server
 - Added dotenv-cli to load .env for pushstate-server
