@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added pushstate-server
+
+### Changed
+- Updated Typescript to 2.4.1
+- Updated several dependencies to their latest versions
+- Updated README
+
+### Removed
+- Removed all Koa code and dependencies, we goin' serverless!
+
 ## [3.2.0 - 2017-06-30]
 ### Added
 - Added rxjs and redux-observable

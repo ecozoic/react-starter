@@ -15,8 +15,7 @@ yarn
 yarn start
 ```
 
-Starts a webpack-dev-server with HMR and redux-devtools at http://localhost:8080 and a Nodemon-monitored and debuggable (via Node's ```--inspect``` flag) Koa server at http://localhost:3000. 
-The webpack-dev-server is configured to proxy HTTP calls to `/api/*` routes to the Koa server.
+Starts a webpack-dev-server with HMR and redux-devtools at http://localhost:8080.
 
 ## Production
 ```
@@ -24,8 +23,7 @@ yarn build
 yarn serve
 ```
 
-Builds minified assets in the `/dist/` directory and serve them up using a koa server at http://localhost:8080. 
-This production-ready server supports HTTP caching, etags, and conditional GET requests. 
+Builds minified assets in the `/dist/` directory and serve them up using pushstate-server at http://localhost:8080. 
 A visualization of the webpack build will be produced in the `/webpack/stats` directory. 
 
 ## Tests
@@ -33,13 +31,18 @@ A visualization of the webpack build will be produced in the `/webpack/stats` di
 yarn test
 ```
 
-Executes Jest unit tests and generate Istanbul coverage reports for both the client and server.
+Executes jest unit tests and generate istanbul coverage reports.
 
-To develop using TDD (Jest in ```--watch``` mode), run:
+To develop using TDD (jest in ```--watch``` mode), run:
 ```
 yarn tdd
 ```
-Starts the webpack-dev-server, Koa, and Jest.
+Starts webpack-dev-server and jest.
+
+```
+yarn test:watch
+```
+Starts jest in ```--watch``` mode without starting webpack-dev-server
 
 ## Documentation
 ```
@@ -50,7 +53,7 @@ Generates typedoc documentation.
 
 ## Configuration
 Add environment specific configuration settings by creating a `.env` file in the root directory. `.env.sample` shows an example format. 
-This file will be loaded by dotenv for both the client and server processes. 
+This file will be loaded with dotenv by webpack during build. 
 
 ## Tools & Features
 * react, react-router
@@ -59,14 +62,10 @@ This file will be loaded by dotenv for both the client and server processes.
 * material-ui, css modules, scss
 * webpack, typescript
 * uglifyJS + tree-shaking
-* koa
 * tslint, sasslint
 * jest, enzyme, istanbul
 * typedoc
 
 ## Roadmap
 * Improve documentation
-* Improve server error handling
 * Auth boilerplate
-* Server-side rendering
-* Upgrade to Node8/Koa2
