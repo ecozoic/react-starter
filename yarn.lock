@@ -49,9 +49,9 @@
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@types/deep-freeze/-/deep-freeze-0.1.1.tgz#0e1ee6ceee06f51baeb663deec0bb7780bd72827"
 
-"@types/enzyme@2.8.2":
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-2.8.2.tgz#5cd2582b7c7876d0a34dd9eaeadf6b52263fe88e"
+"@types/enzyme@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-2.8.3.tgz#1f6b11248d99bf9a625d0552d56b627f73be4c9e"
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -86,9 +86,9 @@
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/@types/marked/-/marked-0.0.28.tgz#44ba754e9fa51432583e8eb30a7c4dd249b52faa"
 
-"@types/material-ui@0.17.16":
-  version "0.17.16"
-  resolved "https://registry.yarnpkg.com/@types/material-ui/-/material-ui-0.17.16.tgz#b228a8a2869eee5b2e3ce5cd3a42d95bf8308928"
+"@types/material-ui@0.17.17":
+  version "0.17.17"
+  resolved "https://registry.yarnpkg.com/@types/material-ui/-/material-ui-0.17.17.tgz#48ac3d082dec113350f0637601e73df6e0679aac"
   dependencies:
     "@types/react" "*"
     "@types/react-addons-linked-state-mixin" "*"
