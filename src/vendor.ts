@@ -2,7 +2,6 @@
 import 'react';
 import 'react-dom';
 import 'react-router-dom';
-import 'react-tap-event-plugin';
 import 'react-helmet';
 
 // redux
@@ -15,12 +14,7 @@ import 'redux-observable';
 // other third party
 import 'history';
 import 'classnames';
-
-// material ui
-import 'material-ui/styles/MuiThemeProvider';
-import 'material-ui/RaisedButton';
-import 'material-ui/TextField';
-import 'material-ui/CircularProgress';
+import 'semantic-ui-react';
 
 // rxjs
 import 'rxjs/Observable';

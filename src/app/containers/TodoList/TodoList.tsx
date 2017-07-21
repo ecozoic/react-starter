@@ -2,13 +2,12 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
 import { toggleTodo } from '../../actions';
-import { getTodos, getPending } from '../../selectors';
+import { getTodos } from '../../selectors';
 import { State } from '../../reducers';
 import TodoList from '../../components/TodoList';
 
 const mapStateToProps = (state: State) => ({
   todos: getTodos(state),
-  loading: getPending(state),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<State>) => ({

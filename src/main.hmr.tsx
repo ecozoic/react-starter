@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { AppContainer } from 'react-hot-loader';
 import { createLogger } from 'redux-logger';
@@ -17,8 +15,6 @@ import rootEpic from './app/epics';
 import DevTools from './app/containers/DevTools';
 
 import './favicon.ico';
-
-injectTapEventPlugin();
 
 const history = createBrowserHistory();
 const initialState = {} as State;
@@ -41,12 +37,10 @@ const renderApp = () => {
   render(
     <AppContainer>
       <Provider store={store}>
-        <MuiThemeProvider>
-          <div>
-            <App history={history} />
-            <DevTools />
-          </div>
-        </MuiThemeProvider>
+        <div>
+          <App history={history} />
+          <DevTools />
+        </div>
       </Provider>
     </AppContainer>,
     document.getElementById('app'),

@@ -5,27 +5,18 @@ exports[`<AddTodo /> renders without crashing 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <TextField
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={false}
-      multiLine={false}
+    <Input
       name="todo"
       onChange={[Function]}
-      rows={1}
       type="text"
-      underlineShow={true}
       value=""
     />
-    <RaisedButton
-      disabled={false}
-      fullWidth={false}
-      label="Add Todo"
-      labelPosition="after"
-      primary={true}
-      secondary={false}
+    <Button
+      as="button"
       type="submit"
-    />
+    >
+      Add Todo
+    </Button>
   </form>
 </div>
 `;
