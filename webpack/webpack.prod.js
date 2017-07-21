@@ -16,8 +16,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: 'assets/js/[name].[hash].js',
-    chunkFilename: 'assets/js/[id].[hash].chunk.js',
+    filename: 'assets/js/[name].[chunkhash:8].js',
   },
 
   module: {
@@ -67,7 +66,7 @@ module.exports = {
       },
     }),
     new ExtractTextPlugin({
-      filename: 'assets/css/[name].[hash].css',
+      filename: 'assets/css/[name].[contenthash:8].css',
       allChunks: true,
     }),
     new Visualizer({
