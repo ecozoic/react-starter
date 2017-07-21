@@ -14,7 +14,14 @@ import 'redux-observable';
 // other third party
 import 'history';
 import 'classnames';
-import 'semantic-ui-react';
+
+// lodash
+// e.g. import 'lodash/map';
+
+// semantic ui
+// need to use this syntax for babel-plugin-lodash to work w/ code splitting
+import 'semantic-ui-react/dist/commonjs/elements/Button/Button';
+import 'semantic-ui-react/dist/commonjs/elements/Input/Input';
 
 // rxjs
 import 'rxjs/Observable';

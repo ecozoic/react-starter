@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -44,10 +45,15 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          useCache: true,
-        },
+        use: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              useCache: true,
+            },
+          },
+        ],
       },
     ],
   },
@@ -66,6 +72,14 @@ module.exports = {
     }),
     new Visualizer({
       filename: '../webpack/stats/stats.prod.html',
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      reportFilename: '../webpack/stats/report.prod.html',
+      defaultSizes: 'parsed',
+      openAnalyzer: false,
+      generateStatsFile: false,
+      logLevel: 'info'
     }),
   ],
 };
