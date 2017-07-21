@@ -66,6 +66,7 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
           />
           <Button
             type="submit"
+            primary
           >
             Add Todo
           </Button>
