@@ -15,6 +15,7 @@ import rootEpic from './app/epics';
 import DevTools from './app/containers/DevTools';
 
 import './favicon.ico';
+import './main.scss';
 
 const history = createBrowserHistory();
 const initialState = {} as State;

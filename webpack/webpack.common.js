@@ -24,6 +24,13 @@ module.exports = {
         },
       },
       {
+        test: /\.(eot|woff2?|ttf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/font/[name].[hash:8].[ext]',
+        },
+      },
+      {
         test: /\.ico$/,
         loader: 'file-loader',
         options: {

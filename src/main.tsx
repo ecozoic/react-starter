@@ -11,6 +11,7 @@ import rootReducer, { State } from './app/reducers';
 import rootEpic from './app/epics';
 
 import './favicon.ico';
+import './main.scss';
 
 const history = createBrowserHistory();
 const initialState = {} as State;

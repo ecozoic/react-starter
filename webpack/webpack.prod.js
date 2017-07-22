@@ -70,11 +70,11 @@ module.exports = {
       allChunks: true,
     }),
     new Visualizer({
-      filename: '../webpack/stats/stats.prod.html',
+      filename: '../webpack/stats/stats.html',
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      reportFilename: '../webpack/stats/report.prod.html',
+      reportFilename: '../webpack/stats/report.html',
       defaultSizes: 'parsed',
       openAnalyzer: false,
       generateStatsFile: false,
