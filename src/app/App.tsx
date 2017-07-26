@@ -9,9 +9,6 @@ export interface AppProps {
   history: History;
 }
 
-/**
- * Main application component
- */
 const App: React.SFC<AppProps> = ({ history }) => {
   return (
     <ConnectedRouter history={history}>

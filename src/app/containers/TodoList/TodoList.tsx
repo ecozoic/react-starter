@@ -1,22 +1,32 @@
-import { connect } from 'react-redux';
+import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
 import { toggleTodo } from '../../actions';
+import { Todo } from '../../models';
 import { getTodos } from '../../selectors';
 import { State } from '../../reducers';
 import TodoList from '../../components/TodoList';
 
-const mapStateToProps = (state: State) => ({
+export interface TodoListStateProps {
+  todos: Todo[];
+}
+
+export interface TodoListDispatchProps {
+  onTodoClick: (id: string) => void;
+}
+
+const mapStateToProps: MapStateToProps<TodoListStateProps, {}> = (state: State) => ({
   todos: getTodos(state),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<State>) => ({
-  onTodoClick: (id: string) => {
-    dispatch(toggleTodo(id));
-  },
-});
+const mapDispatchToProps: MapDispatchToProps<TodoListDispatchProps, {}> =
+  (dispatch: Dispatch<State>) => ({
+    onTodoClick: (id: string) => {
+      dispatch(toggleTodo(id));
+    },
+  });
 
-const TodoListContainer = connect(
+const TodoListContainer = connect<TodoListStateProps, TodoListDispatchProps, {}>(
   mapStateToProps,
   mapDispatchToProps,
 )(TodoList);

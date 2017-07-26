@@ -3,9 +3,6 @@ import Helmet from 'react-helmet';
 
 const styles = require('./PageNotFound.scss');
 
-/**
- * Page not found component
- */
 const PageNotFound: React.SFC<any> = () => {
   return (
     <div>
