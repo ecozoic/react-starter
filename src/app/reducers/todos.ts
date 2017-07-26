@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS_FULFILLED } from '../constants';
+import { ActionTypes } from '../constants';
 import { Todo } from '../models';
 import { AddTodoAction, ToggleTodoAction, FetchTodosFulfilledAction } from '../actions';
 
@@ -18,7 +18,7 @@ export const INITIAL_STATE: TodosState = {
 
 export const todosReducer = (prevState: TodosState = INITIAL_STATE, action: TodosAction) => {
   switch (action.type) {
-    case ADD_TODO:
+    case ActionTypes.ADD_TODO:
       return {
         ...prevState,
         byId: {
@@ -30,7 +30,7 @@ export const todosReducer = (prevState: TodosState = INITIAL_STATE, action: Todo
           action.payload.id,
         ],
       };
-    case TOGGLE_TODO:
+    case ActionTypes.TOGGLE_TODO:
       if (!prevState.byId[action.payload.id]) {
         return prevState;
       }
@@ -45,7 +45,7 @@ export const todosReducer = (prevState: TodosState = INITIAL_STATE, action: Todo
           },
         },
       };
-    case FETCH_TODOS_FULFILLED:
+    case ActionTypes.FETCH_TODOS_FULFILLED:
       return {
         ...prevState,
         byId: {

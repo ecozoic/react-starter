@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Updated several dependencies to their latest versions
 - Updated favicon
 - Normalized todos state
+- Refactored action types to use string enums rather than type literals
 
 ### Removed
 - Removed material-ui
