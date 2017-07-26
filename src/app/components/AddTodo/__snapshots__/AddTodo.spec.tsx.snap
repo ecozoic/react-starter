@@ -13,6 +13,7 @@ exports[`<AddTodo /> renders without crashing 1`] = `
     />
     <Button
       as="button"
+      primary={true}
       type="submit"
     >
       Add Todo
