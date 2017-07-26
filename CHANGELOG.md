@@ -19,6 +19,9 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Removed
 - Removed material-ui
 
+### Fixed
+- Fixed issue with HMR forcing components to unmount
+
 ## [4.0.0 - 2017-07-18]
 ### Added
 - Added pushstate-server
