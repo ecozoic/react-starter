@@ -6,18 +6,34 @@ exports[`<AddTodo /> renders without crashing 1`] = `
     onSubmit={[Function]}
   >
     <Input
+      action={
+        <Button
+          animated={true}
+          as="button"
+          disabled={true}
+          primary={true}
+          type="submit"
+        >
+          <ButtonContent
+            visible={true}
+          >
+            Add Todo
+          </ButtonContent>
+          <ButtonContent
+            hidden={true}
+          >
+            <Icon
+              as="i"
+              name="plus"
+            />
+          </ButtonContent>
+        </Button>
+      }
       name="todo"
       onChange={[Function]}
       type="text"
       value=""
     />
-    <Button
-      as="button"
-      primary={true}
-      type="submit"
-    >
-      Add Todo
-    </Button>
   </form>
 </div>
 `;

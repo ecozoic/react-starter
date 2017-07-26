@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Input } from 'semantic-ui-react';
+import { Button, Input, Icon } from 'semantic-ui-react';
 
 export interface AddTodoProps {
   onInit: () => void;
@@ -63,13 +63,22 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
             type="text"
             value={todo}
             onChange={this.handleChange}
+            action={
+              <Button
+                type="submit"
+                primary
+                animated
+                disabled={!todo}
+              >
+                <Button.Content visible>
+                  Add Todo
+                </Button.Content>
+                <Button.Content hidden>
+                  <Icon name="plus" />
+                </Button.Content>
+              </Button>
+            }
           />
-          <Button
-            type="submit"
-            primary
-          >
-            Add Todo
-          </Button>
         </form>
       </div>
     );
