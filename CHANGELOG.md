@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 ### Changed
 - Updated several dependencies to their latest versions
+- Updated favicon
 
 ### Removed
 - Removed material-ui
