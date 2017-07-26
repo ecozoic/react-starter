@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added uuid to generate unique IDs for todos
+- Added semantic-ui-react
+- Added babel to Webpack build pipeline to support babel-plugin-lodash
+- Added lodash
+
+### Changed
+- Updated several dependencies to their latest versions
+
+### Removed
+- Removed material-ui
+
 ## [4.0.0 - 2017-07-18]
 ### Added
 - Added pushstate-server
