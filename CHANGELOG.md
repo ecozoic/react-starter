@@ -8,10 +8,12 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Added semantic-ui-react
 - Added babel to Webpack build pipeline to support babel-plugin-lodash
 - Added lodash
+- Added normalizr
 
 ### Changed
 - Updated several dependencies to their latest versions
 - Updated favicon
+- Normalized todos state
 
 ### Removed
 - Removed material-ui

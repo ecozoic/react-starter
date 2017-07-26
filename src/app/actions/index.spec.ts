@@ -26,12 +26,14 @@ describe('addTodo', () => {
     expect(isFSA(action)).toEqual(true);
     expect(action.type).toEqual(ADD_TODO);
     expect(action.payload.text).toEqual(text);
+    expect(action.payload.id).toEqual(expect.any(String));
+    expect(action.payload.completed).toEqual(false);
   });
 });
 
 describe('toggleTodo', () => {
   it('creates a valid action', () => {
-    const id = 1;
+    const id = '1';
     const action = toggleTodo(id);
 
     expect(isFSA(action)).toEqual(true);
@@ -60,7 +62,15 @@ describe('fetchTodosPending', () => {
 
 describe('fetchTodosFulfilled', () => {
   it('creates a valid action', () => {
-    const todos = ['foo', 'bar'];
+    const todos = {
+      entities: {
+        todos: {
+          1: { id: '1', text: 'Todo', completed: false },
+        },
+      },
+      result: ['1'],
+    };
+
     const action = fetchTodosFulfilled(todos);
 
     expect(isFSA(action)).toEqual(true);

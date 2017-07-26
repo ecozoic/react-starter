@@ -1,83 +1,102 @@
 import deepFreeze from 'deep-freeze';
 import { Action } from 'redux';
 
-import { Todo } from '../models';
+import { NormalizedTodoList } from '../models';
 import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions';
 
 import {
   todosReducer,
   INITIAL_STATE,
+  TodosState,
 } from './todos';
 
 describe('todosReducer', () => {
   it('adds a new todo', () => {
-    const action1 = addTodo('Todo 1');
-    const action2 = addTodo('Todo 2');
+    const text1 = 'Todo 1';
+    const text2 = 'Todo 2';
 
-    const todosBefore: Todo[] = [];
+    const action1 = addTodo(text1);
+    const action2 = addTodo(text2);
+
+    const prevState = INITIAL_STATE;
 
     deepFreeze(action1);
     deepFreeze(action2);
-    deepFreeze(todosBefore);
+    deepFreeze(prevState);
 
-    let todosAfter = todosReducer(todosBefore, action1);
-    expect(todosAfter.length).toEqual(1);
+    let nextState = todosReducer(prevState, action1);
+    expect(nextState.allIds.length).toEqual(1);
+    expect(nextState.byId[action1.payload.id].text).toEqual(text1);
 
-    todosAfter = todosReducer(todosAfter, action2);
-    expect(todosAfter.length).toEqual(2);
+    deepFreeze(nextState);
+
+    nextState = todosReducer(nextState, action2);
+    expect(nextState.allIds.length).toEqual(2);
+    expect(nextState.byId[action2.payload.id].text).toEqual(text2);
   });
 
   it('toggles an existing todo', () => {
-    const action = toggleTodo(1);
+    const id = '1';
+    const action = toggleTodo(id);
 
-    const todosBefore: Todo[] = [{
-      id: 1,
-      text: 'Todo',
-      completed: false,
-    }];
+    const prevState: TodosState = {
+      allIds: [id],
+      byId: {
+        [id]: { id, text: 'Todo', completed: false },
+      },
+    };
 
     deepFreeze(action);
-    deepFreeze(todosBefore);
+    deepFreeze(prevState);
 
-    let todosAfter = todosReducer(todosBefore, action);
-    expect(todosAfter.length).toEqual(1);
-    expect(todosAfter[0].completed).toEqual(true);
+    let nextState = todosReducer(prevState, action);
+    expect(nextState.byId[id].completed).toEqual(true);
 
-    todosAfter = todosReducer(todosAfter, action);
-    expect(todosAfter.length).toEqual(1);
-    expect(todosAfter[0].completed).toEqual(false);
+    deepFreeze(nextState);
+
+    nextState = todosReducer(nextState, action);
+    expect(nextState.byId[id].completed).toEqual(false);
   });
 
   it('noops if requested todo to toggle not found', () => {
-    const action = toggleTodo(100);
+    const action = toggleTodo('100');
 
-    const todosBefore: Todo[] = [{
-      id: 1,
-      text: 'Todo',
-      completed: false,
-    }];
+    const prevState: TodosState = {
+      allIds: ['1'],
+      byId: {
+        1: { id: '1', text: 'Todo', completed: false },
+      },
+    };
 
     deepFreeze(action);
-    deepFreeze(todosBefore);
+    deepFreeze(prevState);
 
-    const todosAfter = todosReducer(todosBefore, action);
-    expect(todosAfter).toEqual(todosBefore);
+    const nextState = todosReducer(prevState, action);
+    expect(nextState).toBe(prevState);
   });
 
   it('adds fetched todos to state', () => {
-    const todos = ['foo', 'bar', 'baz'];
+    const todos: NormalizedTodoList = {
+      entities: {
+        todos: {
+          1: { id: '1', text: 'Todo', completed: false },
+          2: { id: '2', text: 'Todo', completed: false },
+          3: { id: '3', text: 'Todo', completed: false },
+        },
+      },
+      result: ['1', '2', '3'],
+    };
+
     const action = fetchTodosFulfilled(todos);
 
-    const todosBefore: Todo[] = [];
+    const prevState = INITIAL_STATE;
 
     deepFreeze(action);
-    deepFreeze(todosBefore);
+    deepFreeze(prevState);
 
-    const todosAfter = todosReducer(todosBefore, action);
-    expect(todosAfter.length).toEqual(todos.length);
-    todosAfter.forEach((todo, idx) => {
-      expect(todo.text).toEqual(todos[idx]);
-    });
+    const nextState = todosReducer(prevState, action);
+    expect(nextState.allIds).toEqual(todos.result);
+    expect(nextState.byId).toEqual(todos.entities.todos);
   });
 
   it('returns initial state', () => {
@@ -87,9 +106,9 @@ describe('todosReducer', () => {
 
     deepFreeze(action);
 
-    const todos = todosReducer(undefined, action);
+    const nextState = todosReducer(undefined, action);
 
-    expect(todos).toEqual(INITIAL_STATE);
+    expect(nextState).toEqual(INITIAL_STATE);
   });
 
   it('returns existing state for unknown action', () => {
@@ -97,11 +116,13 @@ describe('todosReducer', () => {
       type: '@@UNKNOWN',
     };
 
-    const todos: Todo[] = [];
+    const prevState = INITIAL_STATE;
 
     deepFreeze(action);
-    deepFreeze(todos);
+    deepFreeze(prevState);
 
-    expect(todosReducer(todos, action)).toBe(todos);
+    const nextState = todosReducer(prevState, action);
+
+    expect(nextState).toBe(prevState);
   });
 });

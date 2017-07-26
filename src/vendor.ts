@@ -14,6 +14,8 @@ import 'redux-observable';
 // other third party
 import 'history';
 import 'classnames';
+import 'normalizr';
+import 'uuid/v4';
 
 // lodash
 // e.g. import 'lodash/map';
