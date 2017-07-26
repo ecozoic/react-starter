@@ -5,16 +5,13 @@ import { Provider } from 'react-redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './app';
 import rootReducer, { State } from './app/reducers';
 import rootEpic from './app/epics';
 
 import './favicon.ico';
-
-injectTapEventPlugin();
+import './main.scss';
 
 const history = createBrowserHistory();
 const initialState = {} as State;
@@ -30,9 +27,7 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <MuiThemeProvider>
-      <App history={history} />
-    </MuiThemeProvider>
+    <App history={history} />
   </Provider>,
   document.getElementById('app'),
 );

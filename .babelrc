@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    [
+      "lodash",
+      { "id": ["lodash", "semantic-ui-react"] }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    }
+  }
+}

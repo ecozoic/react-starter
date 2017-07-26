@@ -2,6 +2,26 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [4.1.0 - 2017-07-26]
+### Added
+- Added uuid to generate unique IDs for todos
+- Added semantic-ui-react
+- Added babel to Webpack build pipeline to support babel-plugin-lodash
+- Added lodash
+- Added normalizr
+
+### Changed
+- Updated several dependencies to their latest versions
+- Updated favicon
+- Normalized todos state
+- Refactored action types to use string enums rather than type literals
+
+### Removed
+- Removed material-ui
+
+### Fixed
+- Fixed issue with HMR forcing components to unmount
+
 ## [4.0.0 - 2017-07-18]
 ### Added
 - Added pushstate-server

@@ -7,9 +7,6 @@ import TodoList from '../../containers/TodoList';
 const img = require('../../../react.png');
 const styles = require('./Home.scss');
 
-/**
- * Home page component
- */
 const Home: React.SFC<any> = () => {
   return (
     <div className={styles.home}>

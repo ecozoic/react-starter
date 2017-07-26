@@ -1,7 +1,5 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { noop } from '../../utils';
 
@@ -127,20 +125,14 @@ describe('<AddTodo />', () => {
   });
 
   describe('componentDidMount', () => {
-    beforeAll(() => {
-      injectTapEventPlugin();
-    });
-
     it('calls onInit after mounting', () => {
       const onInit = jest.fn();
 
       mount(
-        <MuiThemeProvider>
-          <AddTodo
-            onInit={onInit}
-            onSubmit={noop}
-          />
-        </MuiThemeProvider>,
+        <AddTodo
+          onInit={onInit}
+          onSubmit={noop}
+        />,
       );
 
       expect(onInit).toHaveBeenCalledTimes(1);

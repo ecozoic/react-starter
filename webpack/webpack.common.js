@@ -20,7 +20,14 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/img/[name].[hash].[ext]',
+          name: 'assets/img/[name].[hash:8].[ext]',
+        },
+      },
+      {
+        test: /\.(eot|woff2?|ttf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/font/[name].[hash:8].[ext]',
         },
       },
       {

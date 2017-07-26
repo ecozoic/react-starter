@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -15,8 +16,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: 'assets/js/[name].[hash].js',
-    chunkFilename: 'assets/js/[id].[hash].chunk.js',
+    filename: 'assets/js/[name].[chunkhash:8].js',
   },
 
   module: {
@@ -44,10 +44,15 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          useCache: true,
-        },
+        use: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              useCache: true,
+            },
+          },
+        ],
       },
     ],
   },
@@ -61,11 +66,19 @@ module.exports = {
       },
     }),
     new ExtractTextPlugin({
-      filename: 'assets/css/[name].[hash].css',
+      filename: 'assets/css/[name].[contenthash:8].css',
       allChunks: true,
     }),
     new Visualizer({
-      filename: '../webpack/stats/stats.prod.html',
+      filename: '../webpack/stats/stats.html',
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      reportFilename: '../webpack/stats/report.html',
+      defaultSizes: 'parsed',
+      openAnalyzer: false,
+      generateStatsFile: false,
+      logLevel: 'info'
     }),
   ],
 };

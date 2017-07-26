@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const Visualizer = require('webpack-visualizer-plugin');
 
 const { PORT, HOST, PROXY_PORT } = process.env;
 
@@ -22,7 +21,6 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
     filename: 'assets/js/[name].js',
-    chunkFilename: 'assets/js/[id].chunk.js',
   },
 
   module: {
@@ -48,7 +46,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
-          'react-hot-loader/webpack',
+          'babel-loader',
           {
             loader: 'awesome-typescript-loader',
             options: {
@@ -63,9 +61,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new Visualizer({
-      filename: '../webpack/stats/stats.dev.html',
-    }),
   ],
 
   devServer: {

@@ -1,13 +1,6 @@
 import { isFSA } from 'flux-standard-action';
 
-import {
-  ADD_TODO,
-  TOGGLE_TODO,
-  FETCH_TODOS,
-  FETCH_TODOS_PENDING,
-  FETCH_TODOS_FULFILLED,
-  FETCH_TODOS_REJECTED,
-} from '../constants';
+import { ActionTypes } from '../constants';
 
 import {
   addTodo,
@@ -24,18 +17,20 @@ describe('addTodo', () => {
     const action = addTodo(text);
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(ADD_TODO);
+    expect(action.type).toEqual(ActionTypes.ADD_TODO);
     expect(action.payload.text).toEqual(text);
+    expect(action.payload.id).toEqual(expect.any(String));
+    expect(action.payload.completed).toEqual(false);
   });
 });
 
 describe('toggleTodo', () => {
   it('creates a valid action', () => {
-    const id = 1;
+    const id = '1';
     const action = toggleTodo(id);
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(TOGGLE_TODO);
+    expect(action.type).toEqual(ActionTypes.TOGGLE_TODO);
     expect(action.payload.id).toEqual(id);
   });
 });
@@ -45,7 +40,7 @@ describe('fetchTodos', () => {
     const action = fetchTodos();
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(FETCH_TODOS);
+    expect(action.type).toEqual(ActionTypes.FETCH_TODOS);
   });
 });
 
@@ -54,17 +49,25 @@ describe('fetchTodosPending', () => {
     const action = fetchTodosPending();
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(FETCH_TODOS_PENDING);
+    expect(action.type).toEqual(ActionTypes.FETCH_TODOS_PENDING);
   });
 });
 
 describe('fetchTodosFulfilled', () => {
   it('creates a valid action', () => {
-    const todos = ['foo', 'bar'];
+    const todos = {
+      entities: {
+        todos: {
+          1: { id: '1', text: 'Todo', completed: false },
+        },
+      },
+      result: ['1'],
+    };
+
     const action = fetchTodosFulfilled(todos);
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(FETCH_TODOS_FULFILLED);
+    expect(action.type).toEqual(ActionTypes.FETCH_TODOS_FULFILLED);
     expect(action.payload).toEqual(todos);
   });
 });
@@ -75,7 +78,7 @@ describe('fetchTodosRejected', () => {
     const action = fetchTodosRejected(error);
 
     expect(isFSA(action)).toEqual(true);
-    expect(action.type).toEqual(FETCH_TODOS_REJECTED);
+    expect(action.type).toEqual(ActionTypes.FETCH_TODOS_REJECTED);
     expect(action.payload).toEqual(error);
     expect(action.error).toEqual(true);
   });

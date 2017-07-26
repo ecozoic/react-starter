@@ -2,7 +2,6 @@
 import 'react';
 import 'react-dom';
 import 'react-router-dom';
-import 'react-tap-event-plugin';
 import 'react-helmet';
 
 // redux
@@ -15,12 +14,16 @@ import 'redux-observable';
 // other third party
 import 'history';
 import 'classnames';
+import 'normalizr';
+import 'uuid/v4';
 
-// material ui
-import 'material-ui/styles/MuiThemeProvider';
-import 'material-ui/RaisedButton';
-import 'material-ui/TextField';
-import 'material-ui/CircularProgress';
+// lodash
+// e.g. import 'lodash/map';
+
+// semantic ui
+// need to use this syntax for babel-plugin-lodash to work w/ code splitting
+import 'semantic-ui-react/dist/commonjs/elements/Button/Button';
+import 'semantic-ui-react/dist/commonjs/elements/Input/Input';
 
 // rxjs
 import 'rxjs/Observable';

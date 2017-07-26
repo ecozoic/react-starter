@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 
 import { noop } from '../../utils';
@@ -31,9 +31,9 @@ describe('<TodoList />', () => {
 
   it('renders a todo for each todo in props', () => {
     const todos = [
-      { id: 1, text: 'Todo 1', completed: false },
-      { id: 2, text: 'Todo 2', completed: true },
-      { id: 3, text: 'Todo 3', completed: false },
+      { id: '1', text: 'Todo 1', completed: false },
+      { id: '2', text: 'Todo 2', completed: true },
+      { id: '3', text: 'Todo 3', completed: false },
     ];
 
     const todoList = shallow(
@@ -48,7 +48,7 @@ describe('<TodoList />', () => {
 
   it('renders todo with proper props', () => {
     const todos = [
-      { id: 1, text: 'Todo 1', completed: false },
+      { id: '1', text: 'Todo 1', completed: false },
     ];
 
     const todoList = shallow(
@@ -67,7 +67,7 @@ describe('<TodoList />', () => {
 
   it('sets the todo id as the key', () => {
     const todos = [
-      { id: 1, text: 'Todo 1', completed: false },
+      { id: '1', text: 'Todo 1', completed: false },
     ];
 
     const todoList = shallow(
@@ -84,7 +84,7 @@ describe('<TodoList />', () => {
     const mockFn = jest.fn();
 
     const todos = [
-      { id: 1, text: 'Todo 1', completed: false },
+      { id: '1', text: 'Todo 1', completed: false },
     ];
 
     const todoList = shallow(
@@ -97,6 +97,6 @@ describe('<TodoList />', () => {
     todoList.find('Todo').simulate('click');
 
     expect(mockFn).toHaveBeenCalledTimes(1);
-    expect(mockFn.mock.calls[0][0]).toBe(1);
+    expect(mockFn.mock.calls[0][0]).toBe('1');
   });
 });

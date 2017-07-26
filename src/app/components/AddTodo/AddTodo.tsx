@@ -1,12 +1,10 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Input, Icon } from 'semantic-ui-react';
 
 export interface AddTodoProps {
   onInit: () => void;
   onSubmit: (todo: string) => void;
-  disabled?: boolean;
 }
 
 export interface AddTodoState {
@@ -17,11 +15,6 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
   static propTypes = {
     onInit: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    disabled: false,
   };
 
   constructor(props: AddTodoProps) {
@@ -61,23 +54,30 @@ class AddTodo extends React.Component<AddTodoProps, AddTodoState> {
 
   render() {
     const { todo } = this.state;
-    const { disabled } = this.props;
 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <TextField
+          <Input
             name="todo"
             type="text"
             value={todo}
             onChange={this.handleChange}
-            disabled={disabled}
-          />
-          <RaisedButton
-            label="Add Todo"
-            primary
-            type="submit"
-            disabled={disabled}
+            action={
+              <Button
+                type="submit"
+                primary
+                animated
+                disabled={!todo}
+              >
+                <Button.Content visible>
+                  Add Todo
+                </Button.Content>
+                <Button.Content hidden>
+                  <Icon name="plus" />
+                </Button.Content>
+              </Button>
+            }
           />
         </form>
       </div>
