@@ -49,7 +49,7 @@ Starts jest in ```--watch``` mode without starting webpack-dev-server
 yarn docs
 ```
 
-Generates typedoc documentation
+Generates typedoc documentation (NOTE: this is currently broken until typedoc updates to TypeScript 2.4)
 
 ## Configuration
 Add environment specific configuration settings by creating a `.env` file in the root directory. `.env.sample` shows an example format. 
@@ -62,7 +62,3 @@ This file will be loaded with dotenv by webpack during build.
 * redux-devtools, react-hot-loader
 * semantic-ui, css modules
 * jest, enzyme, istanbul
-
-## Roadmap
-* Improve documentation
-* Auth boilerplate
