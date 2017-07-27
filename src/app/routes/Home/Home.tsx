@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 import AddTodo from '../../containers/AddTodo';
 import TodoList from '../../containers/TodoList';
 
-const img = require('../../../react.png');
-const styles = require('./Home.scss');
+import img from '../../../react.png';
+import styles from './Home.scss';
 
 const Home: React.SFC<any> = () => {
   return (

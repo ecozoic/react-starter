@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const styles = require('./PageNotFound.scss');
+import styles from './PageNotFound.scss';
 
 const PageNotFound: React.SFC<any> = () => {
   return (
