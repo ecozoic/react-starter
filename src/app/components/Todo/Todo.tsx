@@ -21,7 +21,7 @@ const Todo: React.SFC<TodoProps> = ({ onClick, completed, text }) => {
       className={className}
       onClick={onClick}
     >
-      {text}!
+      {text}
     </li>
   );
 };
