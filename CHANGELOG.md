@@ -2,9 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [4.1.1 - 2017-07-29]
+### Added
+- Added module typedefs for *.scss and *.png files
+
+### Changed
+- Updated several dependencies to their latest versions
+
 ### Fixed
 - Updated typedoc to 0.8.0 to fix documentation generation
+- Removed "!" mark from Todo component JSX
 
 ## [4.1.0 - 2017-07-26]
 ### Added
