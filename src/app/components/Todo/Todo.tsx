@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const styles = require('./Todo.scss');
+import styles from './Todo.scss';
 
 export interface TodoProps {
   onClick: React.EventHandler<React.MouseEvent<HTMLLIElement>>;
