@@ -15,10 +15,10 @@ import 'redux-observable';
 import 'history';
 import 'classnames';
 import 'normalizr';
-import 'uuid/v4';
 
 // lodash
 // e.g. import 'lodash/map';
+import 'lodash/uniqueId';
 
 // semantic ui
 // need to use this syntax for babel-plugin-lodash to work w/ code splitting

@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added typedef for process.env
+
+### Changed
+- Updated several dependencies to their latest versions
+- Redux store refactor for DRY
+- Upgrade Node to 6.11.2
+- Use lodash#uniqueId for id generation
+
+### Removed
+- Removed uuid
+
 ## [4.1.1 - 2017-07-29]
 ### Added
 - Added module typedefs for *.scss and *.png files

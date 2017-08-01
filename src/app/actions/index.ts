@@ -1,5 +1,5 @@
 import { Action as ReduxAction } from 'redux';
-import uuid from 'uuid/v4';
+import _ from 'lodash';
 
 import { ActionTypes } from '../constants';
 import { NormalizedTodoList } from '../models';
@@ -48,7 +48,7 @@ export interface FetchTodosRejectedAction extends Action<Error> {
 export const addTodo: (text: string) => AddTodoAction = text => ({
   type: ActionTypes.ADD_TODO,
   payload: {
-    id: uuid(),
+    id: _.uniqueId(),
     text,
     completed: false,
   },
