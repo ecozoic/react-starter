@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Redux store refactor for DRY
 - Upgrade Node to 6.11.2
 - Use lodash#uniqueId for id generation
+- Configure babel-loader to use cache directory
 
 ### Removed
 - Removed uuid
