@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "A starter kit for React+Redux+Rxjs UIs",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -46,7 +46,6 @@
     "@types/redux-devtools-dock-monitor": "1.1.31",
     "@types/redux-devtools-log-monitor": "1.0.32",
     "@types/redux-logger": "3.0.0",
-    "@types/uuid": "3.4.0",
     "@types/webpack-env": "1.13.0",
     "awesome-typescript-loader": "3.2.2",
     "babel-core": "6.25.0",
@@ -60,7 +59,7 @@
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
     "flux-standard-action": "1.2.0",
-    "html-webpack-plugin": "2.29.0",
+    "html-webpack-plugin": "2.30.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
     "node-sass": "4.5.3",
@@ -95,7 +94,7 @@
     "classnames": "2.2.5",
     "connected-react-router": "4.2.3",
     "core-js": "2.4.1",
-    "cross-env": "5.0.1",
+    "cross-env": "5.0.2",
     "dotenv": "4.0.0",
     "dotenv-cli": "1.4.0",
     "history": "4.6.3",
@@ -112,11 +111,10 @@
     "redux-observable": "0.14.1",
     "reselect": "3.0.1",
     "rxjs": "5.4.2",
-    "semantic-ui-react": "0.71.2",
-    "uuid": "3.1.0"
+    "semantic-ui-react": "0.71.3"
   },
   "engines": {
-    "node": "6.11.1",
+    "node": "6.11.2",
     "npm": "3.10.10",
     "yarn": "0.27.5"
   }

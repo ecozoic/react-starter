@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { schema } from 'normalizr';
 
 export interface Todo {
-  id: string;
-  completed: boolean;
-  text: string;
+  readonly id: string;
+  readonly completed: boolean;
+  readonly text: string;
 }
 
 export const todoShape = PropTypes.shape({

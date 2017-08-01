@@ -5,10 +5,10 @@ import { AddTodoAction, ToggleTodoAction, FetchTodosFulfilledAction } from '../a
 type TodosAction = AddTodoAction | ToggleTodoAction | FetchTodosFulfilledAction;
 
 export interface TodosState {
-  byId: {
-    [id: string]: Todo;
+  readonly byId: {
+    readonly [id: string]: Todo;
   };
-  allIds: string[];
+  readonly allIds: string[];
 }
 
 export const INITIAL_STATE: TodosState = {
