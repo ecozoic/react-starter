@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added gh-pages
+- Added deploy script to deploy to gh-pages branch
+
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [4.1.2 - 2017-08-01]
 ### Added
 - Added typedef for process.env
