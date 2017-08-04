@@ -45,7 +45,7 @@ export interface FetchTodosRejectedAction extends Action<Error> {
   type: ActionTypes.FETCH_TODOS_REJECTED;
 }
 
-export const addTodo: (text: string) => AddTodoAction = text => ({
+export const addTodo = (text: string): AddTodoAction => ({
   type: ActionTypes.ADD_TODO,
   payload: {
     id: _.uniqueId(),
@@ -54,28 +54,27 @@ export const addTodo: (text: string) => AddTodoAction = text => ({
   },
 });
 
-export const toggleTodo: (id: string) => ToggleTodoAction = id => ({
+export const toggleTodo = (id: string): ToggleTodoAction => ({
   type: ActionTypes.TOGGLE_TODO,
   payload: {
     id,
   },
 });
 
-export const fetchTodos: () => FetchTodosAction = () => ({
+export const fetchTodos = (): FetchTodosAction => ({
   type: ActionTypes.FETCH_TODOS,
 });
 
-export const fetchTodosPending: () => FetchTodosPendingAction = () => ({
+export const fetchTodosPending = (): FetchTodosPendingAction => ({
   type: ActionTypes.FETCH_TODOS_PENDING,
 });
 
-export const fetchTodosFulfilled: (todos: NormalizedTodoList) => FetchTodosFulfilledAction =
-  todos => ({
-    type: ActionTypes.FETCH_TODOS_FULFILLED,
-    payload: todos,
-  });
+export const fetchTodosFulfilled = (todos: NormalizedTodoList): FetchTodosFulfilledAction => ({
+  type: ActionTypes.FETCH_TODOS_FULFILLED,
+  payload: todos,
+});
 
-export const fetchTodosRejected: (error: Error) => FetchTodosRejectedAction = error => ({
+export const fetchTodosRejected = (error: Error): FetchTodosRejectedAction => ({
   type: ActionTypes.FETCH_TODOS_REJECTED,
   payload: error,
   error: true,

@@ -13,7 +13,12 @@ import { createBrowserHistory } from 'history';
 import rootReducer, { INITIAL_STATE } from '../reducers';
 import rootEpic from '../epics';
 
-const history = createBrowserHistory();
+const { BASENAME } = process.env;
+
+const history = createBrowserHistory({
+  basename: BASENAME,
+});
+
 const epicMiddleware = createEpicMiddleware(rootEpic);
 const routerMiddleware = createRouterMiddleware(history);
 

@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import App from './app';
 import { configureStore, history } from './app/store';
 
-import './favicon.ico';
 import './main.scss';
 
 const store = configureStore();

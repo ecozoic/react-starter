@@ -30,13 +30,6 @@ module.exports = {
           name: 'assets/font/[name].[hash:8].[ext]',
         },
       },
-      {
-        test: /\.ico$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-        },
-      },
     ],
   },
 
@@ -49,7 +42,8 @@ module.exports = {
       name: ['app', 'vendor', 'polyfill']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/index.html',
+      favicon: 'src/favicon.ico',
     }),
     new webpack.DefinePlugin({
       'process.env': Object.keys(process.env).reduce((prev, curr) => {
