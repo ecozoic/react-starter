@@ -6924,9 +6924,9 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
-ts-jest@20.0.8:
-  version "20.0.8"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-20.0.8.tgz#d135ce43d72e811f89af2eb7c0176eba0f5568c2"
+ts-jest@20.0.9:
+  version "20.0.9"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-20.0.9.tgz#b09a3060f18bc9206e0c5ebc7b0af6dc010e2dc4"
   dependencies:
     "@types/babel-core" "^6.7.14"
     babel-core "^6.24.1"
@@ -7334,9 +7334,9 @@ webidl-conversions@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.1.tgz#8015a17ab83e7e1b311638486ace81da6ce206a0"
 
-webpack-bundle-analyzer@2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.8.3.tgz#8e7b3deb3832698c24b09c84dfe5b43902a83991"
+webpack-bundle-analyzer@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.9.0.tgz#b58bc34cc30b27ffdbaf3d00bf27aba6fa29c6e3"
   dependencies:
     acorn "^5.1.1"
     chalk "^1.1.3"
