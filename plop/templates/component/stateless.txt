@@ -1,0 +1,15 @@
+import React from 'react';
+
+export interface {{name}}Props { }
+
+const {{name}}: React.SFC<{{name}}Props> = (props) => {
+  return (
+    <div>
+      {{name}}
+    </div>
+  );
+};
+
+{{name}}.propTypes = { };
+
+export default {{name}};

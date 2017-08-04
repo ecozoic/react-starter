@@ -10,13 +10,12 @@ import { connectRouter, routerMiddleware as createRouterMiddleware } from 'conne
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 
+import config from '../config';
 import rootReducer, { INITIAL_STATE } from '../reducers';
 import rootEpic from '../epics';
 
-const { BASENAME } = process.env;
-
 const history = createBrowserHistory({
-  basename: BASENAME,
+  basename: config.basename,
 });
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
