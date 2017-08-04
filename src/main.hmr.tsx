@@ -12,7 +12,6 @@ import rootReducer from './app/reducers';
 import rootEpic from './app/epics';
 import DevTools from './app/containers/DevTools';
 
-import './favicon.ico';
 import './main.scss';
 
 const store = configureStore(
