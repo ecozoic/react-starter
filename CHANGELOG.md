@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 ### Changed
 - Updated several dependencies to their latest versions
+- Added BASENAME env variable to support deploying to folders other than root
 
 ## [4.1.2 - 2017-08-01]
 ### Added

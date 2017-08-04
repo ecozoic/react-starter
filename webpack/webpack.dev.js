@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const { PORT, HOST, PROXY_PORT } = process.env;
+const { PORT, HOST, BASENAME } = process.env;
 
 module.exports = {
   entry: {
@@ -19,7 +19,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
+    publicPath: BASENAME,
     filename: 'assets/js/[name].js',
   },
 
@@ -74,7 +74,7 @@ module.exports = {
     stats: 'minimal',
     compress: true,
     contentBase: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
+    publicPath: BASENAME,
     port: PORT,
     host: HOST,
   },

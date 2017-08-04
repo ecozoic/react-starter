@@ -4,6 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
+const { BASENAME } = process.env;
+
 module.exports = {
   entry: {
     polyfill: './src/polyfill',
@@ -15,7 +17,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
+    publicPath: BASENAME,
     filename: 'assets/js/[name].[chunkhash:8].js',
   },
 
