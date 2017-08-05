@@ -22,13 +22,13 @@ module.exports = {
       actions.push({
         type: 'add',
         path: 'src/app/components/{{name}}/{{name}}.tsx',
-        templateFile: 'plop/templates/component/stateless.txt',
+        templateFile: 'plop/templates/component/stateless.hbs',
       });
     } else {
       actions.push({
         type: 'add',
         path: 'src/app/components/{{name}}/{{name}}.tsx',
-        templateFile: 'plop/templates/component/stateful.txt',
+        templateFile: 'plop/templates/component/stateful.hbs',
       });
     }
 
@@ -36,20 +36,20 @@ module.exports = {
       actions.push({
         type: 'add',
         path: 'src/app/components/{{name}}/{{name}}.scss',
-        templateFile: 'plop/templates/component/styles.txt',
+        templateFile: 'plop/templates/component/styles.hbs',
       });
     }
 
     actions.push({
       type: 'add',
       path: 'src/app/components/{{name}}/index.ts',
-      templateFile: 'plop/templates/component/index.txt',
+      templateFile: 'plop/templates/component/index.hbs',
     });
 
     actions.push({
       type: 'add',
       path: 'src/app/components/{{name}}/{{name}}.spec.tsx',
-      templateFile: 'plop/templates/component/spec.txt',
+      templateFile: 'plop/templates/component/spec.hbs',
     });
 
     return actions;

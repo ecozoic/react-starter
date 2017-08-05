@@ -8,6 +8,6 @@ module.exports = {
   actions: [{
     type: 'add',
     path: 'src/app/containers/{{name}}/{{name}}.tsx',
-    templateFile: 'plop/templates/container/container.txt',
+    templateFile: 'plop/templates/container/container.hbs',
   }],
 };

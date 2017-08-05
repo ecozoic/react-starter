@@ -8,6 +8,6 @@ module.exports = {
   actions: [{
     type: 'add',
     path: 'src/app/reducers/{{name}}.ts',
-    templateFile: 'plop/templates/reducer/reducer.txt',
+    templateFile: 'plop/templates/reducer/reducer.hbs',
   }],
 };

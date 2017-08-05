@@ -8,6 +8,6 @@ module.exports = {
   actions: [{
     type: 'add',
     path: 'src/app/epics/{{name}}.ts',
-    templateFile: 'plop/templates/epic/epic.txt',
+    templateFile: 'plop/templates/epic/epic.hbs',
   }],
 };
