@@ -1,7 +1,7 @@
 {
   "name": "react-starter",
   "version": "4.2.0",
-  "description": "A starter kit for React+Redux+Rxjs UIs",
+  "description": "A scaffold for React+Redux+Rxjs UIs powered by Webpack+TypeScript",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "test": "yarn jest -- --no-cache --coverage",
