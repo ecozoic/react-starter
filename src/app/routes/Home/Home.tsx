@@ -1,5 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { RouteComponentProps } from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
 import AddTodo from '../../containers/AddTodo';
 import TodoList from '../../containers/TodoList';
@@ -7,7 +9,7 @@ import TodoList from '../../containers/TodoList';
 import img from '../../../react.png';
 import styles from './Home.scss';
 
-const Home: React.SFC<any> = () => {
+const Home: React.SFC<RouteComponentProps<any>> = () => {
   return (
     <div className={styles.home}>
       <Helmet>
@@ -23,6 +25,12 @@ const Home: React.SFC<any> = () => {
       </div>
     </div>
   );
+};
+
+Home.propTypes = {
+  location: ReactRouterPropTypes.location.isRequired,
+  history: ReactRouterPropTypes.history.isRequired,
+  match: ReactRouterPropTypes.match.isRequired,
 };
 
 export default Home;

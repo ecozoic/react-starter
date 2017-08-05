@@ -1,9 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { RouteComponentProps } from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
 import styles from './PageNotFound.scss';
 
-const PageNotFound: React.SFC<any> = () => {
+const PageNotFound: React.SFC<RouteComponentProps<any>> = () => {
   return (
     <div>
       <Helmet>
@@ -12,6 +14,12 @@ const PageNotFound: React.SFC<any> = () => {
       <h1 className={styles.header}>404</h1>
     </div>
   );
+};
+
+PageNotFound.propTypes = {
+  location: ReactRouterPropTypes.location.isRequired,
+  history: ReactRouterPropTypes.history.isRequired,
+  match: ReactRouterPropTypes.match.isRequired,
 };
 
 export default PageNotFound;

@@ -2,6 +2,7 @@
 import 'react';
 import 'react-dom';
 import 'react-router-dom';
+import 'react-router-prop-types';
 import 'react-helmet';
 
 // redux
