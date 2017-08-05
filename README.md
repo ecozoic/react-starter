@@ -43,11 +43,11 @@ yarn test:watch
 ```
 
 ## Documentation
+Generate typedoc documentation in the `/docs/` directory  
 ```
 yarn docs
 ```
 
-Generates typedoc documentation in the `/docs/` directory  
 
 ## Configuration
 * Add environment-specific configuration settings by creating a `.env` file in the root directory

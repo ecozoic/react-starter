@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [4.3.1] - 2017-08-05
+### Added
+- Added nock for mocking HTTP requests
+
+### Changed
+- Improved container spec plop template
+- Updated README
+
 ## [4.3.0] - 2017-08-05
 ### Added
 - Added new process.env configuration class to consolidate logic
