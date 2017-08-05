@@ -23,6 +23,10 @@ module.exports = {
       type: 'add',
       path: 'src/app/routes/{{name}}/index.ts',
       templateFile: 'plop/templates/route/index.hbs',
+    }, {
+      type: 'add',
+      path: 'src/app/routes/{{name}}/{{name}}.spec.tsx',
+      templateFile: 'plop/templates/route/spec.hbs',
     }];
 
     if (data.styles) {
