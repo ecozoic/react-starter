@@ -6,6 +6,9 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const { BASENAME } = process.env;
 
+// set defaults
+const publicPath = BASENAME || '/';
+
 module.exports = {
   entry: {
     polyfill: './src/polyfill',
@@ -17,7 +20,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: BASENAME,
+    publicPath,
     filename: 'assets/js/[name].[chunkhash:8].js',
   },
 

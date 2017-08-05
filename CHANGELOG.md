@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [4.3.0] - 2017-08-05
+### Added
+- Added new process.env configuration class to consolidate logic
+- Added plop support with generators for components, containers, epics, reducers, and routes
+- Added react-router-prop-types
+- Added typedefs for react-router-prop-types
+
+### Changed
+- Set sensible defaults for process.env values if not provided
+- Updated several dependencies to their latest versions
+- Updated README
+
 ## [4.2.0 - 2017-08-04]
 ### Added
 - Added gh-pages

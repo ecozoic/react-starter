@@ -3,23 +3,28 @@ import Helmet from 'react-helmet';
 import { RouteComponentProps } from 'react-router-dom';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
-import styles from './PageNotFound.scss';
+{{#if styles}}
+import styles from './{{name}}.scss';
+{{/if}}
 
-const PageNotFound: React.SFC<RouteComponentProps<any>> = () => {
+const {{name}}: React.SFC<RouteComponentProps<any>> = () => {
   return (
+    {{#if styles}}
+    <div className={styles.{{camelCase name ~}} }>
+    {{else}}
     <div>
+    {{/if}}
       <Helmet>
-        <title>404</title>
+        <title>{{title}}</title>
       </Helmet>
-      <h1 className={styles.header}>404</h1>
     </div>
   );
 };
 
-PageNotFound.propTypes = {
+{{name}}.propTypes = {
   location: ReactRouterPropTypes.location.isRequired,
   history: ReactRouterPropTypes.history.isRequired,
   match: ReactRouterPropTypes.match.isRequired,
 };
 
-export default PageNotFound;
+export default {{name}};
