@@ -49,6 +49,7 @@
     "@types/redux-devtools-dock-monitor": "1.1.31",
     "@types/redux-devtools-log-monitor": "1.0.32",
     "@types/redux-logger": "3.0.0",
+    "@types/redux-mock-store": "0.0.9",
     "@types/webpack-env": "1.13.0",
     "awesome-typescript-loader": "3.2.2",
     "babel-core": "6.25.0",

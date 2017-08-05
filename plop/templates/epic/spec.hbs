@@ -1,0 +1,27 @@
+import configureMockStore from 'redux-mock-store';
+import { createEpicMiddleware } from 'redux-observable';
+import { Store } from 'redux';
+
+import { ActionTypes } from '../constants';
+import { State } from '../reducers';
+
+import { {{name}}Epic } from './{{name}}';
+
+const epicMiddleware = createEpicMiddleware({{name}}Epic);
+const mockStore = configureMockStore([epicMiddleware]);
+
+describe('{{name}}Epic', () => {
+  let store: Store<State>;
+
+  beforeEach(() => {
+    store = mockStore();
+  });
+
+  afterEach(() => {
+    epicMiddleware.replaceEpic({{name}}Epic);
+  });
+
+  it('listens', () => {
+    store.dispatch({ type: ActionTypes.{{action}} });
+  });
+});
