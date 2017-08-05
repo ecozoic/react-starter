@@ -3,11 +3,23 @@ module.exports = {
   prompts: [{
     type: 'input',
     name: 'name',
-    message: 'component name please',
+    message: 'container name please',
+  }, {
+    type: 'input',
+    name: 'component',
+    message: 'named of wrapped component',
   }],
   actions: [{
     type: 'add',
     path: 'src/app/containers/{{name}}/{{name}}.tsx',
     templateFile: 'plop/templates/container/container.hbs',
+  }, {
+    type : 'add',
+    path: 'src/app/containers/{{name}}/index.ts',
+    templateFile: 'plop/templates/container/index.hbs',
+  }, {
+    type: 'add',
+    path: 'src/app/containers/{{name}}/{{name}}.spec.tsx',
+    templateFile: 'plop/templates/container/spec.hbs',
   }],
 };
