@@ -1,12 +1,12 @@
-FROM node:6.11.2-alpine
+FROM node:6.11.2
 
-# node-gyp deps
-RUN apk add python make gcc g++ --no-cache
+COPY . /tmp/react-starter
+WORKDIR "/tmp/react-starter"
 
-COPY . .
+ENV HOST=0.0.0.0 \
+    PORT=8080 \
+    BASENAME=/
 
 RUN yarn
 RUN yarn build
-
-EXPOSE 8080
-CMD ["yarn", "serve"]
+CMD [ "yarn", "serve" ]
