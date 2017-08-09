@@ -10,7 +10,7 @@
     "jest": "cross-env NODE_ENV=test jest --config jest.conf.json",
     "tdd": "concurrently \"yarn start\" \"yarn test:watch\"",
     "prebuild": "yarn clean:build",
-    "build": "cross-env NODE_ENV=production webpack --progress --profile --colors --bail",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --bail",
     "serve": "dotenv pushstate-server dist",
     "predocs": "yarn clean:docs",
     "docs": "typedoc --out docs src --exclude \"**/*.spec.+(ts|tsx)\" --mode file",
