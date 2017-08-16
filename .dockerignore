@@ -1,0 +1,7 @@
+node_modules
+.awcache
+.vscode
+coverage
+dist
+docs
+.env
