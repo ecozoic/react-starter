@@ -74,8 +74,9 @@ yarn plop component
 ```
 
 ## Features
-* react, react-router
-* redux, connected-react-router, reselect
+* react
+* react-router, connected-react-router
+* redux, redux-thunk, reselect
 * rxjs, redux-observable
 * redux-devtools, react-hot-loader
 * semantic-ui, css modules
