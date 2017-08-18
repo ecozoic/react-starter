@@ -6,6 +6,7 @@ import {
   GenericStoreEnhancer,
 } from 'redux';
 
+import thunk from 'redux-thunk';
 import { connectRouter, routerMiddleware as createRouterMiddleware } from 'connected-react-router';
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
@@ -23,6 +24,7 @@ const routerMiddleware = createRouterMiddleware(history);
 
 const defaultMiddleware = [
   routerMiddleware,
+  thunk,
   epicMiddleware,
 ];
 
