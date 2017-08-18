@@ -8,5 +8,4 @@ ENV HOST=0.0.0.0 \
     BASENAME=/
 
 RUN yarn
-RUN yarn build
 CMD [ "yarn", "serve" ]
