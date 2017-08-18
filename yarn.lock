@@ -10,9 +10,9 @@
   version "0.22.2"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.2.tgz#539625874bc856086ad491c2fdc9b10c05ae308e"
 
-"@types/classnames@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.1.tgz#2b6fc6be389aadc8176b1d068a2c27a02eabb811"
+"@types/classnames@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.2.tgz#035fdc82f30e5de5031db8cf90614fb6340a0ea5"
 
 "@types/deep-freeze@0.1.1":
   version "0.1.1"
@@ -102,9 +102,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-redux@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.3.tgz#cd68de0c49c516b940fdc6f688535596b5d6eca4"
+"@types/react-redux@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.4.tgz#7b52b6b6bd5be77e8b7ed58a9e6ff00a9a933138"
   dependencies:
     "@types/react" "*"
     redux "^3.6.0"
@@ -1541,9 +1541,9 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
-css-loader@0.28.4:
-  version "0.28.4"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.4.tgz#6cf3579192ce355e8b38d5f42dd7a1f2ec898d0f"
+css-loader@0.28.5:
+  version "0.28.5"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.5.tgz#dd02bb91b94545710212ef7f6aaa66663113d754"
   dependencies:
     babel-code-frame "^6.11.0"
     css-selector-tokenizer "^0.7.0"
@@ -1558,7 +1558,7 @@ css-loader@0.28.4:
     postcss-modules-scope "^1.0.0"
     postcss-modules-values "^1.1.0"
     postcss-value-parser "^3.3.0"
-    source-list-map "^0.1.7"
+    source-list-map "^2.0.0"
 
 css-select@^1.1.0, css-select@~1.2.0:
   version "1.2.0"
@@ -6278,9 +6278,9 @@ redux-mock-store@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.2.3.tgz#1b3ad299da91cb41ba30d68e3b6f024475fb9e1b"
 
-redux-observable@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.15.0.tgz#8c01231f022073b653ae4bc6c6fd53c38e1c46fb"
+redux-observable@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.16.0.tgz#dc431d0f47a9c3af232639d6bdd70d80c1b620d9"
 
 redux@3.7.2, redux@^3.6.0:
   version "3.7.2"
@@ -6853,10 +6853,6 @@ sort-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-1.1.2.tgz#441b6d4d346798f1b4e49e8920adfba0e543f9ad"
   dependencies:
     is-plain-obj "^1.0.0"
-
-source-list-map@^0.1.7:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
 
 source-list-map@^2.0.0:
   version "2.0.0"
