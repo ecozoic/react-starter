@@ -108,7 +108,7 @@ docker build -t react-starter .
 
 To start a container:
 ```
-docker run -d --name react-starter 8080:8080 react-starter
+docker run -d --name react-starter -p 8080:8080 react-starter
 ```
 
 As part of a `docker-compose.yml`:
