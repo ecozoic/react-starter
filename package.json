@@ -55,7 +55,7 @@
     "@types/webpack-env": "1.13.0",
     "awesome-typescript-loader": "3.2.3",
     "babel-core": "6.26.0",
-    "babel-loader": "7.1.1",
+    "babel-loader": "7.1.2",
     "babel-plugin-lodash": "3.2.11",
     "concurrently": "3.5.0",
     "css-loader": "0.28.5",
@@ -122,7 +122,7 @@
     "redux-thunk": "2.2.0",
     "reselect": "3.0.1",
     "rxjs": "5.4.3",
-    "semantic-ui-react": "0.71.4"
+    "semantic-ui-react": "0.71.5"
   },
   "engines": {
     "node": "6.11.2",
