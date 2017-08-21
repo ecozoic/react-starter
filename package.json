@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "4.4.0",
+  "version": "4.5.0",
   "description": "A scaffold for React+Redux+Rxjs UIs powered by Webpack+TypeScript",
   "scripts": {
     "postinstall": "yarn build",
@@ -33,12 +33,12 @@
   },
   "homepage": "https://github.com/ecozoic/react-starter#readme",
   "devDependencies": {
-    "@types/classnames": "2.2.2",
+    "@types/classnames": "2.2.3",
     "@types/deep-freeze": "0.1.1",
     "@types/enzyme": "2.8.6",
     "@types/history": "4.6.0",
     "@types/jest": "20.0.7",
-    "@types/lodash": "4.14.73",
+    "@types/lodash": "4.14.74",
     "@types/nock": "8.2.1",
     "@types/prop-types": "15.5.1",
     "@types/react": "16.0.2",

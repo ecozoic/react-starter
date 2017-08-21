@@ -2,7 +2,7 @@ version: "3"
 services:
   ui:
     build: .
-    image: react-starter
+    image: react-starter:4.5.0
     ports:
       - 8081:8080
     volumes:

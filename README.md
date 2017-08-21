@@ -12,6 +12,7 @@ A scaffold for React+Redux+Rxjs UIs powered by Webpack+TypeScript.
 * semantic-ui, css modules
 * jest, enzyme, istanbul
 * plop  
+* gh-pages, heroku, docker
 
 ## Installation
 ```
@@ -113,12 +114,27 @@ docker run -d --name react-starter -p 8080:8080 react-starter
 
 As part of a `docker-compose.yml`:
 ```
-version: '3'
+version: "3"
 services:
   ui:
-    image: 'react-starter'
+    build: .
+    image: react-starter
     ports:
-      - '8080:8080'
+      - 8080:8080
+```
+
+This project also includes a `docker-compose.yml` that serves up your UI using nginx and provides Portainer to manage your docker containers.  
+
+You can access nginx via port 8080, the Node server via port 8081 for debugging purposes, and Portainer via port 9000.
+
+To start the stack:  
+```
+docker-compose up
+```
+
+To stop the stack:  
+```
+docker-compose down
 ```
 
 ### Heroku
@@ -136,3 +152,5 @@ To deploy:
 ```
 git push heroku master
 ```
+
+Note that since we are using Heroku to build our application, you need to set the `NPM_CONFIG_PRODUCTION` environment variable to `false` in Heroku's config vars UI. This is to make sure it pulls down our devDependencies. By default, Heroku sets this value to `true`. 
