@@ -1,4 +1,4 @@
 module.exports = {
   componentPaths: ['src'],
-  webpackConfigPath: 'webpack.config.js'
+  webpackConfigPath: 'webpack.config.js',
 };

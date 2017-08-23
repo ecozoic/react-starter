@@ -11,7 +11,7 @@ const publicPath = BASENAME || '/';
 module.exports = {
   entry: {
     polyfill: './src/polyfill',
-    vendor: './src/vendor.hmr',
+    vendor: './src/vendor',
     app: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://${host}:${port}`,

@@ -78,7 +78,7 @@ module.exports = {
       defaultSizes: 'parsed',
       openAnalyzer: false,
       generateStatsFile: false,
-      logLevel: 'info'
+      logLevel: 'info',
     }),
   ],
 };

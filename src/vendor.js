@@ -20,6 +20,7 @@ import 'normalizr';
 // lodash
 // e.g. import 'lodash/map';
 import 'lodash/uniqueId';
+import 'lodash/identity';
 
 // semantic ui
 // need to use this syntax for babel-plugin-lodash to work w/ code splitting

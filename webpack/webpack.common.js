@@ -34,10 +34,10 @@ module.exports = {
 
   plugins: [
     new SassLintPlugin({
-      glob: 'src/**/*.s?(a|c)ss'
+      glob: 'src/**/*.s?(a|c)ss',
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfill']
+      name: ['app', 'vendor', 'polyfill'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -47,7 +47,7 @@ module.exports = {
       'process.env': Object.keys(process.env).reduce((prev, curr) => {
         prev[curr] = JSON.stringify(process.env[curr]);
         return prev;
-      }, {})
+      }, {}),
     }),
   ],
 
