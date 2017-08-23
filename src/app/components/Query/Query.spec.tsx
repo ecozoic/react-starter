@@ -5,6 +5,6 @@ import Query from './';
 
 describe('<Query />', () => {
   it('renders', () => {
-    shallow(<Query />);
+    shallow(<Query conditions={[]} onAddCondition={function () {}} />);
   });
 });

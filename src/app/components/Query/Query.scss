@@ -1,4 +1,6 @@
 .query {
-  display: block;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
   height: 530px;
 }

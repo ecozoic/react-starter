@@ -32,6 +32,8 @@ import 'semantic-ui-react/dist/commonjs/elements/Icon/Icon';
 import 'semantic-ui-react/dist/commonjs/elements/List/List';
 import 'semantic-ui-react/dist/commonjs/elements/Container/Container';
 
+import 'semantic-ui-react/dist/commonjs/views/Card/Card';
+
 import 'semantic-ui-react/dist/commonjs/collections/Grid/Grid';
 
 // rxjs

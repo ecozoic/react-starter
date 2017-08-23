@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Segment, List, Icon } from 'semantic-ui-react';
+import { Segment, List } from 'semantic-ui-react';
+
+import Condition from '../Condition';
 
 import styles from './ConditionList.scss';
 
@@ -13,12 +15,7 @@ const ConditionList: React.SFC<ConditionListProps> = ({ conditions }) => {
     <Segment className={styles.conditionList}>
       <List relaxed="very" divided verticalAlign="middle" selection className={styles.list}>
         {conditions.map(condition =>
-          <List.Item key={condition} className={styles.listItem}>
-            <List.Content floated="right">
-              <Icon name="move" />
-            </List.Content>
-            <List.Header>{condition}</List.Header>
-          </List.Item>,
+          <Condition key={condition} condition={condition} />,
         )}
       </List>
     </Segment>
