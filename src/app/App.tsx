@@ -2,6 +2,8 @@ import React from 'react';
 import { History } from 'history';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import routes from './routes';
 
@@ -21,4 +23,4 @@ App.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default App;
+export default DragDropContext(HTML5Backend)(App);

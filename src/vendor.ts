@@ -4,6 +4,8 @@ import 'react-dom';
 import 'react-router-dom';
 import 'react-router-prop-types';
 import 'react-helmet';
+import 'react-dnd';
+import 'react-dnd-html5-backend';
 
 // redux
 import 'redux';

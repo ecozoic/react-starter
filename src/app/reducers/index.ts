@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux';
 import { RouterState } from 'connected-react-router';
 
-import { todosReducer as todos, TodosState } from './todos';
+const dndReducer = (prevState: any = {}, action: any) => {
+  return prevState;
+};
 
 const rootReducer = combineReducers<State>({
-  todos,
+  dnd: dndReducer,
 });
 
 export interface State {
-  readonly todos?: TodosState;
   readonly router?: RouterState;
 }
 

@@ -1,9 +1,5 @@
 import { combineEpics } from 'redux-observable';
 
-import { fetchTodosEpic } from './todos';
-
-const rootEpic = combineEpics(
-  fetchTodosEpic,
-);
+const rootEpic = combineEpics();
 
 export default rootEpic;
