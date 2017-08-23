@@ -4,9 +4,9 @@ import { connectRouter, routerMiddleware as createRouterMiddleware } from 'conne
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 
-import config from '../config/index';
-import rootReducer, { INITIAL_STATE } from '../reducers/index';
-import rootEpic from '../epics/index';
+import config from '../config';
+import rootReducer, { INITIAL_STATE } from '../reducers';
+import rootEpic from '../epics';
 
 const history = createBrowserHistory({
   basename: config.basename,

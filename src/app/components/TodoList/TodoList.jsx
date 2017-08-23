@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { todoShape } from '../../models';
-import TodoComponent from '../Todo/index';
+import TodoComponent from '../Todo';
 
 import styles from './TodoList.scss';
 

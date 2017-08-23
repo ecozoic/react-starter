@@ -1,4 +1,4 @@
-import { ActionTypes } from '../constants/index';
+import { ActionTypes } from '../constants';
 
 export const INITIAL_STATE = {
   byId: {},

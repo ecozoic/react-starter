@@ -15,7 +15,7 @@ const Todo = ({ onClick, completed, text }) => {
       className={className}
       onClick={onClick}
     >
-      {text}!!
+      {text}
     </li>
   );
 };

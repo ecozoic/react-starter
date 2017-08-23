@@ -1,6 +1,6 @@
 import deepFreeze from 'deep-freeze';
 
-import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions/index';
+import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions';
 
 import { todosReducer, INITIAL_STATE } from './todos';
 

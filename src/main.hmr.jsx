@@ -6,11 +6,11 @@ import { connectRouter } from 'connected-react-router';
 import { AppContainer } from 'react-hot-loader';
 import { createLogger } from 'redux-logger';
 
-import App from './app/index';
-import { configureStore, history, epicMiddleware } from './app/store/index';
-import rootReducer from './app/reducers/index';
-import rootEpic from './app/epics/index';
-import DevTools from './app/containers/DevTools/index';
+import App from './app';
+import { configureStore, history, epicMiddleware } from './app/store';
+import rootReducer from './app/reducers';
+import rootEpic from './app/epics';
+import DevTools from './app/containers/DevTools';
 
 import './main.scss';
 
@@ -41,7 +41,6 @@ renderApp();
 
 if (module.hot) {
   module.hot.accept('./app', () => {
-    console.log('render!');
     renderApp();
   });
 

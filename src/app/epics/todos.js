@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs/Observable';
 
-import { fetchTodosFulfilled, fetchTodosPending, fetchTodosRejected } from '../actions/index';
-import { getTodos } from '../api/index';
-import { ActionTypes } from '../constants/index';
+import { fetchTodosFulfilled, fetchTodosPending, fetchTodosRejected } from '../actions';
+import { getTodos } from '../api';
+import { ActionTypes } from '../constants';
 
 export const fetchTodosEpic = (action$, store) =>
   action$

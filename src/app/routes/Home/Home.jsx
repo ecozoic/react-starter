@@ -2,8 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
-import AddTodo from '../../containers/AddTodo/index';
-import TodoList from '../../containers/TodoList/index';
+import AddTodo from '../../containers/AddTodo';
+import TodoList from '../../containers/TodoList';
 
 import img from '../../../react.png';
 import styles from './Home.scss';
