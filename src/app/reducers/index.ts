@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
 import { RouterState } from 'connected-react-router';
 
-const dndReducer = (prevState: any = {}, action: any) => {
-  return prevState;
-};
+import { conditionReducer as condition, ConditionState } from './condition';
+import { expressionReducer as expression, ExpressionState } from './expression';
 
 const rootReducer = combineReducers<State>({
-  dnd: dndReducer,
+  condition,
+  expression,
 });
 
 export interface State {
   readonly router?: RouterState;
+  readonly condition?: ConditionState;
+  readonly expression?: ExpressionState;
 }
 
 export const INITIAL_STATE: State = {};

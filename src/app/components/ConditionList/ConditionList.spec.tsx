@@ -5,6 +5,6 @@ import ConditionList from './';
 
 describe('<ConditionList />', () => {
   it('renders', () => {
-    shallow(<ConditionList />);
+    shallow(<ConditionList conditions={[]} />);
   });
 });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 
-import ConditionList from '../ConditionList';
-import Query from '../Query';
+import ConditionList from '../../containers/ConditionList';
+import Query from '../../containers/Query';
 
 import styles from './ExpressionBuilder.scss';
 
