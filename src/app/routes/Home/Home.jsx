@@ -1,15 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { RouteComponentProps } from 'react-router-dom';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
-import AddTodo from '../../containers/AddTodo';
-import TodoList from '../../containers/TodoList';
+import AddTodo from '../../containers/AddTodo/index';
+import TodoList from '../../containers/TodoList/index';
 
 import img from '../../../react.png';
 import styles from './Home.scss';
 
-const Home: React.SFC<RouteComponentProps<any>> = () => {
+const Home = () => {
   return (
     <div className={styles.home}>
       <Helmet>

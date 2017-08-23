@@ -1,7 +1,6 @@
 import React from 'react';
+import _ from 'lodash';
 import { shallow } from 'enzyme';
-
-import { noop } from '../../utils';
 
 import Todo from './';
 
@@ -9,8 +8,8 @@ describe('<Todo />', () => {
   it('renders without crashing', () => {
     const todo = shallow(
       <Todo
-        onClick={noop}
-        text={'Todo'}
+        onClick={_.identity}
+        text="Todo"
         completed={false}
       />,
     );
@@ -21,8 +20,8 @@ describe('<Todo />', () => {
   it('displays todo text', () => {
     const todo = shallow(
       <Todo
-        onClick={noop}
-        text={'Todo'}
+        onClick={_.identity}
+        text="Todo"
         completed={false}
       />,
     );
@@ -36,9 +35,9 @@ describe('<Todo />', () => {
   it('has completed class if completed', () => {
     const todo = shallow(
       <Todo
-        onClick={noop}
-        text={'Todo'}
-        completed={true}
+        onClick={_.identity}
+        text="Todo"
+        completed
       />,
     );
 
@@ -50,8 +49,8 @@ describe('<Todo />', () => {
   it('does not have completed class if incomplete', () => {
     const todo = shallow(
       <Todo
-        onClick={noop}
-        text={'Todo'}
+        onClick={_.identity}
+        text="Todo"
         completed={false}
       />,
     );
@@ -67,7 +66,7 @@ describe('<Todo />', () => {
     const todo = shallow(
       <Todo
         onClick={mockFn}
-        text={'Todo'}
+        text="Todo"
         completed={false}
       />,
     );

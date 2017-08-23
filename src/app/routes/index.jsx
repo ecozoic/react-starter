@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from './Home';
-import PageNotFound from './PageNotFound';
+import Home from './Home/index';
+import PageNotFound from './PageNotFound/index';
 
 const routes = (
   <Switch>

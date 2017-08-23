@@ -1,9 +1,8 @@
 import { getTodos } from './';
-import { State } from '../reducers';
 
 describe('getTodos', () => {
   it('returns todos from state', () => {
-    const state: State = {
+    const state = {
       todos: {
         byId: {
           1: { id: '1', text: 'Todo', completed: false },

@@ -1,19 +1,12 @@
-import {
-  createStore,
-  applyMiddleware,
-  Middleware,
-  compose,
-  GenericStoreEnhancer,
-} from 'redux';
-
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { connectRouter, routerMiddleware as createRouterMiddleware } from 'connected-react-router';
 import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
 
-import config from '../config';
-import rootReducer, { INITIAL_STATE } from '../reducers';
-import rootEpic from '../epics';
+import config from '../config/index';
+import rootReducer, { INITIAL_STATE } from '../reducers/index';
+import rootEpic from '../epics/index';
 
 const history = createBrowserHistory({
   basename: config.basename,
@@ -29,7 +22,7 @@ const defaultMiddleware = [
 ];
 
 const configureStore =
-  (middleware: Middleware[] = [], storeEnhancers: GenericStoreEnhancer[] = []) => {
+  (middleware = [], storeEnhancers = []) => {
     return createStore(
       connectRouter(history)(rootReducer),
       INITIAL_STATE,

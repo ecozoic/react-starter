@@ -42,7 +42,7 @@ module.exports = {
 
     actions.push({
       type: 'add',
-      path: 'src/app/components/{{name}}/index.ts',
+      path: 'src/app/components/{{name}}/index.js',
       templateFile: 'plop/templates/component/index.hbs',
     });
 

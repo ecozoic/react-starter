@@ -1,14 +1,8 @@
 import deepFreeze from 'deep-freeze';
-import { Action } from 'redux';
 
-import { NormalizedTodoList } from '../models';
-import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions';
+import { addTodo, toggleTodo, fetchTodosFulfilled } from '../actions/index';
 
-import {
-  todosReducer,
-  INITIAL_STATE,
-  TodosState,
-} from './todos';
+import { todosReducer, INITIAL_STATE } from './todos';
 
 describe('todosReducer', () => {
   it('adds a new todo', () => {
@@ -39,7 +33,7 @@ describe('todosReducer', () => {
     const id = '1';
     const action = toggleTodo(id);
 
-    const prevState: TodosState = {
+    const prevState = {
       allIds: [id],
       byId: {
         [id]: { id, text: 'Todo', completed: false },
@@ -61,7 +55,7 @@ describe('todosReducer', () => {
   it('noops if requested todo to toggle not found', () => {
     const action = toggleTodo('100');
 
-    const prevState: TodosState = {
+    const prevState = {
       allIds: ['1'],
       byId: {
         1: { id: '1', text: 'Todo', completed: false },
@@ -76,7 +70,7 @@ describe('todosReducer', () => {
   });
 
   it('adds fetched todos to state', () => {
-    const todos: NormalizedTodoList = {
+    const todos = {
       entities: {
         todos: {
           1: { id: '1', text: 'Todo', completed: false },
@@ -100,7 +94,7 @@ describe('todosReducer', () => {
   });
 
   it('returns initial state', () => {
-    const action: Action = {
+    const action = {
       type: '@@INIT',
     };
 
@@ -112,7 +106,7 @@ describe('todosReducer', () => {
   });
 
   it('returns existing state for unknown action', () => {
-    const action: Action = {
+    const action = {
       type: '@@UNKNOWN',
     };
 

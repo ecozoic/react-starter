@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import { schema } from 'normalizr';
 
-export interface Todo {
-  readonly id: string;
-  readonly completed: boolean;
-  readonly text: string;
-}
-
 export const todoShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
@@ -15,12 +9,3 @@ export const todoShape = PropTypes.shape({
 
 export const todoSchema = new schema.Entity('todos');
 export const todoListSchema = [todoSchema];
-
-export interface NormalizedTodoList {
-  entities: {
-    todos: {
-      [id: string]: Todo;
-    };
-  };
-  result: string[];
-}

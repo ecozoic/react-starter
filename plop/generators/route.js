@@ -21,7 +21,7 @@ module.exports = {
       templateFile: 'plop/templates/route/route.hbs',
     }, {
       type: 'add',
-      path: 'src/app/routes/{{name}}/index.ts',
+      path: 'src/app/routes/{{name}}/index.js',
       templateFile: 'plop/templates/route/index.hbs',
     }, {
       type: 'add',

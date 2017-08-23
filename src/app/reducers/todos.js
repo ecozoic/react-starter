@@ -1,22 +1,11 @@
-import { ActionTypes } from '../constants';
-import { Todo } from '../models';
-import { AddTodoAction, ToggleTodoAction, FetchTodosFulfilledAction } from '../actions';
+import { ActionTypes } from '../constants/index';
 
-type TodosAction = AddTodoAction | ToggleTodoAction | FetchTodosFulfilledAction;
-
-export interface TodosState {
-  readonly byId: {
-    readonly [id: string]: Todo;
-  };
-  readonly allIds: string[];
-}
-
-export const INITIAL_STATE: TodosState = {
+export const INITIAL_STATE = {
   byId: {},
   allIds: [],
 };
 
-export const todosReducer = (prevState: TodosState = INITIAL_STATE, action: TodosAction) => {
+export const todosReducer = (prevState = INITIAL_STATE, action) => {
   switch (action.type) {
     case ActionTypes.ADD_TODO:
       return {

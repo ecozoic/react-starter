@@ -2,16 +2,16 @@ import { Observable } from 'rxjs/Observable';
 import { normalize } from 'normalizr';
 import _ from 'lodash';
 
-import { todoListSchema, Todo, NormalizedTodoList } from '../models';
+import { todoListSchema } from '../models';
 
-const TODOS: Todo[] = [
+const TODOS = [
   { id: _.uniqueId(), text: 'foo', completed: false },
   { id: _.uniqueId(), text: 'bar', completed: false },
   { id: _.uniqueId(), text: 'baz', completed: false },
 ];
 
-export const getTodos: () => Observable<NormalizedTodoList> = () => {
+export const getTodos = () => {
   return Observable.of(
-    normalize(TODOS, todoListSchema) as NormalizedTodoList,
+    normalize(TODOS, todoListSchema),
   );
 };

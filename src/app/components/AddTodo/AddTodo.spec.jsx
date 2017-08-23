@@ -1,7 +1,6 @@
 import React from 'react';
+import _ from 'lodash';
 import { mount, shallow } from 'enzyme';
-
-import { noop } from '../../utils';
 
 import AddTodo from './';
 
@@ -9,8 +8,8 @@ describe('<AddTodo />', () => {
   it('renders without crashing', () => {
     const addTodo = shallow(
       <AddTodo
-        onInit={noop}
-        onSubmit={noop}
+        onInit={_.identity}
+        onSubmit={_.identity}
       />,
     );
 
@@ -21,14 +20,14 @@ describe('<AddTodo />', () => {
     it('prevents default behavior on form submission', () => {
       const preventDefault = jest.fn();
 
-      const event: any = {
+      const event = {
         preventDefault,
       };
 
       const addTodo = shallow(
         <AddTodo
-          onInit={noop}
-          onSubmit={noop}
+          onInit={_.identity}
+          onSubmit={_.identity}
         />,
       );
 
@@ -43,15 +42,15 @@ describe('<AddTodo />', () => {
 
       const addTodo = shallow(
         <AddTodo
-          onInit={noop}
+          onInit={_.identity}
           onSubmit={onSubmit}
         />,
       );
 
       addTodo.setState({ todo: '' });
 
-      const instance = addTodo.instance() as AddTodo;
-      const event: any = { preventDefault: noop };
+      const instance = addTodo.instance();
+      const event = { preventDefault: _.identity };
 
       instance.handleSubmit(event);
 
@@ -70,15 +69,15 @@ describe('<AddTodo />', () => {
 
       const addTodo = shallow(
         <AddTodo
-          onInit={noop}
+          onInit={_.identity}
           onSubmit={onSubmit}
         />,
       );
 
       addTodo.setState({ todo });
 
-      const instance = addTodo.instance() as AddTodo;
-      const event: any = { preventDefault: noop };
+      const instance = addTodo.instance();
+      const event = { preventDefault: _.identity };
 
       instance.handleSubmit(event);
 
@@ -89,15 +88,15 @@ describe('<AddTodo />', () => {
     it('resets state after submission', () => {
       const addTodo = shallow(
         <AddTodo
-          onInit={noop}
-          onSubmit={noop}
+          onInit={_.identity}
+          onSubmit={_.identity}
         />,
       );
 
       addTodo.setState({ todo: 'foo' });
 
-      const instance = addTodo.instance() as AddTodo;
-      const event: any = { preventDefault: noop };
+      const instance = addTodo.instance();
+      const event = { preventDefault: _.identity };
 
       instance.handleSubmit(event);
 
@@ -109,14 +108,14 @@ describe('<AddTodo />', () => {
     it('sets state', () => {
       const addTodo = shallow(
         <AddTodo
-          onInit={noop}
-          onSubmit={noop}
+          onInit={_.identity}
+          onSubmit={_.identity}
         />,
       );
 
-      const instance = addTodo.instance() as AddTodo;
+      const instance = addTodo.instance();
       const todo = 'todo';
-      const event: any = { target: { value: todo } };
+      const event = { target: { value: todo } };
 
       instance.handleChange(event);
 
@@ -131,7 +130,7 @@ describe('<AddTodo />', () => {
       mount(
         <AddTodo
           onInit={onInit}
-          onSubmit={noop}
+          onSubmit={_.identity}
         />,
       );
 

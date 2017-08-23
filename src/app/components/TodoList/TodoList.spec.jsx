@@ -1,17 +1,15 @@
 import React from 'react';
+import _ from 'lodash';
 import { shallow } from 'enzyme';
 
-import { noop } from '../../utils';
-
 import TodoList from './';
-import { TodoProps } from '../Todo/Todo';
 
 describe('<TodoList />', () => {
   it('renders without crashing', () => {
     const todoList = shallow(
       <TodoList
         todos={[]}
-        onTodoClick={noop}
+        onTodoClick={_.identity}
       />,
     );
 
@@ -22,7 +20,7 @@ describe('<TodoList />', () => {
     const todoList = shallow(
       <TodoList
         todos={[]}
-        onTodoClick={noop}
+        onTodoClick={_.identity}
       />,
     );
 
@@ -39,7 +37,7 @@ describe('<TodoList />', () => {
     const todoList = shallow(
       <TodoList
         todos={todos}
-        onTodoClick={noop}
+        onTodoClick={_.identity}
       />,
     );
 
@@ -54,12 +52,12 @@ describe('<TodoList />', () => {
     const todoList = shallow(
       <TodoList
         todos={todos}
-        onTodoClick={noop}
+        onTodoClick={_.identity}
       />,
     );
 
     const todo = todoList.find('Todo');
-    const props = todo.props() as TodoProps;
+    const props = todo.props();
 
     expect(props.completed).toBe(false);
     expect(props.text).toBe('Todo 1');
@@ -73,7 +71,7 @@ describe('<TodoList />', () => {
     const todoList = shallow(
       <TodoList
         todos={todos}
-        onTodoClick={noop}
+        onTodoClick={_.identity}
       />,
     );
 

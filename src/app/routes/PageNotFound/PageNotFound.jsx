@@ -1,11 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { RouteComponentProps } from 'react-router-dom';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
 import styles from './PageNotFound.scss';
 
-const PageNotFound: React.SFC<RouteComponentProps<any>> = () => {
+const PageNotFound = () => {
   return (
     <div>
       <Helmet>

@@ -15,7 +15,7 @@ module.exports = {
     templateFile: 'plop/templates/container/container.hbs',
   }, {
     type : 'add',
-    path: 'src/app/containers/{{name}}/index.ts',
+    path: 'src/app/containers/{{name}}/index.js',
     templateFile: 'plop/templates/container/index.hbs',
   }, {
     type: 'add',

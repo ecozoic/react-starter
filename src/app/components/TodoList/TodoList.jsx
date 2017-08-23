@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { todoShape, Todo } from '../../models';
-import TodoComponent from '../Todo';
+import { todoShape } from '../../models';
+import TodoComponent from '../Todo/index';
 
 import styles from './TodoList.scss';
 
-export interface TodoListProps {
-  todos: Todo[];
-  onTodoClick: (id: string) => void;
-}
-
-const TodoList: React.SFC<TodoListProps> = ({ todos, onTodoClick }) => {
+const TodoList = ({ todos, onTodoClick }) => {
   return (
     <ul className={styles.todoList}>
       {todos.map(todo => (

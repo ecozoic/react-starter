@@ -4,13 +4,7 @@ import classNames from 'classnames';
 
 import styles from './Todo.scss';
 
-export interface TodoProps {
-  onClick: React.EventHandler<React.MouseEvent<HTMLLIElement>>;
-  completed: boolean;
-  text: string;
-}
-
-const Todo: React.SFC<TodoProps> = ({ onClick, completed, text }) => {
+const Todo = ({ onClick, completed, text }) => {
   const className = classNames(
     styles.todo,
     { [styles.completed]: completed },

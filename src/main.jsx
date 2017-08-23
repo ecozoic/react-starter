@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from './app';
-import { configureStore, history } from './app/store';
+import App from './app/index';
+import { configureStore, history } from './app/store/index';
 
 import './main.scss';
 

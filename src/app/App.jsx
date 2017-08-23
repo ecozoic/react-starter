@@ -1,15 +1,10 @@
 import React from 'react';
-import { History } from 'history';
-import PropTypes from 'prop-types';
+import ReactRouterPropTypes from 'react-router-prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';
 
-export interface AppProps {
-  history: History;
-}
-
-const App: React.SFC<AppProps> = ({ history }) => {
+const App = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
       {routes}
@@ -18,7 +13,7 @@ const App: React.SFC<AppProps> = ({ history }) => {
 };
 
 App.propTypes = {
-  history: PropTypes.object.isRequired,
+  history: ReactRouterPropTypes.history.isRequired,
 };
 
 export default App;

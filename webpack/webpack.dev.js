@@ -48,22 +48,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.tsx?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-            },
-          },
-          {
-            loader: 'awesome-typescript-loader',
-            options: {
-              useCache: true,
-            },
-          },
-        ],
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+        },
       },
     ],
   },
