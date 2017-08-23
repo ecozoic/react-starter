@@ -22,18 +22,16 @@ const defaultMiddleware = [
 ];
 
 const configureStore =
-  (middleware = [], storeEnhancers = []) => {
-    return createStore(
-      connectRouter(history)(rootReducer),
-      INITIAL_STATE,
-      compose(
-        applyMiddleware(
+  (middleware = [], storeEnhancers = []) => createStore(
+    connectRouter(history)(rootReducer),
+    INITIAL_STATE,
+    compose(
+      applyMiddleware(
         ...defaultMiddleware,
         ...middleware,
-        ),
-        ...storeEnhancers,
       ),
-    );
-  };
+      ...storeEnhancers,
+    ),
+  );
 
 export { configureStore, history, epicMiddleware, routerMiddleware };

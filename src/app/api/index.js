@@ -10,8 +10,6 @@ const TODOS = [
   { id: _.uniqueId(), text: 'baz', completed: false },
 ];
 
-export const getTodos = () => {
-  return Observable.of(
-    normalize(TODOS, todoListSchema),
-  );
-};
+export const getTodos = () => Observable.of(
+  normalize(TODOS, todoListSchema),
+);

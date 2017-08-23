@@ -40,7 +40,10 @@ const renderApp = () => {
 renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app', renderApp);
+  module.hot.accept('./app', () => {
+    console.log('render!');
+    renderApp();
+  });
 
   module.hot.accept('./app/reducers', () => {
     store.replaceReducer(connectRouter(history)(rootReducer));

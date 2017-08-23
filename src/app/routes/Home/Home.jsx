@@ -8,23 +8,21 @@ import TodoList from '../../containers/TodoList/index';
 import img from '../../../react.png';
 import styles from './Home.scss';
 
-const Home = () => {
-  return (
-    <div className={styles.home}>
-      <Helmet>
-        <title>Todo List</title>
-      </Helmet>
-      <div className={styles.todos}>
-        <div className={styles.imageContainer}>
-          <img className={styles.image} src={img} alt="logo" />
-        </div>
-        <h1 className={styles.header}>Todo List</h1>
-        <AddTodo />
-        <TodoList />
+const Home = () => (
+  <div className={styles.home}>
+    <Helmet>
+      <title>Todo List</title>
+    </Helmet>
+    <div className={styles.todos}>
+      <div className={styles.imageContainer}>
+        <img className={styles.image} src={img} alt="logo" />
       </div>
+      <h1 className={styles.header}>Todo List</h1>
+      <AddTodo />
+      <TodoList />
     </div>
-  );
-};
+  </div>
+);
 
 Home.propTypes = {
   location: ReactRouterPropTypes.location.isRequired,

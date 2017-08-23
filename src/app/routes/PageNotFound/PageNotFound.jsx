@@ -4,16 +4,14 @@ import ReactRouterPropTypes from 'react-router-prop-types';
 
 import styles from './PageNotFound.scss';
 
-const PageNotFound = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>404</title>
-      </Helmet>
-      <h1 className={styles.header}>404</h1>
-    </div>
-  );
-};
+const PageNotFound = () => (
+  <div>
+    <Helmet>
+      <title>404</title>
+    </Helmet>
+    <h1 className={styles.header}>404</h1>
+  </div>
+);
 
 PageNotFound.propTypes = {
   location: ReactRouterPropTypes.location.isRequired,

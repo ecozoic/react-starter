@@ -86,9 +86,9 @@
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
+    "babel-polyfill": "6.26.0",
     "classnames": "2.2.5",
     "connected-react-router": "4.2.3",
-    "core-js": "2.5.0",
     "cross-env": "5.0.5",
     "dotenv": "4.0.0",
     "dotenv-cli": "1.4.0",

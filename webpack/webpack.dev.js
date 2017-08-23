@@ -47,14 +47,6 @@ module.exports = {
           'sass-loader',
         ],
       },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: true,
-        },
-      },
     ],
   },
 

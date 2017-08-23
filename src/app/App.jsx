@@ -4,13 +4,11 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import routes from './routes';
 
-const App = ({ history }) => {
-  return (
-    <ConnectedRouter history={history}>
-      {routes}
-    </ConnectedRouter>
-  );
-};
+const App = ({ history }) => (
+  <ConnectedRouter history={history}>
+    {routes}
+  </ConnectedRouter>
+);
 
 App.propTypes = {
   history: ReactRouterPropTypes.history.isRequired,

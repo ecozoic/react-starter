@@ -16,6 +16,14 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)$/,
         loader: 'file-loader',
         options: {
@@ -45,6 +53,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': Object.keys(process.env).reduce((prev, curr) => {
+        // eslint-disable-next-line no-param-reassign
         prev[curr] = JSON.stringify(process.env[curr]);
         return prev;
       }, {}),
