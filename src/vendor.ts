@@ -27,6 +27,12 @@ import 'lodash/uniqueId';
 // need to use this syntax for babel-plugin-lodash to work w/ code splitting
 import 'semantic-ui-react/dist/commonjs/elements/Button/Button';
 import 'semantic-ui-react/dist/commonjs/elements/Input/Input';
+import 'semantic-ui-react/dist/commonjs/elements/Segment/Segment';
+import 'semantic-ui-react/dist/commonjs/elements/Icon/Icon';
+import 'semantic-ui-react/dist/commonjs/elements/List/List';
+import 'semantic-ui-react/dist/commonjs/elements/Container/Container';
+
+import 'semantic-ui-react/dist/commonjs/collections/Grid/Grid';
 
 // rxjs
 import 'rxjs/Observable';
