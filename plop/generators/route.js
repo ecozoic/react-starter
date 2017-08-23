@@ -17,7 +17,7 @@ module.exports = {
   actions: (data) => {
     const actions = [{
       type: 'add',
-      path: 'src/app/routes/{{name}}/{{name}}.tsx',
+      path: 'src/app/routes/{{name}}/{{name}}.jsx',
       templateFile: 'plop/templates/route/route.hbs',
     }, {
       type: 'add',
@@ -25,7 +25,7 @@ module.exports = {
       templateFile: 'plop/templates/route/index.hbs',
     }, {
       type: 'add',
-      path: 'src/app/routes/{{name}}/{{name}}.spec.tsx',
+      path: 'src/app/routes/{{name}}/{{name}}.spec.jsx',
       templateFile: 'plop/templates/route/spec.hbs',
     }];
 

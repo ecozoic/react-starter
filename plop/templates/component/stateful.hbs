@@ -4,14 +4,10 @@ import React from 'react';
 import styles from './{{name}}.scss';
 {{/if}}
 
-export interface {{name}}Props {}
-
-export interface {{name}}State {}
-
-class {{name}} extends React.Component<{{name}}Props, {{name}}State> {
+class {{name}} extends React.Component {
   static propTypes = {};
 
-  constructor(props: {{name}}Props) {
+  constructor(props) {
     super(props);
 
     this.state = {};

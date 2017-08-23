@@ -1,11 +1,7 @@
-import { ActionsObservable } from 'redux-observable';
-import { Store } from 'redux';
-
 import { Action } from '../actions';
 import { ActionTypes } from '../constants';
-import { State } from '../reducers';
 
-export const {{name}}Epic = (action$: ActionsObservable<Action<any, any>>, store: Store<State>) =>
+export const {{name}}Epic = (action$, store) =>
   action$
     .ofType(ActionTypes.{{action}})
     ;

@@ -1,13 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { RouteComponentProps } from 'react-router-dom';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
 {{#if styles}}
 import styles from './{{name}}.scss';
 {{/if}}
 
-const {{name}}: React.SFC<RouteComponentProps<any>> = () => {
+const {{name}} = () => {
   return (
     {{#if styles}}
     <div className={styles.{{camelCase name ~}} }>

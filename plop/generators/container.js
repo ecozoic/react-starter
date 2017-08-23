@@ -11,7 +11,7 @@ module.exports = {
   }],
   actions: [{
     type: 'add',
-    path: 'src/app/containers/{{name}}/{{name}}.tsx',
+    path: 'src/app/containers/{{name}}/{{name}}.jsx',
     templateFile: 'plop/templates/container/container.hbs',
   }, {
     type : 'add',
@@ -19,7 +19,7 @@ module.exports = {
     templateFile: 'plop/templates/container/index.hbs',
   }, {
     type: 'add',
-    path: 'src/app/containers/{{name}}/{{name}}.spec.tsx',
+    path: 'src/app/containers/{{name}}/{{name}}.spec.jsx',
     templateFile: 'plop/templates/container/spec.hbs',
   }],
 };
