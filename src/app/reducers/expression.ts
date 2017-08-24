@@ -1,10 +1,17 @@
 import _ from 'lodash';
 
-import { AddQueryConditionAction, ToggleOperatorAction } from '../actions';
-import { ActionTypes, Operators, QuerySegmentTypes } from '../constants';
+import {
+  AddQueryConditionAction,
+  ToggleOperatorAction,
+  ToggleConditionPrefixAction,
+} from '../actions';
+import { ActionTypes, Operators, Prefixes, QuerySegmentTypes } from '../constants';
 import { QuerySegment } from '../models';
 
-type ExpressionAction = AddQueryConditionAction | ToggleOperatorAction;
+type ExpressionAction =
+  AddQueryConditionAction |
+  ToggleOperatorAction |
+  ToggleConditionPrefixAction;
 
 export interface ExpressionState {
   readonly query: QuerySegment[];
@@ -48,6 +55,23 @@ export const expressionReducer =
               return {
                 ...querySegment,
                 value: querySegment.value === Operators.AND ? Operators.OR : Operators.AND,
+              };
+            }
+
+            return querySegment;
+          }),
+        };
+      case ActionTypes.TOGGLE_CONDITION_PREFIX:
+        return {
+          ...prevState,
+          query: prevState.query.map((querySegment) => {
+            if (
+              querySegment.type === QuerySegmentTypes.CONDITION &&
+              querySegment.id === action.payload.conditionId
+            ) {
+              return {
+                ...querySegment,
+                prefix: querySegment.prefix === Prefixes.NOT ? undefined : Prefixes.NOT,
               };
             }
 

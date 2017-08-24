@@ -1,7 +1,7 @@
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import { addQueryCondition, toggleOperator } from '../../actions';
+import { addQueryCondition, toggleOperator, toggleConditionPrefix } from '../../actions';
 import { State } from '../../reducers';
 import { getQuery } from '../../selectors';
 import Query from '../../components/Query';
@@ -14,6 +14,7 @@ export interface QueryStateProps {
 export interface QueryDispatchProps {
   onAddCondition: (condition: string) => void;
   onOperatorClick: (operator: QuerySegment) => void;
+  onConditionClick: (condition: QuerySegment) => void;
 }
 
 const mapStateToProps: MapStateToProps<QueryStateProps, {}> =
@@ -28,6 +29,9 @@ const mapDispatchToProps: MapDispatchToProps<QueryDispatchProps, {}> =
     },
     onOperatorClick: (operator: QuerySegment) => {
       dispatch(toggleOperator(operator.id));
+    },
+    onConditionClick: (condition: QuerySegment) => {
+      dispatch(toggleConditionPrefix(condition.id));
     },
   });
 

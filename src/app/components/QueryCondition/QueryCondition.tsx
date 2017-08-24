@@ -8,12 +8,24 @@ import styles from './QueryCondition.scss';
 
 export interface QueryConditionProps {
   condition: QuerySegment;
+  onConditionClick: (condition: QuerySegment) => void;
 }
 
-const QueryCondition: React.SFC<QueryConditionProps> = ({ condition }) => {
+const QueryCondition: React.SFC<QueryConditionProps> = ({ condition, onConditionClick }) => {
   return (
-    <Card color="orange" className={styles.queryCondition}>
-      <Card.Content>{condition.value}</Card.Content>
+    <Card
+      color="orange"
+      className={styles.queryCondition}
+      onClick={() => onConditionClick(condition)}
+    >
+      <Card.Content>
+        <div>
+          {condition.prefix || false}
+        </div>
+        <div>
+          {condition.value}
+        </div>
+      </Card.Content>
     </Card>
   );
 };

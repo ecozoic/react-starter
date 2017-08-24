@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import jsep from 'jsep';
 
-import { QuerySegmentTypes, JsepOperatorMap } from '../constants';
+import { QuerySegmentTypes, JsepOperatorMap, Prefixes, JsepPrefixMap } from '../constants';
 import { State } from '../reducers';
 
 export const getConditions = (state: State) => state.condition.conditions;
@@ -14,6 +14,11 @@ export const getQueryAsString = createSelector(
     return query.map((querySegment) => {
       if (querySegment.type === QuerySegmentTypes.OPERATOR) {
         return JsepOperatorMap[querySegment.value];
+      } else if (
+        querySegment.type === QuerySegmentTypes.CONDITION &&
+        querySegment.prefix === Prefixes.NOT
+      ) {
+        return `${JsepPrefixMap[Prefixes.NOT]}${querySegment.value}`;
       }
 
       return querySegment.value;

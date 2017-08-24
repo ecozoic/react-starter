@@ -14,6 +14,7 @@ export interface QueryProps {
   onAddCondition: (condition: string) => void;
   query: QuerySegment[];
   onOperatorClick: (operator: QuerySegment) => void;
+  onConditionClick: (condition: QuerySegment) => void;
   connectDropTarget?: ConnectDropTarget;
 }
 
@@ -21,6 +22,7 @@ const Query: React.SFC<QueryProps> = (props) => {
   const {
     query,
     onOperatorClick,
+    onConditionClick,
     connectDropTarget,
   } = props;
 
@@ -41,6 +43,7 @@ const Query: React.SFC<QueryProps> = (props) => {
             <QueryCondition
               key={querySegment.id}
               condition={querySegment}
+              onConditionClick={onConditionClick}
             />
           );
         })}

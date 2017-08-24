@@ -17,6 +17,8 @@ describe('<Query />', () => {
         query={query}
         onAddCondition={function () {}}
         onOperatorClick={function () {}}
-      />);
+        onConditionClick={function () {}}
+      />,
+    );
   });
 });

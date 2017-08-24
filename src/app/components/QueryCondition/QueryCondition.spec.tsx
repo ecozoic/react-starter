@@ -12,6 +12,6 @@ const condition = {
 
 describe('<QueryCondition />', () => {
   it('renders', () => {
-    shallow(<QueryCondition condition={condition} />);
+    shallow(<QueryCondition condition={condition} onConditionClick={function () { }} />);
   });
 });

@@ -24,7 +24,6 @@ export const addQueryCondition = (condition: string): AddQueryConditionAction =>
   },
 });
 
-
 export interface ToggleOperatorAction extends Action<{ readonly operatorId: string}> {
   readonly type: ActionTypes.TOGGLE_OPERATOR;
 }
@@ -33,5 +32,16 @@ export const toggleOperator = (operatorId: string): ToggleOperatorAction => ({
   type: ActionTypes.TOGGLE_OPERATOR,
   payload: {
     operatorId,
+  },
+});
+
+export interface ToggleConditionPrefixAction extends Action<{ readonly conditionId: string}> {
+  readonly type: ActionTypes.TOGGLE_CONDITION_PREFIX;
+}
+
+export const toggleConditionPrefix = (conditionId: string): ToggleConditionPrefixAction => ({
+  type: ActionTypes.TOGGLE_CONDITION_PREFIX,
+  payload: {
+    conditionId,
   },
 });
