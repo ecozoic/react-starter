@@ -3,23 +3,29 @@ import PropTypes from 'prop-types';
 import { Card } from 'semantic-ui-react';
 
 import { Operators } from '../../constants';
+import { QuerySegment } from '../../models';
 
 import styles from './Operator.scss';
 
 export interface OperatorProps {
-  operator: Operators;
+  operator: QuerySegment;
+  onOperatorClick: (operator: QuerySegment) => void;
 }
 
-const Operator: React.SFC<OperatorProps> = ({ operator }) => {
+const Operator: React.SFC<OperatorProps> = ({ operator, onOperatorClick }) => {
   return (
-    <Card color="blue" className={styles.operator}>
-      <Card.Content>{operator}</Card.Content>
+    <Card
+      color={operator.value === Operators.AND ? 'blue' : 'green'}
+      className={styles.operator}
+      onClick={() => onOperatorClick(operator)}
+    >
+      <Card.Content>{operator.value}</Card.Content>
     </Card>
   );
 };
 
 Operator.propTypes = {
-  operator: PropTypes.oneOf(['AND', 'OR']),
+  operator: PropTypes.object.isRequired,
 };
 
 export default Operator;

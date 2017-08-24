@@ -2,10 +2,12 @@ import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
 import { State } from '../../reducers';
-import { getQueryAsString, getQueryAsExpr } from '../../selectors';
+import { getQuery, getQueryAsString, getQueryAsExpr } from '../../selectors';
 import Debug from '../../components/Debug';
+import { QuerySegment } from '../../models';
 
 export interface DebugStateProps {
+  query: QuerySegment[];
   queryAsString: string;
   queryAsExpr: any;
 }
@@ -14,6 +16,7 @@ export interface DebugDispatchProps {}
 
 const mapStateToProps: MapStateToProps<DebugStateProps, {}> =
   (state: State) => ({
+    query: getQuery(state),
     queryAsString: getQueryAsString(state),
     queryAsExpr: getQueryAsExpr(state),
   });

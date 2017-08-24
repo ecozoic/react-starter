@@ -1,28 +1,33 @@
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import { addQueryCondition } from '../../actions';
+import { addQueryCondition, toggleOperator } from '../../actions';
 import { State } from '../../reducers';
-import { getQueryConditions } from '../../selectors';
+import { getQuery } from '../../selectors';
 import Query from '../../components/Query';
+import { QuerySegment } from '../../models';
 
 export interface QueryStateProps {
-  conditions: string[];
+  query: QuerySegment[];
 }
 
 export interface QueryDispatchProps {
   onAddCondition: (condition: string) => void;
+  onOperatorClick: (operator: QuerySegment) => void;
 }
 
 const mapStateToProps: MapStateToProps<QueryStateProps, {}> =
   (state: State) => ({
-    conditions: getQueryConditions(state),
+    query: getQuery(state),
   });
 
 const mapDispatchToProps: MapDispatchToProps<QueryDispatchProps, {}> =
   (dispatch: Dispatch<State>) => ({
     onAddCondition: (condition: string) => {
       dispatch(addQueryCondition(condition));
+    },
+    onOperatorClick: (operator: QuerySegment) => {
+      dispatch(toggleOperator(operator.id));
     },
   });
 

@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'semantic-ui-react';
 
+import { QuerySegment } from '../../models';
+
 import styles from './QueryCondition.scss';
 
 export interface QueryConditionProps {
-  condition: string;
+  condition: QuerySegment;
 }
 
 const QueryCondition: React.SFC<QueryConditionProps> = ({ condition }) => {
   return (
-    <Card color="green" className={styles.queryCondition}>
-      <Card.Content>{condition}</Card.Content>
+    <Card color="orange" className={styles.queryCondition}>
+      <Card.Content>{condition.value}</Card.Content>
     </Card>
   );
 };

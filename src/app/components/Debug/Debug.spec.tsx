@@ -5,6 +5,6 @@ import Debug from './';
 
 describe('<Debug />', () => {
   it('renders', () => {
-    shallow(<Debug queryAsString="" queryAsExpr />);
+    shallow(<Debug query={[]} queryAsString="" queryAsExpr />);
   });
 });

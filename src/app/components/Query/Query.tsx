@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
 import { DropTarget, DropTargetSpec, DropTargetCollector, ConnectDropTarget } from 'react-dnd';
 
-import { DndTypes, Operators } from '../../constants';
+import { DndTypes, QuerySegmentTypes } from '../../constants';
+import { QuerySegment } from '../../models';
 import QueryCondition from '../QueryCondition';
 import Operator from '../Operator';
 
@@ -11,27 +12,36 @@ import styles from './Query.scss';
 
 export interface QueryProps {
   onAddCondition: (condition: string) => void;
-  conditions: string[];
+  query: QuerySegment[];
+  onOperatorClick: (operator: QuerySegment) => void;
   connectDropTarget?: ConnectDropTarget;
 }
 
 const Query: React.SFC<QueryProps> = (props) => {
   const {
-    conditions,
+    query,
+    onOperatorClick,
     connectDropTarget,
   } = props;
 
   return connectDropTarget(
     <div>
       <Segment className={styles.query}>
-        {conditions.map((condition, idx) => {
+        {query.map((querySegment) => {
+          if (querySegment.type === QuerySegmentTypes.OPERATOR) {
+            return (
+              <Operator
+                key={querySegment.id}
+                operator={querySegment}
+                onOperatorClick={onOperatorClick}
+              />
+            );
+          }
           return (
-            <div key={condition} style={{ display: 'flex' }}>
-              {idx > 0 &&
-                <Operator operator={Operators.AND} />
-              }
-              <QueryCondition condition={condition}/>
-            </div>
+            <QueryCondition
+              key={querySegment.id}
+              condition={querySegment}
+            />
           );
         })}
       </Segment>
@@ -41,7 +51,7 @@ const Query: React.SFC<QueryProps> = (props) => {
 
 Query.propTypes = {
   onAddCondition: PropTypes.func.isRequired,
-  conditions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  query: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const spec: DropTargetSpec<QueryProps> = {
