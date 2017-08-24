@@ -3,6 +3,7 @@ import { Grid } from 'semantic-ui-react';
 
 import ConditionList from '../../containers/ConditionList';
 import Query from '../../containers/Query';
+import Debug from '../../containers/Debug';
 
 import styles from './ExpressionBuilder.scss';
 
@@ -15,8 +16,11 @@ const ExpressionBuilder: React.SFC<ExpressionBuilderProps> = (props) => {
         <Grid.Column width={3}>
           <ConditionList />
         </Grid.Column>
-        <Grid.Column width={13}>
+        <Grid.Column width={8}>
           <Query />
+        </Grid.Column>
+        <Grid.Column width={5}>
+          <Debug />
         </Grid.Column>
       </Grid.Row>
     </Grid>

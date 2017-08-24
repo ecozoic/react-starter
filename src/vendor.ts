@@ -18,6 +18,7 @@ import 'redux-observable';
 import 'history';
 import 'classnames';
 import 'normalizr';
+import 'jsep';
 
 // lodash
 // e.g. import 'lodash/map';

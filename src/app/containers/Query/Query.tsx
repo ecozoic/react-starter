@@ -26,7 +26,7 @@ const mapDispatchToProps: MapDispatchToProps<QueryDispatchProps, {}> =
     },
   });
 
-const QueryContainer = connect<QueryStateProps, QueryDispatchProps, {}>(
+const QueryContainer = connect<any, any, any>(
   mapStateToProps,
   mapDispatchToProps,
 )(Query);

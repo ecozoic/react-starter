@@ -10,7 +10,7 @@ export interface QueryConditionProps {
 
 const QueryCondition: React.SFC<QueryConditionProps> = ({ condition }) => {
   return (
-    <Card className={styles.queryCondition}>
+    <Card color="green" className={styles.queryCondition}>
       <Card.Content>{condition}</Card.Content>
     </Card>
   );

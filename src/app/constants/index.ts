@@ -5,3 +5,8 @@ export enum ActionTypes {
 export enum DndTypes {
   CONDITION = 'CONDITION',
 }
+
+export enum Operators {
+  AND = 'AND',
+  OR = 'OR',
+}
