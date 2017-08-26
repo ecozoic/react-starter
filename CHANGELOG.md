@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Added documentation.js
 - Added eslint and airbnb preset
 - Added babel plugins and presets
+- Added JSDoc comments
 
 ### Changed
 - Updated Plop templates
