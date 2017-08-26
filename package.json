@@ -14,7 +14,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --colors --bail",
     "serve": "dotenv pushstate-server dist",
     "predocs": "yarn clean:docs",
-    "docs": "typedoc --out docs src --exclude \"**/*.spec.+(ts|tsx)\" --mode file",
+    "docs": "documentation build src/** -f html -o docs",
     "predeploy": "cross-env BASENAME=/react-starter/ yarn build",
     "deploy": "gh-pages -d dist",
     "clean:build": "rimraf dist",

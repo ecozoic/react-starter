@@ -21,6 +21,14 @@ const defaultMiddleware = [
   epicMiddleware,
 ];
 
+/**
+ * Creates a fully-configured Redux store
+ * Default middleware: connected-react-router, redux-thunk, redux-observable
+ * Default store enhancers: applyMiddleware
+ * @param {Function[]} [middleware=[]] - array of middleware to be appended to defaults
+ * @param {Function[]} [storeEnhancers=[]] - array of store enhancers to be appended to defaults
+ * @returns {Object} Redux store
+ */
 const configureStore =
   (middleware = [], storeEnhancers = []) => createStore(
     connectRouter(history)(rootReducer),

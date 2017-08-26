@@ -1,10 +1,22 @@
 import { ActionTypes } from '../constants';
 
+/**
+ * Todos initial state
+ * @const
+ * @type {{byId: Object.<string, Object>, allIds: string[]}}
+ * @default
+ */
 export const INITIAL_STATE = {
   byId: {},
   allIds: [],
 };
 
+/**
+ * Todos reducer
+ * @param {Object} prevState - previous Redux state
+ * @param {Object} action - Redux action
+ * @returns {Object} next Redux state
+ */
 export const todosReducer = (prevState = INITIAL_STATE, action) => {
   switch (action.type) {
     case ActionTypes.ADD_TODO:

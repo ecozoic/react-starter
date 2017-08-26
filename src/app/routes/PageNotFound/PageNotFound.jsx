@@ -4,6 +4,9 @@ import ReactRouterPropTypes from 'react-router-prop-types';
 
 import styles from './PageNotFound.scss';
 
+/**
+ * 404 component
+ */
 const PageNotFound = () => (
   <div>
     <Helmet>

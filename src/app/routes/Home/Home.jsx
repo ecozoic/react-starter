@@ -8,6 +8,9 @@ import TodoList from '../../containers/TodoList';
 import img from '../../../react.png';
 import styles from './Home.scss';
 
+/**
+ * Homepage component
+ */
 const Home = () => (
   <div className={styles.home}>
     <Helmet>

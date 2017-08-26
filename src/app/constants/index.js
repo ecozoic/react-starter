@@ -1,3 +1,7 @@
+/**
+ * Action Types enum
+ * @const
+ */
 export const ActionTypes = {
   ADD_TODO: 'ADD_TODO',
   TOGGLE_TODO: 'TOGGLE_TODO',
