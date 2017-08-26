@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added documentation.js
+- Added eslint and airbnb preset
+- Added babel plugins and presets
+
+### Changed
+- Updated Plop templates
+- Updated code style for eslint
+- Updated several dependencies to their latest versions
+
+### Removed
+- Removed TypeScript support
+
 ## [4.5.0] - 2017-08-21
 ### Added
 - Added docker-compose.yml
