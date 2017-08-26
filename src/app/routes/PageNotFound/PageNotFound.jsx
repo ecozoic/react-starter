@@ -2,26 +2,24 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
-{{#if styles}}
-import styles from './{{name}}.scss';
-{{/if}}
+import styles from './PageNotFound.scss';
 
-const {{name}} = () => (
-  {{#if styles}}
-  <div className={styles.{{camelCase name ~}} }>
-  {{else}}
+/**
+ * 404 component
+ */
+const PageNotFound = () => (
   <div>
-  {{/if}}
     <Helmet>
-      <title>{{title}}</title>
+      <title>404</title>
     </Helmet>
+    <h1 className={styles.header}>404</h1>
   </div>
 );
 
-{{name}}.propTypes = {
+PageNotFound.propTypes = {
   location: ReactRouterPropTypes.location.isRequired,
   history: ReactRouterPropTypes.history.isRequired,
   match: ReactRouterPropTypes.match.isRequired,
 };
 
-export default {{name}};
+export default PageNotFound;

@@ -1,20 +1,12 @@
-import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-import { Dispatch } from 'redux';
+import { connect } from 'react-redux';
 
-import { State } from '../../reducers';
 import {{component}} from '../../components/{{component}}';
 
-export interface {{name}}StateProps {}
+const mapStateToProps = () => ({});
 
-export interface {{name}}DispatchProps {}
+const mapDispatchToProps = () => ({});
 
-const mapStateToProps: MapStateToProps<{{name}}StateProps, {}> =
-  (state: State) => ({});
-
-const mapDispatchToProps: MapDispatchToProps<{{name}}DispatchProps, {}> =
-  (dispatch: Dispatch<State>) => ({});
-
-const {{name}}Container = connect<{{name}}StateProps, {{name}}DispatchProps, {}>(
+const {{name}}Container = connect(
   mapStateToProps,
   mapDispatchToProps,
 )({{component}});

@@ -46,24 +46,6 @@ module.exports = {
           ],
         }),
       },
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-            },
-          },
-          {
-            loader: 'awesome-typescript-loader',
-            options: {
-              useCache: true,
-            },
-          },
-        ],
-      },
     ],
   },
 
@@ -88,7 +70,7 @@ module.exports = {
       defaultSizes: 'parsed',
       openAnalyzer: false,
       generateStatsFile: false,
-      logLevel: 'info'
+      logLevel: 'info',
     }),
   ],
 };

@@ -1,11 +1,10 @@
 import deepFreeze from 'deep-freeze';
-import { Action } from 'redux';
 
 import { {{name}}Reducer, INITIAL_STATE } from './{{name}}';
 
 describe('{{name}}Reducer', () => {
   it('returns initial state', () => {
-    const action: Action = {
+    const action = {
       type: '@@INIT',
     };
 
@@ -17,7 +16,7 @@ describe('{{name}}Reducer', () => {
   });
 
   it('returns existing state for unknown action', () => {
-    const action: Action = {
+    const action = {
       type: '@@UNKNOWN',
     };
 

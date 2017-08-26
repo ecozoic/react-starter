@@ -4,19 +4,15 @@ import React from 'react';
 import styles from './{{name}}.scss';
 {{/if}}
 
-export interface {{name}}Props {}
-
-const {{name}}: React.SFC<{{name}}Props> = (props) => {
-  return (
-    {{#if styles}}
-    <div className={styles.{{camelCase name ~}} }>
-    {{else}}
-    <div>
-    {{/if}}
-      {{name}}
-    </div>
-  );
-};
+const {{name}} = () => (
+  {{#if styles}}
+  <div className={styles.{{camelCase name ~}} }>
+  {{else}}
+  <div>
+  {{/if}}
+    {{name}}
+  </div>
+);
 
 {{name}}.propTypes = {};
 

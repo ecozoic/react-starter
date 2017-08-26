@@ -1,7 +1,7 @@
 # react-starter
 [![Build Status](https://travis-ci.org/ecozoic/react-starter.svg?branch=master)](https://travis-ci.org/ecozoic/react-starter) [![Dependency Status](https://david-dm.org/ecozoic/react-starter.svg)](https://david-dm.org/ecozoic/react-starter) [![devDependency Status](https://david-dm.org/ecozoic/react-starter/dev-status.png)](https://david-dm.org/ecozoic/react-starter?type=dev)
 
-A scaffold for React+Redux+Rxjs UIs powered by Webpack+TypeScript.
+A scaffold for React+Redux+Rxjs UIs powered by Webpack.
 
 ## Features
 * react
@@ -54,7 +54,7 @@ yarn test:watch
 ```
 
 ## Documentation
-Generate typedoc documentation in the `/docs/` directory  
+Generate documentation.js documentation in the `/docs/` directory  
 ```
 yarn docs
 ```

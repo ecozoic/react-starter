@@ -11,7 +11,7 @@ const publicPath = BASENAME || '/';
 module.exports = {
   entry: {
     polyfill: './src/polyfill',
-    vendor: './src/vendor.hmr',
+    vendor: './src/vendor',
     app: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://${host}:${port}`,
@@ -45,24 +45,6 @@ module.exports = {
           },
           'postcss-loader',
           'sass-loader',
-        ],
-      },
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-            },
-          },
-          {
-            loader: 'awesome-typescript-loader',
-            options: {
-              useCache: true,
-            },
-          },
         ],
       },
     ],

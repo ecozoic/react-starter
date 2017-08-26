@@ -21,13 +21,13 @@ module.exports = {
     if (data.stateless) {
       actions.push({
         type: 'add',
-        path: 'src/app/components/{{name}}/{{name}}.tsx',
+        path: 'src/app/components/{{name}}/{{name}}.jsx',
         templateFile: 'plop/templates/component/stateless.hbs',
       });
     } else {
       actions.push({
         type: 'add',
-        path: 'src/app/components/{{name}}/{{name}}.tsx',
+        path: 'src/app/components/{{name}}/{{name}}.jsx',
         templateFile: 'plop/templates/component/stateful.hbs',
       });
     }
@@ -42,13 +42,13 @@ module.exports = {
 
     actions.push({
       type: 'add',
-      path: 'src/app/components/{{name}}/index.ts',
+      path: 'src/app/components/{{name}}/index.js',
       templateFile: 'plop/templates/component/index.hbs',
     });
 
     actions.push({
       type: 'add',
-      path: 'src/app/components/{{name}}/{{name}}.spec.tsx',
+      path: 'src/app/components/{{name}}/{{name}}.spec.jsx',
       templateFile: 'plop/templates/component/spec.hbs',
     });
 

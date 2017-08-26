@@ -1,10 +1,6 @@
-type {{properCase name}}Action = any;
+export const INITIAL_STATE = {};
 
-export interface {{properCase name}}State {}
-
-export const INITIAL_STATE: {{properCase name}}State = {};
-
-export const {{name}}Reducer = (prevState: {{properCase name}}State = INITIAL_STATE, action: {{properCase name}}Action) => {
+export const {{name}}Reducer = (prevState = INITIAL_STATE, action) => {
   switch (action.type) {
     default:
       return prevState;

@@ -7,15 +7,15 @@ module.exports = {
   }, {
     type: 'input',
     name: 'action',
-    message: 'action type to listen for'
+    message: 'action type to listen for',
   }],
   actions: [{
     type: 'add',
-    path: 'src/app/epics/{{name}}.ts',
+    path: 'src/app/epics/{{name}}.js',
     templateFile: 'plop/templates/epic/epic.hbs',
   }, {
     type: 'add',
-    path: 'src/app/epics//{{name}}.spec.ts',
+    path: 'src/app/epics//{{name}}.spec.js',
     templateFile: 'plop/templates/epic/spec.hbs',
   }],
 };

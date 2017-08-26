@@ -1,20 +1,27 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
-const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    extensions: ['.jsx', '.js'],
   },
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.jsx?$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        loader: 'tslint-loader',
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+        },
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
@@ -34,12 +41,11 @@ module.exports = {
   },
 
   plugins: [
-    new CheckerPlugin(),
     new SassLintPlugin({
-      glob: 'src/**/*.s?(a|c)ss'
+      glob: 'src/**/*.s?(a|c)ss',
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfill']
+      name: ['app', 'vendor', 'polyfill'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -47,9 +53,10 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': Object.keys(process.env).reduce((prev, curr) => {
+        // eslint-disable-next-line no-param-reassign
         prev[curr] = JSON.stringify(process.env[curr]);
         return prev;
-      }, {})
+      }, {}),
     }),
   ],
 
