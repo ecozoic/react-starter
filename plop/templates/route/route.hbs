@@ -6,19 +6,17 @@ import ReactRouterPropTypes from 'react-router-prop-types';
 import styles from './{{name}}.scss';
 {{/if}}
 
-const {{name}} = () => {
-  return (
-    {{#if styles}}
-    <div className={styles.{{camelCase name ~}} }>
-    {{else}}
-    <div>
-    {{/if}}
-      <Helmet>
-        <title>{{title}}</title>
-      </Helmet>
-    </div>
-  );
-};
+const {{name}} = () => (
+  {{#if styles}}
+  <div className={styles.{{camelCase name ~}} }>
+  {{else}}
+  <div>
+  {{/if}}
+    <Helmet>
+      <title>{{title}}</title>
+    </Helmet>
+  </div>
+);
 
 {{name}}.propTypes = {
   location: ReactRouterPropTypes.location.isRequired,
