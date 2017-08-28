@@ -2,10 +2,12 @@ export enum ActionTypes {
   ADD_QUERY_CONDITION = 'ADD_QUERY_CONDITION',
   TOGGLE_OPERATOR = 'TOGGLE_OPERATOR',
   TOGGLE_CONDITION_PREFIX = 'TOGGLE_CONDITION_PREFIX',
+  MOVE_QUERY_CONDITION = 'MOVE_QUERY_CONDITION',
 }
 
 export enum DndTypes {
-  CONDITION = 'CONDITION',
+  CONDITION = 'CONDITION', // adding a new condition
+  QUERY_CONDITION = 'QUERY_CONDITION', // moving existing condition
 }
 
 export enum Operators {

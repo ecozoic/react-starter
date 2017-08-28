@@ -18,6 +18,8 @@ describe('<Query />', () => {
         onAddCondition={function () {}}
         onOperatorClick={function () {}}
         onConditionClick={function () {}}
+        moveCondition={function () {}}
+        findConditionIndex={function () { return 1; }}
       />,
     );
   });

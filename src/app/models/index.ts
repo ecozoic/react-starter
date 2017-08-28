@@ -5,4 +5,6 @@ export interface QuerySegment {
   value: string;
   type: QuerySegmentTypes;
   prefix?: Prefixes;
+  startId?: string;
+  endId?: string;
 }

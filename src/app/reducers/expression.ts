@@ -1,9 +1,10 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 
 import {
   AddQueryConditionAction,
   ToggleOperatorAction,
   ToggleConditionPrefixAction,
+  MoveQueryConditionAction,
 } from '../actions';
 import { ActionTypes, Operators, Prefixes, QuerySegmentTypes } from '../constants';
 import { QuerySegment } from '../models';
@@ -11,7 +12,8 @@ import { QuerySegment } from '../models';
 type ExpressionAction =
   AddQueryConditionAction |
   ToggleOperatorAction |
-  ToggleConditionPrefixAction;
+  ToggleConditionPrefixAction |
+  MoveQueryConditionAction;
 
 export interface ExpressionState {
   readonly query: QuerySegment[];
@@ -25,14 +27,17 @@ export const expressionReducer =
   (prevState: ExpressionState = INITIAL_STATE, action: ExpressionAction) => {
     switch (action.type) {
       case ActionTypes.ADD_QUERY_CONDITION:
-        if (prevState.query.length === 0) {
-          return {
-            ...prevState,
-            query: [action.payload],
-          };
-        }
-
+        // if (prevState.query.length === 0) {
         return {
+          ...prevState,
+          query: [
+            ...prevState.query,
+            action.payload,
+          ],
+        };
+        // }
+
+        /*return {
           ...prevState,
           query: [
             ...prevState.query,
@@ -43,6 +48,19 @@ export const expressionReducer =
             },
             action.payload,
           ],
+        };*/
+      case ActionTypes.MOVE_QUERY_CONDITION:
+        const query = prevState.query.slice();
+        const { nextIndex, conditionId } = action.payload;
+        const prevIndex = query.findIndex(qc => qc.id === conditionId);
+        const queryConditionToMove = query[prevIndex];
+
+        query[prevIndex] = query[nextIndex];
+        query[nextIndex] = queryConditionToMove;
+
+        return {
+          ...prevState,
+          query,
         };
       case ActionTypes.TOGGLE_OPERATOR:
         return {

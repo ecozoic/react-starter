@@ -32,3 +32,9 @@ export const getQueryAsExpr = createSelector(
     return jsep(queryAsString);
   },
 );
+
+export const getQueryConditionIndex = (state: State, conditionId: string) => {
+  const query = getQuery(state);
+
+  return query.findIndex(qc => qc.id === conditionId);
+};

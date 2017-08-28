@@ -45,3 +45,21 @@ export const toggleConditionPrefix = (conditionId: string): ToggleConditionPrefi
     conditionId,
   },
 });
+
+export interface MoveQueryConditionPayload {
+  readonly conditionId: string;
+  readonly nextIndex: number;
+}
+
+export interface MoveQueryConditionAction extends Action<MoveQueryConditionPayload> {
+  readonly type: ActionTypes.MOVE_QUERY_CONDITION;
+}
+
+export const moveQueryCondition =
+  (conditionId: string, nextIndex: number): MoveQueryConditionAction => ({
+    type: ActionTypes.MOVE_QUERY_CONDITION,
+    payload: {
+      conditionId,
+      nextIndex,
+    },
+  });

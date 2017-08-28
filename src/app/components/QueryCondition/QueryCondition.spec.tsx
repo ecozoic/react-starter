@@ -12,6 +12,13 @@ const condition = {
 
 describe('<QueryCondition />', () => {
   it('renders', () => {
-    shallow(<QueryCondition condition={condition} onConditionClick={function () { }} />);
+    shallow(
+      <QueryCondition
+        condition={condition}
+        onConditionClick={function () { }}
+        moveCondition={function () { }}
+        findConditionIndex={function () { return 1; }}
+      />,
+    );
   });
 });

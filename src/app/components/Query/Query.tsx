@@ -12,6 +12,8 @@ import styles from './Query.scss';
 
 export interface QueryProps {
   onAddCondition: (condition: string) => void;
+  moveCondition: (conditionId: string, nextIndex: number) => void;
+  findConditionIndex: (conditionId: string) => number;
   query: QuerySegment[];
   onOperatorClick: (operator: QuerySegment) => void;
   onConditionClick: (condition: QuerySegment) => void;
@@ -23,6 +25,8 @@ const Query: React.SFC<QueryProps> = (props) => {
     query,
     onOperatorClick,
     onConditionClick,
+    findConditionIndex,
+    moveCondition,
     connectDropTarget,
   } = props;
 
@@ -38,12 +42,21 @@ const Query: React.SFC<QueryProps> = (props) => {
                 onOperatorClick={onOperatorClick}
               />
             );
+          } else if (querySegment.type === QuerySegmentTypes.GROUP) {
+            return (
+              <div style={{ fontSize: '40px', marginTop: '30px' }} key={querySegment.id}>
+                {querySegment.value}
+              </div>
+            );
           }
+
           return (
             <QueryCondition
               key={querySegment.id}
               condition={querySegment}
               onConditionClick={onConditionClick}
+              findConditionIndex={findConditionIndex}
+              moveCondition={moveCondition}
             />
           );
         })}
