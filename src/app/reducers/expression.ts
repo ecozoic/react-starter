@@ -1,4 +1,4 @@
-// import _ from 'lodash';
+import _ from 'lodash';
 
 import {
   AddQueryConditionAction,
@@ -27,17 +27,17 @@ export const expressionReducer =
   (prevState: ExpressionState = INITIAL_STATE, action: ExpressionAction) => {
     switch (action.type) {
       case ActionTypes.ADD_QUERY_CONDITION:
-        // if (prevState.query.length === 0) {
-        return {
-          ...prevState,
-          query: [
-            ...prevState.query,
-            action.payload,
-          ],
-        };
-        // }
+        if (prevState.query.length === 0) {
+          return {
+            ...prevState,
+            query: [
+              ...prevState.query,
+              action.payload,
+            ],
+          };
+        }
 
-        /*return {
+        return {
           ...prevState,
           query: [
             ...prevState.query,
@@ -48,7 +48,7 @@ export const expressionReducer =
             },
             action.payload,
           ],
-        };*/
+        };
       case ActionTypes.MOVE_QUERY_CONDITION:
         const query = prevState.query.slice();
         const { nextIndex, conditionId } = action.payload;
