@@ -27,10 +27,11 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                importLoaders: 1,
+                importLoaders: 2,
                 minimize: true,
               },
             },
+            'postcss-loader',
             'sass-loader',
           ],
         }),
