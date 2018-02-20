@@ -3,6 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import routes from './routes';
 
+/**
+ * Main application component
+ */
 const App = () => (
   <BrowserRouter basename={process.env.BASENAME}>
     <div>
