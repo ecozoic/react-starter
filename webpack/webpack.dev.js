@@ -40,10 +40,13 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
 
   devServer: {
     historyApiFallback: true,
+    hot: true,
     stats: 'minimal',
     publicPath,
     port,
