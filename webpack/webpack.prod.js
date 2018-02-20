@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const { BASENAME } = process.env;
@@ -22,6 +23,22 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.s?(a|c)ss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                minimize: true,
+              },
+            },
+            'sass-loader',
+          ],
+        }),
+      },
     ],
   },
 
@@ -32,6 +49,10 @@ module.exports = {
       compress: {
         warnings: false,
       },
+    }),
+    new ExtractTextPlugin({
+      filename: 'assets/css/[name].[contenthash:8].css',
+      allChunks: true,
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
