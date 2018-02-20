@@ -8,6 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack",
     "serve": "dotenv pushstate-server dist",
+    "lint:css": "stylelint \"src/**/*.scss\"",
     "lint:js": "eslint --ext .js,.jsx src"
   },
   "repository": {
@@ -43,6 +44,9 @@
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
+    "stylelint": "^9.0.0",
+    "stylelint-config-standard": "^18.1.0",
+    "stylelint-webpack-plugin": "^0.10.2",
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.10.0",
     "webpack-dev-server": "^2.11.1",

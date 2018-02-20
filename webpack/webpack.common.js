@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -45,6 +46,7 @@ module.exports = {
         return prev;
       }, {}),
     }),
+    new StylelintWebpackPlugin(),
   ],
 
   performance: {
