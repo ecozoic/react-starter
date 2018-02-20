@@ -12,15 +12,14 @@ import App from './app';
 import rootReducer from './app/reducers';
 import rootEpic from './app/epics';
 
+// eslint-disable-next-line no-underscore-dangle
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
 const store = createStore(
   rootReducer,
   {},
-  composeEnhancers(
-    applyMiddleware(epicMiddleware),
-  ),
+  composeEnhancers(applyMiddleware(epicMiddleware)),
 );
 
 const renderApp = () => {
@@ -38,17 +37,14 @@ renderApp();
 
 if (module.hot) {
   module.hot.accept('./app', () => {
-    console.log('Component changed... re-rendering application');
     renderApp();
   });
 
   module.hot.accept('./app/reducers', () => {
-    console.log('Reducer changed... replacing root reducer');
     store.replaceReducer(rootReducer);
   });
 
   module.hot.accept('./app/epics', () => {
-    console.log('Epic changed... replacing root epic');
     epicMiddleware.replaceEpic(rootEpic);
   });
 }
