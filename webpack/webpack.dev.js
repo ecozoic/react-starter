@@ -9,10 +9,6 @@ const host = HOST || 'localhost';
 const publicPath = BASENAME || '/';
 
 module.exports = {
-  entry: {
-    app: './src/main',
-  },
-
   devtool: 'eval',
 
   output: {

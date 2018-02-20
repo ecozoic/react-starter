@@ -9,10 +9,6 @@ const { BASENAME } = process.env;
 const publicPath = BASENAME || '/';
 
 module.exports = {
-  entry: {
-    app: './src/main',
-  },
-
   devtool: 'source-map',
 
   output: {

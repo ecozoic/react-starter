@@ -2,6 +2,14 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  entry: {
+    app: [
+      'babel-polyfill',
+      'react-hot-loader/patch',
+      './src/main',
+    ],
+  },
+
   resolve: {
     extensions: ['.jsx', '.js'],
   },
