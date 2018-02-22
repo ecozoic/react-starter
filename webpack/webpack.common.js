@@ -47,6 +47,23 @@ module.exports = {
       }, {}),
     }),
     new StylelintWebpackPlugin(),
+    // extract vendor code
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: module =>
+        module.context && module.context.includes('node_modules'),
+    }),
+    // extract polyfill code
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'polyfill',
+      minChunks: module =>
+        module.context && (module.context.includes('babel-polyfill') || module.context.includes('core-js')),
+    }),
+    // extract webpack manifest
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      minChunks: Infinity,
+    }),
   ],
 
   performance: {

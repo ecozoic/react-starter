@@ -5,8 +5,8 @@ type State = {
 };
 
 type Action =
-  | { type: 'INCREMENT' }
-  | { type: 'DECREMENT' };
+  | { +type: 'INCREMENT' }
+  | { +type: 'DECREMENT' };
 
 const counter = (prevState: State = { count: 0 }, action: Action): State => {
   switch (action.type) {

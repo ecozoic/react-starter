@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import 'rxjs';
+import 'lodash';
 import { createEpicMiddleware } from 'redux-observable';
 
 import './main.scss';
