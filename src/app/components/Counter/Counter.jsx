@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Counter = ({ count, onIncrement, onDecrement }) => (
+export const Counter = ({ count, onIncrement, onDecrement }) => (
   <div>
     <div>{count}</div>
     <button onClick={onDecrement}>-</button>
