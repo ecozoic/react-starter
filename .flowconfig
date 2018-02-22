@@ -1,0 +1,16 @@
+[include]
+
+[ignore]
+<PROJECT_ROOT>/webpack/.*
+<PROJECT_ROOT>/jest/.*
+<PROJECT_ROOT>/coverage/.*
+<PROJECT_ROOT>/dist/.*
+
+[libs]
+
+[lints]
+
+[options]
+
+[version]
+0.66.0

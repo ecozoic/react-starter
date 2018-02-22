@@ -1,8 +1,16 @@
+// @flow
+
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export const Counter = ({ count, onIncrement, onDecrement }) => (
+type Props = {
+  +count: number,
+  +onIncrement: Function,
+  +onDecrement: Function,
+};
+
+export const Counter = ({ count, onIncrement, onDecrement }: Props) => (
   <div>
     <div>{count}</div>
     <button onClick={onDecrement}>-</button>

@@ -1,4 +1,14 @@
-const counter = (prevState = { count: 0 }, action) => {
+// @flow
+
+type State = {
+  +count: number;
+};
+
+type Action =
+  | { type: 'INCREMENT' }
+  | { type: 'DECREMENT' };
+
+const counter = (prevState: State = { count: 0 }, action: Action): State => {
   switch (action.type) {
     case 'INCREMENT':
       return {
