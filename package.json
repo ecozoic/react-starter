@@ -8,14 +8,16 @@
     "test": "npm run jest -- --no-cache --coverage",
     "test:watch": "npm run jest -- --watch",
     "tdd": "concurrently \"npm start\" \"npm run test:watch\"",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && rimraf build",
     "build": "cross-env NODE_ENV=production webpack",
     "serve": "dotenv pushstate-server dist",
     "lint:css": "stylelint \"src/**/*.scss\"",
     "lint:js": "eslint --ext .js,.jsx src",
     "predocs": "rimraf docs",
     "jest": "cross-env NODE_ENV=test jest",
-    "docs": "jsdoc -c jsdoc.conf.json"
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "predeploy": "cross-env BASENAME=/react-starter/ npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -49,6 +51,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.0",

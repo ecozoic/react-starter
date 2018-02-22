@@ -39,7 +39,7 @@ dist
 docs
 
 # webpack visualizer stats
-webpack/stats
+build
 
 # environment configuration
 .env
