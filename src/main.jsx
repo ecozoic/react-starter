@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import 'rxjs';
@@ -25,11 +24,9 @@ const store = createStore(
 
 const renderApp = () => {
   render(
-    <AppContainer>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </AppContainer>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
     document.getElementById('app'),
   );
 };
@@ -37,10 +34,6 @@ const renderApp = () => {
 renderApp();
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
-    renderApp();
-  });
-
   module.hot.accept('./app/reducers', () => {
     store.replaceReducer(rootReducer);
   });

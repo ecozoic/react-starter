@@ -6,7 +6,6 @@ module.exports = {
   entry: {
     app: [
       'babel-polyfill',
-      'react-hot-loader/patch',
       './src/main',
     ],
   },
