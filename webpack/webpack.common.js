@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
+const LodashWebpackPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -45,6 +46,7 @@ module.exports = {
         return prev;
       }, {}),
     }),
+    new LodashWebpackPlugin(),
     new StylelintWebpackPlugin(),
     // extract vendor code
     new webpack.optimize.CommonsChunkPlugin({
