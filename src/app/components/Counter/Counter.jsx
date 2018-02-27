@@ -10,6 +10,13 @@ type Props = {
   +onDecrement: Function,
 };
 
+/**
+ * Component to render a counter
+ * @param {Props} props
+ * @param {Number} props.count - the current counter value
+ * @param {Function} props.onIncrement - function to call when increment button is clicked
+ * @param {Function} props.onDecrement - function to call when decrement button is clicked
+ */
 export const Counter = ({ count, onIncrement, onDecrement }: Props) => (
   <div>
     <div>{count}</div>
