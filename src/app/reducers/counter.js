@@ -1,5 +1,4 @@
 // @flow
-
 type State = {
   +count: number;
 };

@@ -38,9 +38,6 @@ dist
 # documentation
 docs
 
-# webpack visualizer stats
-build
-
 # environment configuration
 .env
 

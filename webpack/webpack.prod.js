@@ -71,7 +71,7 @@ module.exports = {
     new webpack.optimize.ModuleConcatenationPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      reportFilename: '../build/report.html',
+      reportFilename: '../dist/report.html',
       defaultSizes: 'parsed',
       openAnalyzer: false,
       generateStatsFile: false,
