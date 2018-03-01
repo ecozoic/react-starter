@@ -65,6 +65,7 @@ module.exports = {
       name: 'manifest',
       minChunks: Infinity,
     }),
+    new webpack.NamedChunksPlugin(),
   ],
 
   performance: {

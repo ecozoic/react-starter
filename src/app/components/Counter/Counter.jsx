@@ -1,6 +1,7 @@
 // @flow
-
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -22,6 +23,9 @@ export const Counter = ({ count, onIncrement, onDecrement }: Props) => (
     <div>{count}</div>
     <button onClick={onDecrement}>-</button>
     <button onClick={onIncrement}>+</button>
+    <div>
+      <Link to="/admin">ADMIN AREA</Link>
+    </div>
   </div>
 );
 
