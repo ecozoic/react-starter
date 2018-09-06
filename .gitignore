@@ -34,12 +34,10 @@ node_modules
 
 # Webpack bundles
 dist
+reports
 
 # documentation
 docs
-
-# webpack visualizer stats
-webpack/stats
 
 # environment configuration
 .env

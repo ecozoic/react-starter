@@ -1,0 +1,84 @@
+version: 2
+
+jobs:
+  install:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - checkout
+      - run: yarn
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - .
+  lint:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run: yarn lint
+  tsc:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run: yarn tsc
+  test:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run: yarn test
+  build:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run: yarn build
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - dist
+  deploy:
+    docker:
+      - image: circleci/node:10.9.0
+    working_directory: ~/app
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run: ls
+
+workflows:
+  version: 2
+  validate_and_deploy:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+      - test:
+          requires:
+            - install
+      - tsc:
+          requires:
+            - install
+      - build:
+          requires:
+            - lint
+            - test
+            - tsc
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
