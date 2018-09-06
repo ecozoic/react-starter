@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "preserve"
+    // "isolatedModules": true,
+    // "esModuleInterop": true
+  },
+  "include": ["src"]
+}
