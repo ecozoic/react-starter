@@ -5,7 +5,7 @@ module.exports = {
   coverageReporters: ['json', 'lcov'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   roots: ['src'],
-  setupFiles: ['<rootDir>/jest/setup.js'],
+  setupFiles: ['<rootDir>/jest/setup.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(j|t)sx?$',
