@@ -21,7 +21,8 @@
     "clean:build": "rimraf dist reports",
     "cz": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,32 @@
     "@babel/preset-typescript": "^7.0.0",
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
+    "@storybook/addon-a11y": "^4.0.0-alpha.21",
+    "@storybook/addon-actions": "^4.0.0-alpha.21",
+    "@storybook/addon-backgrounds": "^4.0.0-alpha.21",
+    "@storybook/addon-centered": "^4.0.0-alpha.21",
+    "@storybook/addon-info": "^4.0.0-alpha.21",
+    "@storybook/addon-knobs": "^4.0.0-alpha.21",
+    "@storybook/addon-links": "^4.0.0-alpha.21",
+    "@storybook/addon-notes": "^4.0.0-alpha.21",
+    "@storybook/addon-storysource": "^4.0.0-alpha.21",
+    "@storybook/addon-viewport": "^4.0.0-alpha.21",
+    "@storybook/react": "^4.0.0-alpha.21",
     "@types/enzyme": "^3.1.13",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.2",
+    "@types/node": "^10.9.4",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
+    "@types/storybook__addon-a11y": "^3.3.1",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-backgrounds": "^3.2.1",
+    "@types/storybook__addon-centered": "^3.3.1",
+    "@types/storybook__addon-info": "^3.4.1",
+    "@types/storybook__addon-knobs": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.2",
+    "@types/storybook__addon-notes": "^3.3.3",
+    "@types/storybook__react": "^3.0.9",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
     "commitizen": "^2.10.1",
@@ -80,6 +102,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.11",
+    "moment": "^2.22.2",
     "normalizr": "^3.2.4",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -109,6 +132,6 @@
     "src/**/*.{js,jsx,ts,tsx}": "eslint --fix --ext .js,.jsx,.ts,.tsx"
   },
   "resolutions": {
-    "babel-core": "7.0.0-bridge.0"
+    "babel-core": "^7.0.0-0"
   }
 }
