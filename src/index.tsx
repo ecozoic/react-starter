@@ -1,7 +1,6 @@
 import '@babel/polyfill';
 
 // TODO: rxjs
-// TODO: react-router
 // TODO: react-helmet
 // TODO: redux typings
 // TODO: eslint, stylelint (styled-components)
@@ -12,6 +11,7 @@ import '@babel/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 
 import App from './App';
 import { rootReducer } from './redux/modules/root';
@@ -21,7 +21,9 @@ const store = configureStore();
 
 render(
   <Provider store={store}>
-    <App />
+    <ThemeProvider theme={{ color: 'blue' }}>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById('app'),
 );

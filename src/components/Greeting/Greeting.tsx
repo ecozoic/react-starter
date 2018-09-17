@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Greeting = styled.h1`
-  color: blue;
+  color: ${props => props.theme.color};
 `;
 
 Greeting.defaultProps = {
