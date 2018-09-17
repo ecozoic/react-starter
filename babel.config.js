@@ -4,7 +4,6 @@ module.exports = function(api) {
   // TODO: configure env based on browsers (browserslistrc)
   // TODO: polyfills
   // TODO: stage-x plugins/presets
-  // TODO: lodash
 
   return {
     presets: [
@@ -12,6 +11,10 @@ module.exports = function(api) {
       '@babel/typescript',
       '@babel/react',
     ],
-    plugins: ['styled-components', 'react-hot-loader/babel'],
+    plugins: [
+      'styled-components',
+      env === 'test' ? false : 'lodash',
+      'react-hot-loader/babel',
+    ].filter(Boolean),
   };
 };

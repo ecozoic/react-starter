@@ -5,10 +5,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const Dotenv = require('dotenv-webpack');
+const LodashPlugin = require('lodash-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-
-// TODO: browserlist, optimize babel-preset-env, polyfill
 
 const devPlugins = [new webpack.HotModuleReplacementPlugin()];
 
@@ -33,6 +32,7 @@ const commonPlugins = [
     safe: true,
     systemvars: true,
   }),
+  new LodashPlugin(),
 ];
 
 const plugins = commonPlugins.concat(isProduction ? prodPlugins : devPlugins);
