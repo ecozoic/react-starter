@@ -60,6 +60,7 @@
     "@types/node": "^10.10.1",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
+    "@types/react-redux": "^6.0.9",
     "@types/storybook__addon-a11y": "^3.3.1",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-backgrounds": "^3.2.1",
@@ -119,6 +120,7 @@
     "react-router": "^4.3.1",
     "redux": "^4.0.0",
     "redux-observable": "^1.0.0",
+    "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
     "rxjs": "^6.3.2",
     "styled-components": "^3.4.6"

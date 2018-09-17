@@ -1,12 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import styled from 'styled-components';
-import _ from 'lodash';
 
-const Header = styled.h1`
-  color: blue;
-`;
+import Greeting from './components/Greeting';
 
-const App = () => <Header>{_.identity('Hello world!')}</Header>;
+const App = () => <Greeting />;
 
 export default hot(module)(App);
