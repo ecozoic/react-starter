@@ -1,8 +1,6 @@
 module.exports = function(api) {
   const env = api.env();
 
-  // TODO: stage-x plugins/presets
-
   return {
     presets: [
       [
@@ -19,6 +17,7 @@ module.exports = function(api) {
       'styled-components',
       env === 'test' ? false : 'lodash',
       'react-hot-loader/babel',
+      '@babel/plugin-proposal-class-properties',
     ].filter(Boolean),
   };
 };
