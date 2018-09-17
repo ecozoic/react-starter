@@ -1,15 +1,16 @@
 module.exports = function(api) {
   const env = api.env();
 
-  // TODO: configure env based on browsers (browserslistrc)
-  // TODO: polyfills
   // TODO: stage-x plugins/presets
 
   return {
     presets: [
       [
         '@babel/env',
-        { modules: env === 'test' ? 'commonjs' : false, useBuiltIns: 'entry' },
+        {
+          modules: env === 'test' ? 'commonjs' : false,
+          useBuiltIns: env === 'test' ? false : 'entry',
+        },
       ],
       '@babel/typescript',
       '@babel/react',
