@@ -7,7 +7,10 @@ module.exports = function(api) {
 
   return {
     presets: [
-      ['@babel/env', { modules: env === 'test' ? 'commonjs' : false }],
+      [
+        '@babel/env',
+        { modules: env === 'test' ? 'commonjs' : false, useBuiltIns: 'entry' },
+      ],
       '@babel/typescript',
       '@babel/react',
     ],
