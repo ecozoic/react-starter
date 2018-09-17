@@ -69,6 +69,7 @@
     "@types/storybook__react": "^3.0.9",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
+    "babel-plugin-styled-components": "^1.7.1",
     "commitizen": "^2.10.1",
     "concurrently": "^4.0.1",
     "cross-env": "^5.2.0",
