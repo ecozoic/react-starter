@@ -1,4 +1,9 @@
 {
   "presets": ["razzle/babel"],
-  "plugins": ["styled-components", "@loadable/babel-plugin"]
+  "plugins": ["styled-components", "@loadable/babel-plugin"],
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
 }

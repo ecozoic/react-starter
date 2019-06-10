@@ -5,8 +5,12 @@
   "scripts": {
     "start": "razzle start",
     "build": "razzle build",
-    "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js"
+    "test": "jest --coverage",
+    "tdd": "jest --watch",
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "commit": "git-cz",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint --fix \"src/**/*.js\""
   },
   "dependencies": {
     "@loadable/component": "5.9.0",
@@ -28,10 +32,53 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
+    "@babel/plugin-transform-modules-commonjs": "7.4.4",
+    "@commitlint/cli": "8.0.0",
+    "@commitlint/config-conventional": "8.0.0",
     "@loadable/babel-plugin": "5.8.0",
     "@loadable/webpack-plugin": "5.7.1",
+    "babel-eslint": "9.0.0",
     "babel-plugin-styled-components": "1.10.0",
+    "commitizen": "3.1.1",
+    "cz-conventional-changelog": "2.1.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "enzyme-to-json": "3.3.5",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.3.0",
+    "eslint-config-react-app": "4.0.1",
+    "eslint-plugin-flowtype": "2.50.3",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.5.0",
+    "husky": "2.4.0",
+    "jest": "24.8.0",
+    "lint-staged": "8.2.0",
     "prettier": "1.17.0",
     "webpack": "4.33.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

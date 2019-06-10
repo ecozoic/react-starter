@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches snapshot 1`] = `
+<Home__Container>
+  <Home__Header>
+    <Home__Logo
+      alt="logo"
+      src="react.svg"
+    />
+    <h2>
+      Welcome to Razzle
+    </h2>
+  </Home__Header>
+  <Home__Intro>
+    To get started, edit 
+    <code>
+      src/App.js
+    </code>
+     or
+     
+    <code>
+      src/Home.js
+    </code>
+     and save to reload.
+  </Home__Intro>
+  <Home__Resources>
+    <li>
+      <a
+        href="https://github.com/jaredpalmer/razzle"
+      >
+        Docs
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/jaredpalmer/razzle/issues"
+      >
+        Issues
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://palmer.chat"
+      >
+        Community Slack
+      </a>
+    </li>
+  </Home__Resources>
+  <Films />
+</Home__Container>
+`;
