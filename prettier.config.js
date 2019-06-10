@@ -8,7 +8,7 @@ module.exports = {
   requirePragma: false,
   semi: true,
   singleQuote: true,
-  tabs: false,
   tabWidth: 2,
   trailingComma: 'all',
+  useTabs: false,
 };
