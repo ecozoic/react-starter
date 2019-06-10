@@ -9,7 +9,7 @@
     "pretest": "rimraf coverage",
     "test": "jest --coverage",
     "tdd": "jest --watch",
-    "start:prod": "cross-env NODE_ENV=production node build/server.js",
+    "serve": "cross-env NODE_ENV=production node build/server.js",
     "commit": "git-cz",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint --fix \"src/**/*.js\""

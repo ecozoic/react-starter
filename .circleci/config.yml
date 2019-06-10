@@ -1,0 +1,47 @@
+version: 2
+
+references:
+  image: &image circleci/node:12.4
+  working_directory: &working_directory ~/app
+
+jobs:
+  install:
+    docker:
+      - image: *image
+    working_directory: *working_directory
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: yarn
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: *working_directory
+          paths:
+            - .
+  test:
+    docker:
+      - image: *image
+    working_directory: *working_directory
+    steps:
+      - attach_workspace:
+          at: *working_directory
+      - run:
+          name: Run unit tests
+          command: yarn test
+
+workflows:
+  version: 2
+  validate_and_release:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
