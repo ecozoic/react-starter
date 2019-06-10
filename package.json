@@ -61,7 +61,8 @@
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
-    "webpack": "4.33.0"
+    "webpack": "4.33.0",
+    "webpack-bundle-analyzer": "3.3.2"
   },
   "config": {
     "commitizen": {
